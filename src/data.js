@@ -1,5 +1,3 @@
-
-
 export const A = [
     { palabra: "Amigo", significado: "una persona con la que uno tiene una relación de afecto y confianza." },
     { palabra: "Amar", significado: "sentir un gran afecto y cariño por alguien." },
@@ -52,7 +50,6 @@ export const A = [
     { palabra: "Apretado", significado: "que está cerca o muy unido." },
     { palabra: "Aislado", significado: "que está separado o aislado de otros." }
 ];
-
 export const B = [
     { palabra: "Bosque", significado: "una gran extensión de tierra cubierta de árboles" },
     { palabra: "Brillar", significado: "emitir luz" },
@@ -105,7 +102,6 @@ export const B = [
     { palabra: "Bizcocho", significado: "un pastel pequeño y esponjoso" },
     { palabra: "Bigote", significado: "el vello facial que crece sobre el labio superior" }
 ];
-
 export const C = [{ palabra: "cielo", significado: "La atmósfera que rodea la Tierra" },
 { palabra: "correr", significado: "Moverse a gran velocidad con los pies" },
 { palabra: "caminar", significado: "Moverse a paso lento con los pies" },
@@ -157,7 +153,6 @@ export const C = [{ palabra: "cielo", significado: "La atmósfera que rodea la T
 { palabra: "caja", significado: "Un recipiente cerrado con una tapa" },
 { palabra: "cofre", significado: "Un recipiente grande y cerrado que se utiliza para guardar objetos de valor" }
 ];
-
 export const D = [{ palabra: "dibujo", significado: "Una representación visual de algo" },
 { palabra: "diamante", significado: "Una piedra preciosa que se caracteriza por su forma cúbica y su brillo" },
 { palabra: "deseo", significado: "Un anhelo o anhelo" },
@@ -208,7 +203,6 @@ export const D = [{ palabra: "dibujo", significado: "Una representación visual 
 { palabra: "devorar", significado: "Comer algo con gran rapidez y avidez" },
 { palabra: "dudar", significado: "No estar seguro de algo" }
 ];
-
 export const E = [
     { palabra: "estrella", significado: "Un gran objeto celeste que brilla con su propia luz" },
     { palabra: "escuchar", significado: "Prestar atención a lo que alguien dice o hace" },
@@ -261,64 +255,59 @@ export const E = [
     { palabra: "enseñar", significado: "Transmitir conocimientos o habilidades a alguien" },
     { palabra: "establecer", significado: "Poner algo en su lugar o posición" }
 ];
+export const F = [
+    { palabra: "flor", significado: "Una planta con pétalos, tallo y raíz" },
+    { palabra: "felicidad", significado: "Un estado de ánimo de alegría y satisfacción" },
+    { palabra: "fuerte", significado: "Que tiene mucha fuerza física o mental" },
+    { palabra: "fuego", significado: "Una reacción química que produce luz, calor y llamas" },
+    { palabra: "fácil", significado: "Que se puede hacer sin mucho esfuerzo" },
+    { palabra: "fresco", significado: "Que tiene una temperatura fría o moderada" },
+    { palabra: "fiesta", significado: "Una celebración o reunión social" },
+    { palabra: "fantasía", significado: "Un sueño o una visión que es imposible o irreal" },
+    { palabra: "fruta", significado: "El órgano comestible de una planta que contiene semillas" },
+    { palabra: "forma", significado: "La apariencia externa de algo" },
+    { palabra: "flotar", significado: "Permanecer en la superficie del agua sin hundirse" },
+    { palabra: "famoso", significado: "Conocido por muchas personas" },
+    { palabra: "fuente", significado: "Un lugar de donde viene algo, como agua o información" },
+    { palabra: "fragancia", significado: "Un olor agradable" },
+    { palabra: "feroz", significado: "Que es violento o agresivo" },
+    { palabra: "frente", significado: "La parte frontal de algo" },
+    { palabra: "festejar", significado: "Celebrar algo con alegría" },
+    { palabra: "frescura", significado: "La calidad de ser fresco" },
+    { palabra: "fusión", significado: "El proceso de combinar dos cosas para formar una nueva cosa" },
+    { palabra: "frío", significado: "Que tiene una temperatura baja" },
+    { palabra: "fiel", significado: "Que es leal o confiable" },
+    { palabra: "fluir", significado: "Mover o moverse de manera suave y continua" },
+    { palabra: "felpa", significado: "Una tela suave con un pelo corto y esponjoso" },
+    { palabra: "frecuente", significado: "Que sucede a menudo" },
+    { palabra: "frenesí", significado: "Un estado de gran excitación o agitación" },
+    { palabra: "fundir", significado: "Calentar algo hasta que se derrita" },
+    { palabra: "fotografía", significado: "La técnica de tomar imágenes con luz" },
+    { palabra: "furia", significado: "Un sentimiento de ira o enojo intenso" },
+    { palabra: "fortaleza", significado: "Una fortaleza o ciudadela fortificada" },
+    { palabra: "filosofía", significado: "El estudio de los principios fundamentales de la realidad, la existencia y el conocimiento" },
+    { palabra: "fiel", significado: "Que es leal o confiable" },
+    { palabra: "frenético", significado: "Que es muy activo o agitado" },
+    { palabra: "foso", significado: "Un agujero profundo que se cava alrededor de algo para protegerlo" },
+    { palabra: "frontera", significado: "La línea que separa dos países o territorios" },
+    { palabra: "fino", significado: "Que tiene una calidad superior" },
+    { palabra: "fundación", significado: "La base o el principio de algo" },
+    { palabra: "llama", significado: "Una columna de fuego que se produce por la combustión" },
+    { palabra: "frágil", significado: "Que se rompe fácilmente" },
+    { palabra: "freír", significado: "Cocinar algo en aceite caliente" },
+    { palabra: "feroz", significado: "Que es violento o agresivo" },
+    { palabra: "forjar", significado: "Crear algo trabajando un material en caliente" },
+    { palabra: "febrero", significado: "El segundo mes del año en el calendario gregoriano y juliano, con 28 días en años comunes y 29 días en años bisiestos." },
+    { palabra: "floración", significado: "El proceso de florecer" },
+    { palabra: "finura", significado: "La calidad de ser fino o delicado" },
+    { palabra: "frenar", significado: "Hacer que algo se detenga o vaya más despacio" },
+    { palabra: "fluctuar", significado: "Cambiar de manera irregular o inconstante" },
+    { palabra: "fuerte", significado: "Que tiene mucha fuerza física o mental" },
+    { palabra: "frescura", significado: "La calidad de ser fresco" },
+    { palabra: "fascinante", significado: "Que despierta la curiosidad y el interés" },
+    { palabra: "fugaz", significado: "Que dura poco tiempo" }]
 
-
-
-export const F = [{
-    palabra: "flor", significado: "Una planta con pétalos, tallo y raíz"
-},
-{ palabra: "felicidad", significado: "Un estado de ánimo de alegría y satisfacción" },
-{ palabra: "fuerte", significado: "Que tiene mucha fuerza física o mental" },
-{ palabra: "fuego", significado: "Una reacción química que produce luz, calor y llamas" },
-{ palabra: "fácil", significado: "Que se puede hacer sin mucho esfuerzo" },
-{ palabra: "fresco", significado: "Que tiene una temperatura fría o moderada" },
-{ palabra: "fiesta", significado: "Una celebración o reunión social" },
-{ palabra: "fantasía", significado: "Un sueño o una visión que es imposible o irreal" },
-{ palabra: "fruta", significado: "El órgano comestible de una planta que contiene semillas" },
-{ palabra: "forma", significado: "La apariencia externa de algo" },
-{ palabra: "flotar", significado: "Permanecer en la superficie del agua sin hundirse" },
-{ palabra: "famoso", significado: "Conocido por muchas personas" },
-{ palabra: "fuente", significado: "Un lugar de donde viene algo, como agua o información" },
-{ palabra: "fragancia", significado: "Un olor agradable" },
-{ palabra: "feroz", significado: "Que es violento o agresivo" },
-{ palabra: "frente", significado: "La parte frontal de algo" },
-{ palabra: "festejar", significado: "Celebrar algo con alegría" },
-{ palabra: "frescura", significado: "La calidad de ser fresco" },
-{ palabra: "fusión", significado: "El proceso de combinar dos cosas para formar una nueva cosa" },
-{ palabra: "frío", significado: "Que tiene una temperatura baja" },
-{ palabra: "fiel", significado: "Que es leal o confiable" },
-{ palabra: "fluir", significado: "Mover o moverse de manera suave y continua" },
-{ palabra: "felpa", significado: "Una tela suave con un pelo corto y esponjoso" },
-{ palabra: "frecuente", significado: "Que sucede a menudo" },
-{ palabra: "frenesí", significado: "Un estado de gran excitación o agitación" },
-{ palabra: "fundir", significado: "Calentar algo hasta que se derrita" },
-{ palabra: "fotografía", significado: "La técnica de tomar imágenes con luz" },
-{ palabra: "furia", significado: "Un sentimiento de ira o enojo intenso" },
-{ palabra: "fortaleza", significado: "Una fortaleza o ciudadela fortificada" },
-{ palabra: "filosofía", significado: "El estudio de los principios fundamentales de la realidad, la existencia y el conocimiento" },
-{ palabra: "fiel", significado: "Que es leal o confiable" },
-{ palabra: "frenético", significado: "Que es muy activo o agitado" },
-{ palabra: "foso", significado: "Un agujero profundo que se cava alrededor de algo para protegerlo" },
-{ palabra: "frontera", significado: "La línea que separa dos países o territorios" },
-{ palabra: "fino", significado: "Que tiene una calidad superior" },
-{ palabra: "fundación", significado: "La base o el principio de algo" },
-{ palabra: "llama", significado: "Una columna de fuego que se produce por la combustión" },
-{ palabra: "frágil", significado: "Que se rompe fácilmente" },
-{ palabra: "freír", significado: "Cocinar algo en aceite caliente" },
-{ palabra: "feroz", significado: "Que es violento o agresivo" },
-{ palabra: "forjar", significado: "Crear algo trabajando un material en caliente" },
-{ palabra: "febrero", significado: "El segundo mes del año en el calendario gregoriano y juliano, con 28 días en años comunes y 29 días en años bisiestos." },
-{ palabra: "floración", significado: "El proceso de florecer" },
-{ palabra: "finura", significado: "La calidad de ser fino o delicado" },
-{ palabra: "frenar", significado: "Hacer que algo se detenga o vaya más despacio" },
-{ palabra: "fluctuar", significado: "Cambiar de manera irregular o inconstante" },
-{ palabra: "fuerte", significado: "Que tiene mucha fuerza física o mental" },
-{ palabra: "frescura", significado: "La calidad de ser fresco" },
-{ palabra: "fascinante", significado: "Que despierta la curiosidad y el interés" },
-{ palabra: "fugaz", significado: "Que dura poco tiempo" }]
-
-
-export const G =  [
+export const G = [
     { palabra: "año", significado: "Un período de 365 días" },
     { palabra: "girar", significado: "Mover algo en un círculo" },
     { palabra: "gris", significado: "Un color que es una mezcla de blanco y negro" },
@@ -361,9 +350,8 @@ export const G =  [
     { palabra: "gratitud", significado: "El sentimiento de agradecimiento" },
     { palabra: "grisáceo", significado: "Que tiene un color grisáceo" },
     { palabra: "genuinidad", significado: "La calidad de ser genuino" }
-  ];
-
-  export const H =  [
+];
+export const H = [
     { palabra: "hola", significado: "Una expresión de saludo" },
     { palabra: "huevo", significado: "Una célula reproductiva de los animales vertebrados" },
     { palabra: "hora", significado: "Un período de tiempo de sesenta minutos" },
@@ -414,9 +402,8 @@ export const G =  [
     { palabra: "homenaje", significado: "Un acto de agradecimiento o tributo" },
     { palabra: "hospital", significado: "Un edificio donde se atiende a las personas enfermas o heridas" },
     { palabra: "hiperactivo", significado: "Que tiene un exceso de energía y es difícil de controlar" }
-  ];
-
-export const I = [ { palabra: "invisible", significado: "Que no puede ser visto" },
+];
+export const I = [{ palabra: "invisible", significado: "Que no puede ser visto" },
 { palabra: "invitar", significado: "Pedir a alguien que venga a un lugar o evento" },
 { palabra: "ira", significado: "Un sentimiento de enojo o furia" },
 { palabra: "impacto", significado: "El efecto de algo" },
@@ -455,8 +442,7 @@ export const I = [ { palabra: "invisible", significado: "Que no puede ser visto"
 { palabra: "intenso", significado: "Muy fuerte o intenso" },
 { palabra: "impulso", significado: "Una fuerza que impulsa a alguien a hacer algo" }
 ];
-
-  export const J =  [
+export const J = [
     { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
     { palabra: "joya", significado: "Una piedra preciosa o un adorno valioso" },
     { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
@@ -509,83 +495,224 @@ export const I = [ { palabra: "invisible", significado: "Que no puede ser visto"
     { palabra: "jubilo", significado: "Una gran alegría o felicidad" },
     { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
     { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" }
-  ];
+];
 
-  
-  
-
-
-  export const K =[
+/* 17 palabras */
+export const K = [
     {
-      palabra: "kilómetro",
-      significado: "Una unidad de longitud que equivale a 1000 metros."
+        palabra: "kilómetro",
+        significado: "Una unidad de longitud que equivale a 1000 metros."
     },
     {
-      palabra: "kiosco",
-      significado: "Una tienda pequeña que vende periódicos, revistas, dulces, golosinas, etc."
+        palabra: "kiosco",
+        significado: "Una tienda pequeña que vende periódicos, revistas, dulces, golosinas, etc."
     },
     {
-      palabra: "karate",
-      significado: "Un arte marcial japonés que se caracteriza por su uso de golpes y patadas."
+        palabra: "karate",
+        significado: "Un arte marcial japonés que se caracteriza por su uso de golpes y patadas."
     },
     {
-      palabra: "karaoke",
-      significado: "Una actividad en la que las personas cantan canciones con la ayuda de una máquina que proporciona la música de fondo."
+        palabra: "karaoke",
+        significado: "Una actividad en la que las personas cantan canciones con la ayuda de una máquina que proporciona la música de fondo."
     },
     {
-      palabra: "karma",
-      significado: "La creencia de que las acciones de una persona en esta vida tendrán consecuencias en la próxima vida."
+        palabra: "karma",
+        significado: "La creencia de que las acciones de una persona en esta vida tendrán consecuencias en la próxima vida."
     },
     {
-      palabra: "ketchup",
-      significado: "Una salsa espesa y roja hecha de tomates, vinagre, azúcar, sal y especias."
+        palabra: "ketchup",
+        significado: "Una salsa espesa y roja hecha de tomates, vinagre, azúcar, sal y especias."
     },
     {
-      palabra: "kilo",
-      significado: "Una unidad de masa que equivale a 1000 gramos."
+        palabra: "kilo",
+        significado: "Una unidad de masa que equivale a 1000 gramos."
     },
     {
-      palabra: "kiwi",
-      significado: "Una fruta redonda y verde que es nativa de Nueva Zelanda."
+        palabra: "kiwi",
+        significado: "Una fruta redonda y verde que es nativa de Nueva Zelanda."
     },
     {
-      palabra: "koala",
-      significado: "Un marsupial que es nativo de Australia."
+        palabra: "koala",
+        significado: "Un marsupial que es nativo de Australia."
     },
     {
-      palabra: "krypton",
-      significado: "Un planeta ficticio en el que nació Superman."
+        palabra: "krypton",
+        significado: "Un planeta ficticio en el que nació Superman."
     },
     {
-      palabra: "kilt",
-      significado: "Una falda larga y escocesa que es usada por los hombres."
+        palabra: "kilt",
+        significado: "Una falda larga y escocesa que es usada por los hombres."
     },
     {
-      palabra: "karateca",
-      significado: "Una persona que practica el arte marcial del karate."
+        palabra: "karateca",
+        significado: "Una persona que practica el arte marcial del karate."
     },
     {
-      palabra: "kioskero",
-      significado: "Una persona que trabaja en un kiosco."
+        palabra: "kioskero",
+        significado: "Una persona que trabaja en un kiosco."
     },
     {
-      palabra: "kilovatio",
-      significado: "Una unidad de potencia eléctrica que equivale a 1000 vatios."
+        palabra: "kilovatio",
+        significado: "Una unidad de potencia eléctrica que equivale a 1000 vatios."
     },
     {
-      palabra: "kafkiano",
-      significado: "Que es característico de la obra del escritor Franz Kafka."
+        palabra: "kafkiano",
+        significado: "Que es característico de la obra del escritor Franz Kafka."
     },
     {
-      palabra: "kit",
-      significado: "Un conjunto de herramientas o materiales que se utilizan para realizar una tarea específica."
+        palabra: "kit",
+        significado: "Un conjunto de herramientas o materiales que se utilizan para realizar una tarea específica."
     },
     {
-      palabra: "kryptonita",
-      significado: "Una piedra ficticia que debilita a Superman."
+        palabra: "kryptonita",
+        significado: "Una piedra ficticia que debilita a Superman."
     },
     {
-      palabra: "kefir",
-      significado: "Una bebida fermentada hecha de leche."
+        palabra: "kefir",
+        significado: "Una bebida fermentada hecha de leche."
     }
-  ];
+];
+export const L = [
+    {
+        palabra: "lago",
+        significado: "Una gran masa de agua dulce que está rodeada de tierra."
+    },
+    {
+        palabra: "luna",
+        significado: "El único satélite natural de la Tierra."
+    },
+    {
+        palabra: "llave",
+        significado: "Un objeto pequeño y metálico que se utiliza para abrir cerraduras."
+    },
+    {
+        palabra: "lápiz",
+        significado: "Un instrumento de escritura que tiene una mina de grafito en un extremo y una punta de madera en el otro."
+    },
+    {
+        palabra: "llamar",
+        significado: "Hacer un sonido para llamar a alguien."
+    },
+    {
+        palabra: "león",
+        significado: "Un mamífero carnívoro que es miembro de la familia de los felinos."
+    },
+    {
+        palabra: "largo",
+        significado: "Que tiene una gran extensión de longitud."
+    },
+    {
+        palabra: "libro",
+        significado: "Un conjunto de hojas de papel impresas que están encuadernadas juntas."
+    },
+    {
+        palabra: "lluvia",
+        significado: "El agua que cae del cielo en forma de gotas."
+    },
+    {
+        palabra: "luchar",
+        significado: "Tratar de derrotar a alguien o algo con fuerza."
+    },
+    {
+        palabra: "línea",
+        significado: "Una forma larga y delgada que no tiene ancho."
+    },
+    {
+        palabra: "lupa",
+        significado: "Un dispositivo que utiliza lentes para aumentar el tamaño de los objetos."
+    },
+    {
+        palabra: "luminoso",
+        significado: "Que emite luz."
+    },
+    {
+        palabra: "lila",
+        significado: "Un color que es una mezcla de azul y violeta."
+    },
+    {
+        palabra: "lujoso",
+        significado: "Que es rico o costoso."
+    },
+    {
+        palabra: "lado",
+        significado: "Una de las dos superficies que se extienden a partir de un punto común."
+    },
+    {
+        palabra: "labio",
+        significado: "La parte carnosa que rodea la boca."
+    },
+    {
+        palabra: "lamento",
+        significado: "Un sonido o expresión de dolor o aflicción."
+    },
+    {
+        palabra: "latido",
+        significado: "El movimiento rítmico del corazón."
+    },
+    {
+        palabra: "luminaria",
+        significado: "Un objeto que produce luz."
+    },
+    {
+        palabra: "lidiar",
+        significado: "Tratar con algo difícil o problemático."
+    },
+    {
+        palabra: "lienzo",
+        significado: "Una tela de lino o algodón que se utiliza para pintar."
+    },
+    {
+        palabra: "lamentar",
+        significado: "Sentir tristeza o pena por algo."
+    },
+    {
+        palabra: "latir",
+        significado: "El movimiento rítmico del corazón."
+    },
+    {
+        palabra: "llanta",
+        significado: "Una cubierta de goma que se coloca alrededor de una rueda de un vehículo."
+    },
+    {
+        palabra: "lazo",
+        significado: "Una pieza de material que se utiliza para atar o sujetar algo."
+    },
+    {
+        palabra: "lucir",
+        significado: "Tener una apariencia hermosa o atractiva."
+    },
+    {
+        palabra: "llovizna",
+        significado: "Una lluvia ligera y fina."
+    },
+    {
+        palabra: "limón",
+        significado: "Una fruta cítrica que tiene una piel amarilla y un jugo agrio."
+    },
+    {
+        palabra: "lírico",
+        significado: "Que está relacionado con la poesía lírica."
+    },
+    {
+        palabra: "límite",
+        significado: "El punto en el que algo termina o se detiene."
+    },
+    {
+        palabra: "lápida",
+        significado: "Una piedra que se coloca sobre una tumba."
+    },
+    {
+        palabra: "lombriz",
+        significado: "Un invertebrado pequeño y alargado que tiene un cuerpo cilíndrico y una cola puntiaguda."
+    },
+    {
+        palabra: "linaje",
+        significado: "La línea de ascendencia de una persona o familia."
+    }
+];
+
+export const M = []
+export const N = []
+export const O = []
+export const P = []
+export const Q = []

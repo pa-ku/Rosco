@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
-import { A, B, C, D, E, F,G,H,I,J,K } from "../data";
+import { A, B, C, D, E, F,G,H,I,J,K ,L } from "../data";
 import Row from "./Row";
 
 
@@ -13,8 +13,9 @@ export default function Table() {
   const [rollStatus, setRollStatus] = useState(false)
  
 function start(){
-  setRoll(Math.floor(Math.random()*A.length))
+  setRoll(Math.floor(Math.random()* 17))
   setRollStatus(true)
+  console.log(roll);
 }
 
   return (
@@ -48,6 +49,7 @@ function start(){
         <Row letter={"h"} ask={H[roll].significado} answer={H[roll].palabra} />
         <Row letter={"i"} ask={I[roll].significado} answer={I[roll].palabra} />
         <Row letter={"k"} ask={K[roll].significado} answer={K[roll].palabra} />
+        <Row letter={"L"} ask={L[roll].significado} answer={L[roll].palabra} />
         </Tabl>
         </Wrapper>
        </>
