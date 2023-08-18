@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
-import { A, B, C, D, E, F } from "../data";
+import { A, B, C, D, E, F,G,H,I,J,K } from "../data";
 import Row from "./Row";
 
 
@@ -39,11 +39,15 @@ function start(){
           <FirstRow>Respuesta</FirstRow>
         </tr>
        <Row letter={"a"} ask={A[roll].significado} answer={A[roll].palabra} />
-         <Row letter={"b"} ask={B[roll].significado} answer={B[roll].palabra} /> 
+        <Row letter={"b"} ask={B[roll].significado} answer={B[roll].palabra} /> 
         <Row letter={"c"} ask={C[roll].significado} answer={C[roll].palabra} />
         <Row letter={"d"} ask={D[roll].significado} answer={D[roll].palabra} />
         <Row letter={"e"} ask={E[roll].significado} answer={E[roll].palabra} />
         <Row letter={"f"} ask={F[roll].significado} answer={F[roll].palabra} />
+        <Row letter={"g"} ask={G[roll].significado} answer={G[roll].palabra} />
+        <Row letter={"h"} ask={H[roll].significado} answer={H[roll].palabra} />
+        <Row letter={"i"} ask={I[roll].significado} answer={I[roll].palabra} />
+        <Row letter={"k"} ask={K[roll].significado} answer={K[roll].palabra} />
         </Tabl>
         </Wrapper>
        </>

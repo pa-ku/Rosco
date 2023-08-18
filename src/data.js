@@ -316,3 +316,276 @@ export const F = [{
 { palabra: "frescura", significado: "La calidad de ser fresco" },
 { palabra: "fascinante", significado: "Que despierta la curiosidad y el interés" },
 { palabra: "fugaz", significado: "Que dura poco tiempo" }]
+
+
+export const G =  [
+    { palabra: "año", significado: "Un período de 365 días" },
+    { palabra: "girar", significado: "Mover algo en un círculo" },
+    { palabra: "gris", significado: "Un color que es una mezcla de blanco y negro" },
+    { palabra: "gritar", significado: "Emitir un sonido fuerte y repentino" },
+    { palabra: "guía", significado: "Una persona que muestra a otros el camino" },
+    { palabra: "gusto", significado: "La capacidad de percibir el sabor" },
+    { palabra: "gemelo", significado: "Uno de dos hermanos nacidos al mismo tiempo" },
+    { palabra: "gaviota", significado: "Un ave marina con alas largas y blancas" },
+    { palabra: "guardián", significado: "Una persona que protege a alguien o algo" },
+    { palabra: "gritar", significado: "Emitir un sonido fuerte y repentino" },
+    { palabra: "galleta", significado: "Un pequeño pastel plano que se puede comer como refrigerio o postre" },
+    { palabra: "gorro", significado: "Una prenda de vestir que se lleva en la cabeza" },
+    { palabra: "gracia", significado: "Elegancia y belleza de movimiento" },
+    { palabra: "grupo", significado: "Un conjunto de personas o cosas que están unidas por una característica común" },
+    { palabra: "genuino", significado: "Que es real y no falso" },
+    { palabra: "galaxia", significado: "Una gran colección de estrellas, nubes de gas y polvo que están unidas por la gravedad" },
+    { palabra: "garaje", significado: "Un edificio donde se guarda un coche" },
+    { palabra: "granizo", significado: "Pequeñas esferas de hielo que caen del cielo durante una tormenta" },
+    { palabra: "gema", significado: "Una piedra preciosa" },
+    { palabra: "gruñir", significado: "Emitir un sonido bajo y profundo" },
+    { palabra: "gesto", significado: "Un movimiento del cuerpo que expresa una idea o emoción" },
+    { palabra: "goma", significado: "Un material flexible que se puede usar para hacer muchos objetos diferentes" },
+    { palabra: "gritar", significado: "Emitir un sonido fuerte y repentino" },
+    { palabra: "gozo", significado: "Un sentimiento de gran alegría" },
+    { palabra: "grasa", significado: "Una sustancia aceitosa que se encuentra en los animales y las plantas" },
+    { palabra: "giro", significado: "Un movimiento circular" },
+    { palabra: "glacial", significado: "Que se relaciona con los glaciares" },
+    { palabra: "guiño", significado: "Un movimiento rápido del ojo que se usa para expresar amistad o coquetería" },
+    { palabra: "golpe", significado: "Un movimiento repentino de la mano o el brazo que causa daño" },
+    { palabra: "garantía", significado: "Una promesa de que algo es cierto o de que algo se hará" },
+    { palabra: "gesticular", significado: "Usar los gestos para expresar ideas o emociones" },
+    { palabra: "galleta", significado: "Un pequeño pastel plano que se puede comer como refrigerio o postre" },
+    { palabra: "grácil", significado: "Que es delgado y elegante" },
+    { palabra: "germinar", significado: "Crecer a partir de una semilla" },
+    { palabra: "guitarrista", significado: "Una persona que toca la guitarra" },
+    { palabra: "garra", significado: "Una uña larga y afilada que se encuentra en las aves, los mamíferos y los reptiles" },
+    { palabra: "gélido", significado: "Que es muy frío" },
+    { palabra: "grano", significado: "Una pequeña partícula de una sustancia sólida" },
+    { palabra: "guerrero", significado: "Una persona que lucha en la guerra" },
+    { palabra: "gratitud", significado: "El sentimiento de agradecimiento" },
+    { palabra: "grisáceo", significado: "Que tiene un color grisáceo" },
+    { palabra: "genuinidad", significado: "La calidad de ser genuino" }
+  ];
+
+  export const H =  [
+    { palabra: "hola", significado: "Una expresión de saludo" },
+    { palabra: "huevo", significado: "Una célula reproductiva de los animales vertebrados" },
+    { palabra: "hora", significado: "Un período de tiempo de sesenta minutos" },
+    { palabra: "héroe", significado: "Una persona que es admirada por sus acciones valientes o heroicas" },
+    { palabra: "hoja", significado: "Una parte plana y delgada de una planta" },
+    { palabra: "habitación", significado: "Un espacio cerrado dentro de un edificio" },
+    { palabra: "hermano", significado: "Un hijo del mismo padre y madre" },
+    { palabra: "hacer", significado: "Realizar una acción" },
+    { palabra: "hambre", significado: "La necesidad de comer" },
+    { palabra: "habilidad", significado: "La capacidad de hacer algo bien" },
+    { palabra: "herida", significado: "Un daño físico causado por una lesión" },
+    { palabra: "hombre", significado: "Un ser humano adulto del sexo masculino" },
+    { palabra: "humano", significado: "Que pertenece a la especie humana" },
+    { palabra: "hermoso", significado: "Que es agradable a la vista" },
+    { palabra: "hierba", significado: "Una planta con tallos delgados y hojas planas" },
+    { palabra: "historia", significado: "Un relato de eventos reales o ficticios" },
+    { palabra: "divertido", significado: "Que causa risa" },
+    { palabra: "hélice", significado: "Una estructura en forma de tornillo que se usa para generar movimiento" },
+    { palabra: "hora", significado: "Un período de tiempo de sesenta minutos" },
+    { palabra: "harina", significado: "Un polvo fino hecho de granos molidos" },
+    { palabra: "hablar", significado: "Usar el lenguaje para comunicarse" },
+    { palabra: "hondo", significado: "Que tiene mucha profundidad" },
+    { palabra: "horizonte", significado: "La línea donde el cielo parece encontrarse con la tierra" },
+    { palabra: "higiene", significado: "La práctica de mantener limpio el cuerpo y el entorno" },
+    { palabra: "hacha", significado: "Una herramienta con una hoja afilada en un extremo y un mango en el otro" },
+    { palabra: "hormiga", significado: "Un insecto pequeño y social que vive en colonias" },
+    { palabra: "hervir", significado: "Calentar algo hasta que se convierta en un líquido" },
+    { palabra: "herramienta", significado: "Un objeto que se utiliza para hacer un trabajo" },
+    { palabra: "huir", significado: "Correr lejos de un peligro" },
+    { palabra: "huracán", significado: "Un ciclón tropical con vientos de más de 119 kilómetros por hora" },
+    { palabra: "híbrido", significado: "Un organismo que es el resultado del cruce de dos especies diferentes" },
+    { palabra: "hongo", significado: "Un organismo eucariota que no tiene hojas, flores ni semillas" },
+    { palabra: "habilidad", significado: "La capacidad de hacer algo bien" },
+    { palabra: "huraño", significado: "Que es tímido o reservado" },
+    { palabra: "hogar", significado: "El lugar donde una persona vive" },
+    { palabra: "hacer", significado: "Realizar una acción" },
+    { palabra: "halcón", significado: "Un ave rapaz con alas largas y puntiagudas" },
+    { palabra: "hinchado", significado: "Que está lleno de aire o líquido" },
+    { palabra: "heredar", significado: "Obtener algo como propiedad después de la muerte de otra persona" },
+    { palabra: "hábil", significado: "Que es capaz de hacer algo bien" },
+    { palabra: "hundir", significado: "Hacer que algo se hunda" },
+    { palabra: "hormigueo", significado: "Una sensación de hormigueo en la piel" },
+    { palabra: "hostil", significado: "Que es enemigo o contrario" },
+    { palabra: "huella", significado: "Una marca dejada por un pie o una pata" },
+    { palabra: "helado", significado: "Un alimento congelado que se hace con leche, crema y azúcar" },
+    { palabra: "hilo", significado: "Una hebra fina y larga de un material como la lana, el algodón o el seda" },
+    { palabra: "humildad", significado: "La calidad de ser modesto y respetuoso" },
+    { palabra: "homenaje", significado: "Un acto de agradecimiento o tributo" },
+    { palabra: "hospital", significado: "Un edificio donde se atiende a las personas enfermas o heridas" },
+    { palabra: "hiperactivo", significado: "Que tiene un exceso de energía y es difícil de controlar" }
+  ];
+
+export const I = [ { palabra: "invisible", significado: "Que no puede ser visto" },
+{ palabra: "invitar", significado: "Pedir a alguien que venga a un lugar o evento" },
+{ palabra: "ira", significado: "Un sentimiento de enojo o furia" },
+{ palabra: "impacto", significado: "El efecto de algo" },
+{ palabra: "inusual", significado: "Que no es común o corriente" },
+{ palabra: "inquietud", significado: "Un sentimiento de ansiedad o preocupación" },
+{ palabra: "inmenso", significado: "Muy grande o vasto" },
+{ palabra: "inicio", significado: "El comienzo de algo" },
+{ palabra: "intuir", significado: "Saber algo sin tener pruebas" },
+{ palabra: "imagen", significado: "Una representación visual de algo" },
+{ palabra: "inglés", significado: "Un idioma que se habla en el Reino Unido, Estados Unidos, Canadá, Australia y Nueva Zelanda" },
+{ palabra: "infinito", significado: "Sin fin o límite" },
+{ palabra: "irreal", significado: "Que no es real o verdadero" },
+{ palabra: "imitación", significado: "El acto de copiar las acciones o palabras de otra persona" },
+{ palabra: "investigar", significado: "Examinar algo cuidadosamente para obtener información" },
+{ palabra: "indicación", significado: "Una señal o sugerencia de algo" },
+{ palabra: "imitar", significado: "Copiar las acciones o palabras de otra persona" },
+{ palabra: "inflar", significado: "Hacer que algo sea más grande llenando de aire o gas" },
+{ palabra: "inscribir", significado: "Escribir algo en un lugar o superficie" },
+{ palabra: "inodoro", significado: "Que no tiene olor" },
+{ palabra: "iniciar", significado: "Empezar algo" },
+{ palabra: "interactuar", significado: "Comunicarse o actuar con otra persona o cosa" },
+{ palabra: "inmediato", significado: "Que sucede o se hace inmediatamente" },
+{ palabra: "invadir", significado: "Entrar en un lugar o territorio sin permiso" },
+{ palabra: "incluir", significado: "Añadir algo a un grupo o colección" },
+{ palabra: "infusión", significado: "Un líquido que se ha hecho remojando algo en agua" },
+{ palabra: "ingreso", significado: "El acto de entrar en un lugar" },
+{ palabra: "ilusión", significado: "Una falsa impresión o creencia" },
+{ palabra: "interesante", significado: "Que despierta la curiosidad o el interés" },
+{ palabra: "incendio", significado: "Un fuego que se extiende rápidamente" },
+{ palabra: "incidir", significado: "Tener un efecto o influencia en algo" },
+{ palabra: "inusual", significado: "Que no es común o corriente" },
+{ palabra: "inquietud", significado: "Un sentimiento de ansiedad o preocupación" },
+{ palabra: "impactante", significado: "Que tiene un gran efecto o impacto" },
+{ palabra: "intención", significado: "El deseo o propósito de hacer algo" },
+{ palabra: "insomnio", significado: "La incapacidad de dormir" },
+{ palabra: "intenso", significado: "Muy fuerte o intenso" },
+{ palabra: "impulso", significado: "Una fuerza que impulsa a alguien a hacer algo" }
+];
+
+  export const J =  [
+    { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
+    { palabra: "joya", significado: "Una piedra preciosa o un adorno valioso" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "joven", significado: "Que está en la primera etapa de la vida" },
+    { palabra: "jadeo", significado: "Respirar con dificultad y rapidez" },
+    { palabra: "jefe", significado: "La persona en la posición de autoridad más alta" },
+    { palabra: "joroba", significado: "Una protuberancia en la espalda de ciertos animales" },
+    { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabón", significado: "Una sustancia utilizada para lavar y limpiar" },
+    { palabra: "jardín", significado: "Un área con plantas y flores cultivadas" },
+    { palabra: "jarra", significado: "Un recipiente grande con asa y boca ancha" },
+    { palabra: "jubilado", significado: "Que ha dejado de trabajar después de alcanzar una cierta edad" },
+    { palabra: "juguete", significado: "Un objeto para que los niños jueguen" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jueves", significado: "El quinto día de la semana" },
+    { palabra: "jaula", significado: "Un recinto con barras utilizado para contener animales" },
+    { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
+    { palabra: "jubilo", significado: "Una gran alegría o felicidad" },
+    { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "junto", significado: "En compañía de o al lado de alguien o algo" },
+    { palabra: "joven", significado: "Que está en la primera etapa de la vida" },
+    { palabra: "jueves", significado: "El quinto día de la semana" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
+    { palabra: "jubilo", significado: "Una gran alegría o felicidad" },
+    { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "junto", significado: "En compañía de o al lado de alguien o algo" },
+    { palabra: "joven", significado: "Que está en la primera etapa de la vida" },
+    { palabra: "jueves", significado: "El quinto día de la semana" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
+    { palabra: "jubilo", significado: "Una gran alegría o felicidad" },
+    { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "junto", significado: "En compañía de o al lado de alguien o algo" },
+    { palabra: "joven", significado: "Que está en la primera etapa de la vida" },
+    { palabra: "jueves", significado: "El quinto día de la semana" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" },
+    { palabra: "jabalí", significado: "Un cerdo salvaje de gran tamaño" },
+    { palabra: "juego", significado: "Una actividad realizada para la diversión o el entretenimiento" },
+    { palabra: "jubilo", significado: "Una gran alegría o felicidad" },
+    { palabra: "jugar", significado: "Participar en un juego o actividad recreativa" },
+    { palabra: "jirafa", significado: "Un mamífero de cuello largo que se encuentra en África" }
+  ];
+
+  
+  
+
+
+  export const K =[
+    {
+      palabra: "kilómetro",
+      significado: "Una unidad de longitud que equivale a 1000 metros."
+    },
+    {
+      palabra: "kiosco",
+      significado: "Una tienda pequeña que vende periódicos, revistas, dulces, golosinas, etc."
+    },
+    {
+      palabra: "karate",
+      significado: "Un arte marcial japonés que se caracteriza por su uso de golpes y patadas."
+    },
+    {
+      palabra: "karaoke",
+      significado: "Una actividad en la que las personas cantan canciones con la ayuda de una máquina que proporciona la música de fondo."
+    },
+    {
+      palabra: "karma",
+      significado: "La creencia de que las acciones de una persona en esta vida tendrán consecuencias en la próxima vida."
+    },
+    {
+      palabra: "ketchup",
+      significado: "Una salsa espesa y roja hecha de tomates, vinagre, azúcar, sal y especias."
+    },
+    {
+      palabra: "kilo",
+      significado: "Una unidad de masa que equivale a 1000 gramos."
+    },
+    {
+      palabra: "kiwi",
+      significado: "Una fruta redonda y verde que es nativa de Nueva Zelanda."
+    },
+    {
+      palabra: "koala",
+      significado: "Un marsupial que es nativo de Australia."
+    },
+    {
+      palabra: "krypton",
+      significado: "Un planeta ficticio en el que nació Superman."
+    },
+    {
+      palabra: "kilt",
+      significado: "Una falda larga y escocesa que es usada por los hombres."
+    },
+    {
+      palabra: "karateca",
+      significado: "Una persona que practica el arte marcial del karate."
+    },
+    {
+      palabra: "kioskero",
+      significado: "Una persona que trabaja en un kiosco."
+    },
+    {
+      palabra: "kilovatio",
+      significado: "Una unidad de potencia eléctrica que equivale a 1000 vatios."
+    },
+    {
+      palabra: "kafkiano",
+      significado: "Que es característico de la obra del escritor Franz Kafka."
+    },
+    {
+      palabra: "kit",
+      significado: "Un conjunto de herramientas o materiales que se utilizan para realizar una tarea específica."
+    },
+    {
+      palabra: "kryptonita",
+      significado: "Una piedra ficticia que debilita a Superman."
+    },
+    {
+      palabra: "kefir",
+      significado: "Una bebida fermentada hecha de leche."
+    }
+  ];
