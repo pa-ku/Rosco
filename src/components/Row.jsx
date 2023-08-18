@@ -39,12 +39,12 @@ const Letter = styled.td`
 
 const CtnButton = styled.div`
   display: flex;
-  flex-direction: column;
+
   margin-left: 1em;
  @media(max-width:700px){
   margin-left: 0em;
-  font-size: 0.8em;
-
+padding: 2em 0em;
+  flex-direction: column;
 
   }
 `;

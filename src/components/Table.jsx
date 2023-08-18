@@ -75,6 +75,8 @@ const CtnInfo = styled.div`
   gap: 1em;
   background-color: #111;
   border-radius: 8px;
+  width: 100%;
+  text-align: center;
 `;
 
 const TxtInfo = styled.p`
