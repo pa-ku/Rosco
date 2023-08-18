@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const StatusContext = createContext();
 
 export function StatusProvider({ children }) {
