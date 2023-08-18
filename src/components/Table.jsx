@@ -26,6 +26,7 @@ function start(){
        { rollStatus  === true  && 
 
        <>
+       <Wrapper>
        <CtnInfo>
         <TxtInfo>Correctas: {rightAnswers}</TxtInfo>
         <TxtInfo>Incorrectas: {wrongAnswers}</TxtInfo>
@@ -44,6 +45,7 @@ function start(){
         <Row letter={"e"} ask={E[roll].significado} answer={E[roll].palabra} />
         <Row letter={"f"} ask={F[roll].significado} answer={F[roll].palabra} />
         </Tabl>
+        </Wrapper>
        </>
         }
 
@@ -53,6 +55,15 @@ function start(){
     </>
   );
 }
+
+
+const Wrapper = styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+`
 
 const Button = styled.button`
   margin-bottom: 2em;
@@ -82,6 +93,7 @@ const CtnInfo = styled.div`
 const TxtInfo = styled.p`
   font-weight: 600;
   font-size: 1.1em;
+  padding: 20px;
 `;
 
 const FirstRow = styled.td`
