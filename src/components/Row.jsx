@@ -42,33 +42,43 @@ const Letter = styled.td`
 
 const CtnButton = styled.div`
   display: flex;
-
   margin-left: 1em;
+
+  & *{
+    border: 4px solid #242424;
+  }
  @media(max-width:700px){
   margin-left: 0em;
-padding: 2em 0em;
+padding: 0.5em 0em;
   flex-direction: column;
+  font-size: 0.8em;
 
+  & *{
+  border: 0px;
+    border-radius: 0px;
+
+}
   }
 `;
 
 const RightBtn = styled.button`
-  border: 4px solid #242424;
   background-color: ${(props) => (props.backgcheck ? "#555" : "#77c700")};
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#acf144")};
   }
+  @media(max-width:700px){
+  
+  }
 `;
 const PassBtn = styled.button`
-  border: 4px solid #242424;
   background-color: ${(props) => (props.backgcheck ? "#555" : "#3f3f3f")};
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
   }
+
 `;
 const WrongBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#ff0000")};
-  border: 4px solid #242424;
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
   }
@@ -128,7 +138,7 @@ export default function Row({ letter, ask, answer }) {
             ✔
           </RightBtn>
           <PassBtn disabled={disable} backgcheck={disable} onClick={pass}>
-            PASS
+            O
           </PassBtn>
           <WrongBtn disabled={disable} backgcheck={disable} onClick={wrong}>
             ✖
