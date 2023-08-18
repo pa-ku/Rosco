@@ -94,6 +94,9 @@ const TxtInfo = styled.p`
   font-weight: 600;
   font-size: 1.1em;
   padding: 20px;
+  @media(max-width:700px){
+  padding: 5px;
+  }
 `;
 
 const FirstRow = styled.td`

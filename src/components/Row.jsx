@@ -9,6 +9,9 @@ const Ask = styled.td`
   text-align: center;
   padding-inline: 2em;
   background-color: #333;
+  @media(max-width:700px){
+  padding: 0px;
+  }
 `;
 
 const Answer = styled.td`
@@ -20,7 +23,7 @@ const Answer = styled.td`
   background-color: #333;
   background-color: ${(props) => props.backg};
   @media(max-width:700px){
-    
+    padding: 0px;
   }
 `;
 const Letter = styled.td`
