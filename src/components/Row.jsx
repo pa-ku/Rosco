@@ -44,11 +44,11 @@ const Answer = styled.td`
   color: floralwhite;
   background-color: #373e47;
   background-color: ${(props) => props.backg};
-
+    padding-block: 5px;
   z-index: 5;
  
   @media (max-width: 700px) {
-    padding-top: 5px;
+   
 
   }
 `;
@@ -142,16 +142,14 @@ const WrongBtn = styled.button`
 
 const Tr = styled.tr`
   width: 100%;
-  &:hover{
-    outline: 2px solid #3c4450;
-  }
+
 `;
 
 
 export default function Row({ letter, ask, answer }) {
   const [color, setColor] = useState();
   const [disable, setDisable] = useState();
-const [show, setShow] = useState()
+
 
   const {
     wrongAnswers,
