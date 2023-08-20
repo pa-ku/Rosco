@@ -161,14 +161,10 @@ const [show, setShow] = useState()
     }
   };
 
-  const RowShow = ()=>{
-  setShow(true)
-  }
-
 
   return (
     <>
-      <Tr onClick={RowShow}>
+      <Tr>
         <Letter>
         {letter}
        
@@ -179,8 +175,6 @@ const [show, setShow] = useState()
         <Ask backg={color}>{ask}</Ask>
         <Answer backg={color}>
           {answer}
-          
-          { show  === true  && 
         <CtnButton>
           <RightBtn disabled={disable} backgcheck={disable} onClick={right}>
             ✔
@@ -192,8 +186,7 @@ const [show, setShow] = useState()
             ✖
           </WrongBtn>
         </CtnButton>
-      
-          } 
+       
         </Answer>
         </Tr>
     
