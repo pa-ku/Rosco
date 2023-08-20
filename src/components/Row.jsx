@@ -18,7 +18,7 @@ const Letter = styled.td`
   }
 `;
 
-const Ask = styled.td`
+const Question = styled.td`
   border: 2px solid #1c2128;
   padding: 8px;
   text-align: center;
@@ -29,6 +29,10 @@ const Ask = styled.td`
   background-color: ${(props) => props.backg};
   @media (max-width: 700px) {
     padding: 5px;
+  }
+  &:first-letter {
+    text-transform: uppercase;
+  
   }
 `;
 
@@ -195,7 +199,7 @@ export default function Row({ letter, ask, answer }) {
           
           
           </Letter>
-        <Ask backg={color}>{ask}</Ask>
+        <Question backg={color}>{ask}</Question>
         <Answer backg={color}>
           {answer}
         <CtnButton>
