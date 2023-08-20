@@ -107,11 +107,12 @@ function start(){
   setRoll(Math.floor(Math.random()* 50))
   setRollStatus(true)
   console.log(roll);
+
 }
 
   return (
     <>
-    <Button onClick={()=>start()}>GENERAR</Button>
+    <Button onClick={start}>GENERAR</Button>
       
       
 

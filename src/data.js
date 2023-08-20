@@ -61,7 +61,7 @@ export const B = [
     { palabra: "Bebé", significado: "un recién nacido" },
     { palabra: "Bilingüe", significado: "que habla dos idiomas" },
     { palabra: "Blanco", significado: "el color de la nieve y la leche" },
-    { palabra: "Brisa", significado: "una brisa ligera" },
+    { palabra: "Brisa", significado: "Viento suave y agradable." },
     { palabra: "Bocado", significado: "una pequeña porción de comida" },
     { palabra: "Bastón", significado: "un palo largo que se usa para apoyarse al caminar" },
     { palabra: "Biblioteca", significado: "una colección de libros que se guarda en un edificio" },
@@ -577,7 +577,7 @@ export const I = [
     { palabra: "inicio", significado: "El comienzo de algo" },
     { palabra: "intuir", significado: "Saber algo sin tener pruebas" },
     { palabra: "imagen", significado: "Una representación visual de algo" },
-    { palabra: "inglés", significado: "Un idioma que se habla en el Reino Unido, Estados Unidos, Canadá, Australia y Nueva Zelanda" },
+    { palabra: "inglés", significado: "Un idioma que se habla en Nueva Zelanda" },
     { palabra: "infinito", significado: "Sin fin o límite" },
     { palabra: "irreal", significado: "Que no es real o verdadero" },
     { palabra: "imitación", significado: "El acto de copiar las acciones o palabras de otra persona" },
@@ -1558,7 +1558,7 @@ export const P = [
     },
     {
         palabra: "Piedra preciosa",
-        significado: "Mineral valioso utilizado en joyería por su belleza."
+        significado: "Sustancia que resulta de la mezcla o aleación de ese metal con otros metales y que se usa principalmente en joyería."
     },
     {
         palabra: "Pirámide",

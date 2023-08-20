@@ -20,12 +20,12 @@ const Letter = styled.td`
 
 const Question = styled.td`
   border: 2px solid #1c2128;
-  padding: 8px;
+
   text-align: center;
-  padding-inline: 2em;
+  padding-inline: 10px;
   background-color: #373e47;
   color: floralwhite;
-  padding-block: 2em;
+  padding-block: 1.7em;
   font-size: 1.2em;
   background-color: ${(props) => props.backg};
   @media (max-width: 700px) {
