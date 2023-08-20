@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
 
-
 const Letter = styled.td`
   border: 2px solid #1c2128;
   padding: 8px;
@@ -14,11 +13,10 @@ const Letter = styled.td`
   color: #befd95;
   background-color: #22272e;
 
-  @media(max-width:700px){
-  padding-inline: 20px;
+  @media (max-width: 700px) {
+    padding-inline: 20px;
   }
 `;
-
 
 const Ask = styled.td`
   border: 2px solid #1c2128;
@@ -28,8 +26,8 @@ const Ask = styled.td`
   background-color: #373e47;
   color: floralwhite;
   background-color: ${(props) => props.backg};
-  @media(max-width:700px){
-  padding: 5px;
+  @media (max-width: 700px) {
+    padding: 5px;
   }
 `;
 
@@ -42,8 +40,8 @@ const Answer = styled.td`
   color: floralwhite;
   background-color: #373e47;
   background-color: ${(props) => props.backg};
-  
-  @media(max-width:700px){
+  font-size: clamp(0.8em,1vw,1em);
+  @media (max-width: 700px) {
     padding: 5px;
   }
 `;
@@ -52,21 +50,21 @@ const CtnButton = styled.div`
   display: flex;
   margin-inline: 0.5em;
 
-  & *{
+  & * {
     border: 4px solid #120f25;
-
   }
- @media(max-width:700px){
-  margin-inline: 5px;
-  padding: 0px;
-  flex-direction: column;
-  font-size: 0.8em;
-  gap: 5px;
-  padding-block: 2em;
-  & *{
-  border: 0px;
-  padding: 10px 15px;
-}}
+  @media (max-width: 700px) {
+    margin-inline: 5px;
+    padding: 0px;
+    flex-direction: column;
+    font-size: 0.8em;
+    gap: 5px;
+    padding-block: 2em;
+    & * {
+      border: 0px;
+      padding: 10px 15px;
+    }
+  }
 `;
 
 const RightBtn = styled.button`
@@ -74,8 +72,7 @@ const RightBtn = styled.button`
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#acf144")};
   }
-  @media(max-width:700px){
-  
+  @media (max-width: 700px) {
   }
 `;
 const PassBtn = styled.button`
@@ -83,20 +80,18 @@ const PassBtn = styled.button`
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
   }
-
 `;
 const WrongBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#c71717")};
-  
+
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
   }
 `;
 
-
 const Tr = styled.tr`
-width: 100%;
-`
+  width: 100%;
+`;
 
 export default function Row({ letter, ask, answer }) {
   const [color, setColor] = useState();
@@ -147,7 +142,7 @@ export default function Row({ letter, ask, answer }) {
             ✔
           </RightBtn>
           <PassBtn disabled={disable} backgcheck={disable} onClick={pass}>
-            PASS
+            ⦿
           </PassBtn>
           <WrongBtn disabled={disable} backgcheck={disable} onClick={wrong}>
             ✖

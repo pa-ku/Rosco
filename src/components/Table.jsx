@@ -103,7 +103,7 @@ const Tabl = styled.table`
   background-color: #120f25;
   font-size: 0.9em;
   border-radius: 8px;
-
+  border: 2px solid #1c2128;
 `;
 
 const CtnInfo = styled.div`
@@ -115,7 +115,7 @@ const CtnInfo = styled.div`
   top: 0px;
   background-color: #120f25;
     border-radius: 8px;
-    border: 2px solid #1c2128;
+
   width: 100%;
   text-align: center;
   color: #a0c5fd;
