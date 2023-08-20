@@ -79,7 +79,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
+padding-bottom: 5em;
 `
 
 const Button = styled.button`
