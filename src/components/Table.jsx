@@ -108,6 +108,10 @@ const Tabl = styled.table`
   font-size: 0.9em;
   border-radius: 8px;
   border: 2px solid #1c2128;
+  @media(max-width:700px){
+   border:0px;
+   border-radius: 0px;
+  }
 `;
 
 const CtnInfo = styled.div`
@@ -119,7 +123,6 @@ const CtnInfo = styled.div`
   top: 0px;
   background-color: #111;
     border-radius: 8px;
-
   width: 100%;
   text-align: center;
   color: #a0c5fd;
@@ -127,6 +130,8 @@ const CtnInfo = styled.div`
   @media(max-width:700px){
     font-size: 1em;
     padding: 0.5em  2em;
+    border:0px;
+   border-radius: 0px;
   }
 `;
 

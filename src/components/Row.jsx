@@ -38,14 +38,18 @@ const Answer = styled.td`
   text-align: center;
   text-transform: uppercase;
   padding-inline: 1em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1em;
   color: floralwhite;
   background-color: #373e47;
   background-color: ${(props) => props.backg};
-  font-size: clamp(0.8em,1vw,1em);
+
   z-index: 5;
  
   @media (max-width: 700px) {
-    padding: 5px;
+    padding-top: 5px;
+    font-size: 0.8em;
   }
 `;
 
@@ -55,7 +59,7 @@ const CtnButton = styled.div`
   animation: ButtonShow 1s;
   z-index: 1;
   & * {
-    border: 4px solid #120f25;
+    border: 4px solid #373e47;
   }
   @media (max-width: 700px) {
     margin-inline: 5px;
@@ -64,6 +68,8 @@ const CtnButton = styled.div`
     font-size: 0.8em;
     gap: 5px;
     padding-block: 2em;
+
+  
     & * {
       border: 0px;
       padding: 10px 15px;
@@ -73,7 +79,7 @@ const CtnButton = styled.div`
   @keyframes ButtonShow {
    0%{
     opacity: 0;
-    translate: -100px;
+    translate: -25px;
    }
    100%{
     opacity: 1;
@@ -93,7 +99,7 @@ const RightBtn = styled.button`
   }
 `;
 const PassBtn = styled.button`
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#3f3f3f")};
+  background-color: ${(props) => (props.backgcheck ? "#555" : "#222")};
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
   }
@@ -163,7 +169,16 @@ const [show, setShow] = useState()
       <Tr onClick={RowShow}>
         <Letter>
         {letter}
-        { show  === true  && 
+       
+          
+          
+          
+          </Letter>
+        <Ask backg={color}>{ask}</Ask>
+        <Answer backg={color}>
+          {answer}
+          
+          { show  === true  && 
         <CtnButton>
           <RightBtn disabled={disable} backgcheck={disable} onClick={right}>
             ✔
@@ -177,12 +192,7 @@ const [show, setShow] = useState()
         </CtnButton>
       
           } 
-          
-          
-          
-          </Letter>
-        <Ask backg={color}>{ask}</Ask>
-        <Answer backg={color}>{answer}</Answer>
+        </Answer>
         </Tr>
     
       
