@@ -6,7 +6,6 @@ export function StatusProvider({ children }) {
   const [rightAnswers, setRightAnswers] = useState(0);
   const [pending, setPending] = useState(0);
 
-
   return (
     <StatusContext.Provider value={{wrongAnswers,setWrongAnswers,rightAnswers,setRightAnswers,pending,setPending}}>
       {children}

@@ -29,15 +29,15 @@ function start(){
        <>
        <Wrapper>
        <CtnInfo>
-        <TxtInfo>Correctas: {rightAnswers}</TxtInfo>
-        <TxtInfo>Incorrectas: {wrongAnswers}</TxtInfo>
-        <TxtInfo>Pendientes: {pending}</TxtInfo>
+        <TxtInfo>✔ {rightAnswers}</TxtInfo>
+        <TxtInfo>Pass {wrongAnswers}</TxtInfo>
+        <TxtInfo>✖ {pending}</TxtInfo>
       </CtnInfo>
       <Tabl>
          <tr>
-          <FirstRow>Letra</FirstRow>
-          <FirstRow>PREGUNTA</FirstRow>
-          <FirstRow>Respuesta</FirstRow>
+          <FirstRow>Word</FirstRow>
+          <FirstRow>Question</FirstRow>
+          <FirstRow>Answer</FirstRow>
         </tr>
        <Row letter={"a"} ask={A[roll].significado} answer={A[roll].palabra} />
         <Row letter={"b"} ask={B[roll].significado} answer={B[roll].palabra} /> 
@@ -54,10 +54,6 @@ function start(){
         </Wrapper>
        </>
         }
-
-
-
-      
     </>
   );
 }
@@ -69,6 +65,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
 `
 
 const Button = styled.button`
@@ -76,13 +73,18 @@ const Button = styled.button`
   background-color: #064ebb;
   color: #fff;
   font-weight: 700;
+  margin-top: 1em;
+  border-radius: px;
 `;
 
 const Tabl = styled.table`
   border-collapse: collapse;
   width: 100%;
   margin: auto;
-  background-color: #111;
+  background-color: #120f25;
+  font-size: 0.9em;
+  border-radius: 8px;
+  border: 2px solid #1c2128;
 `;
 
 const CtnInfo = styled.div`
@@ -90,10 +92,16 @@ const CtnInfo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1em;
-  background-color: #111;
-  border-radius: 8px;
+  background-color: #120f25;
+    border-radius: 8px;
+    margin-bottom: 1em;
   width: 100%;
   text-align: center;
+  color: #a0c5fd;
+
+  @media(max-width:700px){
+    font-size: 1em;
+  }
 `;
 
 const TxtInfo = styled.p`
@@ -106,13 +114,16 @@ const TxtInfo = styled.p`
 `;
 
 const FirstRow = styled.td`
-  background-color: #064ebb;
+  background-color: #120f25;
+  border-radius: 2px solid #333;
   font-size: 1.1em;
+  color: #a0c5fd;
   font-weight: 600;
   padding: 10px 20px;
-  border: 2px solid white;
+  border: 2px solid #1c2128;
   text-transform: uppercase;
   @media(max-width:700px){
   padding: 2px;
+  font-size: 0.9em;
   }
 `;
