@@ -20,7 +20,6 @@ const Letter = styled.td`
 
 const Question = styled.td`
   border: 2px solid #1c2128;
-
   text-align: center;
   padding-inline: 10px;
   background-color: #373e47;
@@ -28,6 +27,7 @@ const Question = styled.td`
   padding-block: 1.7em;
   font-size: 1.2em;
   background-color: ${(props) => props.backg};
+
   @media (max-width: 700px) {
     font-size: 1.1em;
   }
@@ -40,7 +40,6 @@ const Answer = styled.td`
   border: 2px solid #1c2128;
   text-align: center;
   text-transform: uppercase;
-
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 1em;
@@ -57,7 +56,6 @@ const Answer = styled.td`
 const CtnButton = styled.div`
   display: flex;
   margin-inline: 0.5em;
-
   animation: ButtonShow 1s;
   z-index: 1;
   display: flex;
@@ -68,6 +66,7 @@ const CtnButton = styled.div`
   & * {
     border: 4px solid #373e47;
   }
+
   @media (max-width: 700px) {
     margin-inline: 5px;
     padding: 0px;
@@ -101,9 +100,11 @@ const RightBtn = styled.button`
   border-top: 1px solid #3f6901;
   border-left: 1px solid #3f6901;
   text-shadow: 1px 1.5px #3f6901;
+
   &:hover {
     background-color: #acf144;
   }
+
   @media (max-width: 700px) {
   }
 `;
@@ -115,8 +116,9 @@ const PassBtn = styled.button`
   border-right: 2px solid #444;
   border-top: 1px solid #444;
   border-left: 1px solid #444;
-  text-shadow: 1px 1.5px #444; 
+  text-shadow: 1px 1.5px #444;
   width: 50%;
+
   &:hover {
     background-color: #6b6b6b;
   }
@@ -190,6 +192,7 @@ export default function Row({ letter, ask, answer }) {
         <Answer backg={color}>
           {answer}
           <CtnButton>
+
             <RightBtn display={disable} disabled={disable} onClick={right}>
               ✔
             </RightBtn>
@@ -198,11 +201,7 @@ export default function Row({ letter, ask, answer }) {
               ✖
             </WrongBtn>
 
-            <PassBtn
-              display={disablePending}
-              disabled={disablePending}
-              onClick={pass}
-            >
+            <PassBtn display={disablePending} disabled={disablePending} onClick={pass}>
               PASS
             </PassBtn>
           </CtnButton>
