@@ -29,9 +29,7 @@ const Question = styled.td`
   font-size: 1.2em;
   background-color: ${(props) => props.backg};
   @media (max-width: 700px) {
-
     font-size: 1.1em;
-
   }
   &:first-letter {
     text-transform: uppercase;
@@ -59,6 +57,7 @@ const Answer = styled.td`
 const CtnButton = styled.div`
   display: flex;
   margin-inline: 0.5em;
+
   animation: ButtonShow 1s;
   z-index: 1;
   display: flex;
@@ -74,7 +73,6 @@ const CtnButton = styled.div`
     padding: 0px;
     flex-direction: row;
     flex-wrap: wrap;
-
     gap: 5px;
     padding-block: 5px;
     & * {
@@ -96,44 +94,45 @@ const CtnButton = styled.div`
 `;
 
 const RightBtn = styled.button`
-display: ${props => props.display};
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#61a002")};
-  border-bottom: 2px solid ${(props) => (props.backgcheck ? "#333" : "#3f6901")};
-  border-right: 2px solid ${(props) => (props.backgcheck ? "#333" : "#3f6901")};
-  border-top: 1px solid ${(props) => (props.backgcheck ? "#333" : "#3f6901")};
-  border-left: 1px solid ${(props) => (props.backgcheck ? "#333" : "#3f6901")};
-  text-shadow: 1px 1.5px ${(props) => (props.backgcheck ? "#333" : "#3f6901")};
+  display: ${(props) => props.display};
+  background-color: #61a002;
+  border-bottom: 2px solid #3f6901;
+  border-right: 2px solid #3f6901;
+  border-top: 1px solid #3f6901;
+  border-left: 1px solid #3f6901;
+  text-shadow: 1px 1.5px #3f6901;
   &:hover {
-    background-color: ${(props) => (props.backgcheck ? "#555" : "#acf144")};
+    background-color: #acf144;
   }
   @media (max-width: 700px) {
   }
 `;
 
 const PassBtn = styled.button`
-display: ${props => props.display};
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#888")};
-  border-bottom: 2px solid ${(props) => (props.backgcheck ? "#333" : "#444")};
-  border-right: 2px solid ${(props) => (props.backgcheck ? "#333" : "#444")};
-  border-top: 1px solid ${(props) => (props.backgcheck ? "#333" : "#444")};
-  border-left: 1px solid ${(props) => (props.backgcheck ? "#333" : "#444")};
-  text-shadow: 1px 1.5px ${(props) => (props.backgcheck ? "#333" : "#444")};
-
+  display: ${(props) => props.display};
+  background-color: #888;
+  border-bottom: 2px solid #444;
+  border-right: 2px solid #444;
+  border-top: 1px solid #444;
+  border-left: 1px solid #444;
+  text-shadow: 1px 1.5px #444; 
+  width: 50%;
   &:hover {
-    background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
+    background-color: #6b6b6b;
   }
 `;
 
 const WrongBtn = styled.button`
-display: ${props => props.display};
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#c71717")};
-  border-bottom: 2px solid ${(props) => (props.backgcheck ? "#333" : "#8d0a0a")};
-  border-right: 2px solid ${(props) => (props.backgcheck ? "#333" : "#8d0a0a")};
-  border-top: 1px solid ${(props) => (props.backgcheck ? "#333" : "#8d0a0a")};
-  border-left: 1px solid ${(props) => (props.backgcheck ? "#333" : "#8d0a0a")};
-  text-shadow: 1px 1.5px ${(props) => (props.backgcheck ? "#333" : "#8d0a0a")};
+  display: ${(props) => props.display};
+  background-color: #c71717;
+  border-bottom: 2px solid #8d0a0a;
+  border-right: 2px solid #8d0a0a;
+  border-top: 1px solid #8d0a0a;
+  border-left: 1px solid #8d0a0a;
+  text-shadow: 1px 1.5px #8d0a0a;
+
   &:hover {
-    background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
+    background-color: #ff5a5a;
   }
 `;
 
@@ -158,7 +157,7 @@ export default function Row({ letter, ask, answer }) {
   const right = () => {
     setColor("#2c462e");
     setRightAnswers(rightAnswers + 1);
-    setDisable(prevState => "none");
+    setDisable((prevState) => "none");
     setDisablePending("none");
 
     if (pending > 0) {
@@ -174,10 +173,9 @@ export default function Row({ letter, ask, answer }) {
 
   const wrong = () => {
     setColor("#4d2626");
-    setDisable(prevState => "none");
+    setDisable((prevState) => "none");
     setDisablePending("none");
     setWrongAnswers((prevWrongAnswers) => wrongAnswers + 1);
-
 
     if (pending > 0) {
       setPending((prevPending) => pending - 1);
@@ -192,21 +190,20 @@ export default function Row({ letter, ask, answer }) {
         <Answer backg={color}>
           {answer}
           <CtnButton>
-            <RightBtn display={disable}  disabled={disable} backgcheck={disable} onClick={right}>
+            <RightBtn display={disable} disabled={disable} onClick={right}>
               ✔
             </RightBtn>
 
-            <WrongBtn display={disable} disabled={disable} backgcheck={disable} onClick={wrong}>
+            <WrongBtn display={disable} disabled={disable} onClick={wrong}>
               ✖
             </WrongBtn>
 
             <PassBtn
-            display={disablePending}
+              display={disablePending}
               disabled={disablePending}
-              backgcheck={disable}
               onClick={pass}
             >
-              ⦿
+              PASS
             </PassBtn>
           </CtnButton>
         </Answer>
