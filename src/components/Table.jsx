@@ -86,13 +86,17 @@ const Button = styled.button`
   margin-bottom: 2em;
   color: #fff;
   background-color: #064ebb;
-  border: 5px solid #0b397e;
+  border-bottom: 5px solid #0b397e;
+  border-right: 5px solid #0b397e;
   font-weight: 400;
   transition: 0.5s;
   margin-top: 1em;
 &:hover{
   background-color: #0b57c9;
-  border: 5px solid #184c99;
+
+  border-bottom: 5px solid ;
+  border-right: 5px solid ;
+  border-color:#184c99 ;
 }
 `;
 
