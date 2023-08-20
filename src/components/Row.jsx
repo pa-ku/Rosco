@@ -86,7 +86,7 @@ const PassBtn = styled.button`
 
 `;
 const WrongBtn = styled.button`
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#ff0000")};
+  background-color: ${(props) => (props.backgcheck ? "#555" : "#c71717")};
   
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
@@ -112,7 +112,7 @@ export default function Row({ letter, ask, answer }) {
   } = useContext(StatusContext); //acceder al contexto, y al value
 
   const right = () => {
-    setColor("#528800");
+    setColor("#2c462e");
     setRightAnswers(rightAnswers + 1);
     setDisable(true);
 
@@ -122,12 +122,12 @@ export default function Row({ letter, ask, answer }) {
   };
 
   const pass = () => {
-    setColor("#666666");
+    setColor("#4a5058");
     setPending((prevPending) => pending + 1);
   };
 
   const wrong = () => {
-    setColor("#b92424");
+    setColor("#4d2626");
     setDisable(true);
     setWrongAnswers((prevWrongAnswers) => wrongAnswers + 1);
     if (pending > 0) {
@@ -147,7 +147,7 @@ export default function Row({ letter, ask, answer }) {
             ✔
           </RightBtn>
           <PassBtn disabled={disable} backgcheck={disable} onClick={pass}>
-            O
+            PASS
           </PassBtn>
           <WrongBtn disabled={disable} backgcheck={disable} onClick={wrong}>
             ✖
