@@ -33,11 +33,11 @@ const Ask = styled.td`
 `;
 
 const Answer = styled.td`
+
   border: 2px solid #1c2128;
-  padding: 8px;
   text-align: center;
   text-transform: uppercase;
-  padding-inline: 1em;
+ 
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 1em;
@@ -58,6 +58,10 @@ const CtnButton = styled.div`
   margin-inline: 0.5em;
   animation: ButtonShow 1s;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   & * {
     border: 4px solid #373e47;
   }
@@ -67,9 +71,7 @@ const CtnButton = styled.div`
     flex-direction: column;
     font-size: 0.8em;
     gap: 5px;
-    padding-block: 2em;
-
-  
+    padding-block: 5px;
     & * {
       border: 0px;
       padding: 10px 15px;
