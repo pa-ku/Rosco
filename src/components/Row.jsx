@@ -49,7 +49,7 @@ const Answer = styled.td`
  
   @media (max-width: 700px) {
     padding-top: 5px;
-    font-size: 0.8em;
+
   }
 `;
 
@@ -68,8 +68,9 @@ const CtnButton = styled.div`
   @media (max-width: 700px) {
     margin-inline: 5px;
     padding: 0px;
-    flex-direction: column;
-    font-size: 0.8em;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     gap: 5px;
     padding-block: 5px;
     & * {
@@ -101,7 +102,7 @@ const RightBtn = styled.button`
   }
 `;
 const PassBtn = styled.button`
-  background-color: ${(props) => (props.backgcheck ? "#555" : "#222")};
+  background-color: ${(props) => (props.backgcheck ? "#555" : "#888")};
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
   }
@@ -179,12 +180,12 @@ const [show, setShow] = useState()
           <RightBtn disabled={disable} backgcheck={disable} onClick={right}>
             ✔
           </RightBtn>
-          <PassBtn disabled={disable} backgcheck={disable} onClick={pass}>
-            ⦿
-          </PassBtn>
           <WrongBtn disabled={disable} backgcheck={disable} onClick={wrong}>
             ✖
           </WrongBtn>
+          <PassBtn disabled={disable} backgcheck={disable} onClick={pass}>
+            ⦿
+          </PassBtn>
         </CtnButton>
        
         </Answer>
