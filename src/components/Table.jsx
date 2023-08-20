@@ -70,11 +70,16 @@ flex-direction: column;
 
 const Button = styled.button`
   margin-bottom: 2em;
-  background-color: #064ebb;
   color: #fff;
-  font-weight: 700;
+  background-color: #064ebb;
+  border: 5px solid #0b397e;
+  font-weight: 400;
+  transition: 0.5s;
   margin-top: 1em;
-  border-radius: px;
+&:hover{
+  background-color: #0b57c9;
+  border: 5px solid #184c99;
+}
 `;
 
 const Tabl = styled.table`
