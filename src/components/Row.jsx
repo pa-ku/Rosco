@@ -25,11 +25,13 @@ const Question = styled.td`
   padding-inline: 2em;
   background-color: #373e47;
   color: floralwhite;
+  padding-block: 2em;
   font-size: 1.2em;
   background-color: ${(props) => props.backg};
   @media (max-width: 700px) {
-    padding: 5px;
+
     font-size: 1.1em;
+
   }
   &:first-letter {
     text-transform: uppercase;
