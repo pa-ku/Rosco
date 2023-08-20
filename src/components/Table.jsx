@@ -97,6 +97,8 @@ const CtnInfo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1em;
+  position: sticky;
+  top: 0px;
   background-color: #120f25;
     border-radius: 8px;
     border: 2px solid #1c2128;
