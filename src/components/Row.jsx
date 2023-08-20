@@ -60,6 +60,7 @@ const CtnButton = styled.div`
   z-index: 1;
   display: flex;
   align-items: center;
+  gap: 5px;
   justify-content: center;
 
   & * {
@@ -95,20 +96,43 @@ const CtnButton = styled.div`
 
 const RightBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#61a002")};
+  border-bottom: 2px solid #497901;
+  border-right: 2px solid #497901;
+  border-top: 1px solid #497901;
+  border-left: 1px solid #497901;
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#acf144")};
   }
   @media (max-width: 700px) {
   }
 `;
+
+
+
 const PassBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#888")};
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+  border-top: 1px solid #555;
+  border-left: 1px solid #555;
+
+
+
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#6b6b6b")};
   }
 `;
+
+
+
+
+
 const WrongBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#c71717")};
+  border-bottom: 2px solid #8d0a0a;
+  border-right: 2px solid #8d0a0a;
+  border-top: 1px solid #8d0a0a;
+  border-left: 1px solid #8d0a0a;
 
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
