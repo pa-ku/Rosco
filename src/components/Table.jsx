@@ -100,7 +100,7 @@ const Tabl = styled.table`
   border-collapse: collapse;
   width: 100%;
   margin: auto;
-  background-color: #120f25;
+  background-color: #111;
   font-size: 0.9em;
   border-radius: 8px;
   border: 2px solid #1c2128;
@@ -113,7 +113,7 @@ const CtnInfo = styled.div`
   gap: 1em;
   position: sticky;
   top: 0px;
-  background-color: #120f25;
+  background-color: #111;
     border-radius: 8px;
 
   width: 100%;
@@ -137,7 +137,7 @@ const TxtInfo = styled.p`
 `;
 
 const FirstRow = styled.td`
-  background-color: #120f25;
+  background-color: #111;
   border-radius: 2px solid #333;
   font-size: 1.1em;
   color: #a0c5fd;

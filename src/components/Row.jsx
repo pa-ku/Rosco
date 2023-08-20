@@ -91,11 +91,17 @@ const WrongBtn = styled.button`
 
 const Tr = styled.tr`
   width: 100%;
+  cursor: pointer;
+  &:hover{
+    outline: 2px solid red;
+  }
 `;
+
 
 export default function Row({ letter, ask, answer }) {
   const [color, setColor] = useState();
   const [disable, setDisable] = useState();
+const [show, setShow] = useState()
 
   const {
     wrongAnswers,
@@ -130,13 +136,19 @@ export default function Row({ letter, ask, answer }) {
     }
   };
 
+  const RowShow = ()=>{
+   
+  }
+
+
   return (
     <>
-      <Tr>
+      <Tr onClick={RowShow()}>
         <Letter>{letter}</Letter>
         <Ask backg={color}>{ask}</Ask>
         <Answer backg={color}>{answer}</Answer>
 
+    
         <CtnButton>
           <RightBtn disabled={disable} backgcheck={disable} onClick={right}>
             ✔
@@ -148,7 +160,10 @@ export default function Row({ letter, ask, answer }) {
             ✖
           </WrongBtn>
         </CtnButton>
+       {/*  { show  === false  && 
+          } */}
       </Tr>
     </>
   );
 }
+
