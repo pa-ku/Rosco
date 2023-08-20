@@ -88,6 +88,7 @@ const Button = styled.button`
   background-color: #064ebb;
   border-bottom: 5px solid #0b397e;
   border-right: 5px solid #0b397e;
+  text-shadow: 1px 1px #0b397e;
   font-weight: 400;
   transition: 0.5s;
   margin-top: 1em;

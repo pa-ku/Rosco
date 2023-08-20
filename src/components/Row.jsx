@@ -96,10 +96,11 @@ const CtnButton = styled.div`
 
 const RightBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#61a002")};
-  border-bottom: 2px solid #497901;
-  border-right: 2px solid #497901;
-  border-top: 1px solid #497901;
-  border-left: 1px solid #497901;
+  border-bottom: 2px solid #3f6901;
+  border-right: 2px solid #3f6901;
+  border-top: 1px solid #3f6901;
+  border-left: 1px solid #3f6901;
+  text-shadow: 1px 1.5px #3f6901;
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#acf144")};
   }
@@ -115,7 +116,7 @@ const PassBtn = styled.button`
   border-right: 2px solid #555;
   border-top: 1px solid #555;
   border-left: 1px solid #555;
-
+  text-shadow: 1px 1.5px #555;
 
 
   &:hover {
@@ -133,7 +134,7 @@ const WrongBtn = styled.button`
   border-right: 2px solid #8d0a0a;
   border-top: 1px solid #8d0a0a;
   border-left: 1px solid #8d0a0a;
-
+  text-shadow: 1px 1.5px #8d0a0a;
   &:hover {
     background-color: ${(props) => (props.backgcheck ? "#555" : "#ff5a5a")};
   }
@@ -141,7 +142,6 @@ const WrongBtn = styled.button`
 
 const Tr = styled.tr`
   width: 100%;
-  cursor: pointer;
   &:hover{
     outline: 2px solid #3c4450;
   }
