@@ -30,8 +30,8 @@ function start(){
        <Wrapper>
        <CtnInfo>
         <TxtInfo>✔ {rightAnswers}</TxtInfo>
-        <TxtInfo>Pass {wrongAnswers}</TxtInfo>
-        <TxtInfo>✖ {pending}</TxtInfo>
+        <TxtInfo> ✖ {wrongAnswers}</TxtInfo>
+        <TxtInfo>Pass {pending}</TxtInfo>
       </CtnInfo>
       <Tabl>
          <tr>
