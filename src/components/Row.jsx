@@ -27,6 +27,7 @@ const Ask = styled.td`
   padding-inline: 2em;
   background-color: #373e47;
   color: floralwhite;
+  background-color: ${(props) => props.backg};
   @media(max-width:700px){
   padding: 5px;
   }
@@ -64,7 +65,7 @@ const CtnButton = styled.div`
   padding-block: 2em;
   & *{
   border: 0px;
-  padding: 100;
+  padding: 10px 15px;
 }}
 `;
 
@@ -138,7 +139,7 @@ export default function Row({ letter, ask, answer }) {
     <>
       <Tr>
         <Letter>{letter}</Letter>
-        <Ask>{ask}</Ask>
+        <Ask backg={color}>{ask}</Ask>
         <Answer backg={color}>{answer}</Answer>
 
         <CtnButton>

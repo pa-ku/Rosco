@@ -99,13 +99,14 @@ const CtnInfo = styled.div`
   gap: 1em;
   background-color: #120f25;
     border-radius: 8px;
-    margin-bottom: 1em;
+    border: 2px solid #1c2128;
   width: 100%;
   text-align: center;
   color: #a0c5fd;
 
   @media(max-width:700px){
     font-size: 1em;
+    padding: 0.5em  2em;
   }
 `;
 
@@ -129,6 +130,7 @@ const FirstRow = styled.td`
   text-transform: uppercase;
   @media(max-width:700px){
   padding: 2px;
+  padding-block: 0.8em;
   font-size: 0.9em;
   }
 `;
