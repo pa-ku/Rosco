@@ -12,7 +12,7 @@ const Letter = styled.td`
   font-weight: 700;
   color: #befd95;
   background-color: #22272e;
-
+ 
   @media (max-width: 700px) {
     padding-inline: 20px;
   }
@@ -25,6 +25,7 @@ const Ask = styled.td`
   padding-inline: 2em;
   background-color: #373e47;
   color: floralwhite;
+
   background-color: ${(props) => props.backg};
   @media (max-width: 700px) {
     padding: 5px;
@@ -41,6 +42,8 @@ const Answer = styled.td`
   background-color: #373e47;
   background-color: ${(props) => props.backg};
   font-size: clamp(0.8em,1vw,1em);
+  z-index: 5;
+ 
   @media (max-width: 700px) {
     padding: 5px;
   }
@@ -49,7 +52,8 @@ const Answer = styled.td`
 const CtnButton = styled.div`
   display: flex;
   margin-inline: 0.5em;
-
+  animation: ButtonShow 1s;
+  z-index: 1;
   & * {
     border: 4px solid #120f25;
   }
@@ -65,7 +69,20 @@ const CtnButton = styled.div`
       padding: 10px 15px;
     }
   }
+
+  @keyframes ButtonShow {
+   0%{
+    opacity: 0;
+    translate: -100px;
+   }
+   100%{
+    opacity: 1;
+    translate: 0px;
+   } 
+  }
 `;
+
+
 
 const RightBtn = styled.button`
   background-color: ${(props) => (props.backgcheck ? "#555" : "#61a002")};
@@ -93,7 +110,7 @@ const Tr = styled.tr`
   width: 100%;
   cursor: pointer;
   &:hover{
-    outline: 2px solid red;
+    outline: 2px solid #3c4450;
   }
 `;
 
@@ -137,18 +154,16 @@ const [show, setShow] = useState()
   };
 
   const RowShow = ()=>{
-   
+  setShow(true)
   }
 
 
   return (
     <>
-      <Tr onClick={RowShow()}>
-        <Letter>{letter}</Letter>
-        <Ask backg={color}>{ask}</Ask>
-        <Answer backg={color}>{answer}</Answer>
-
-    
+      <Tr onClick={RowShow}>
+        <Letter>
+        {letter}
+        { show  === true  && 
         <CtnButton>
           <RightBtn disabled={disable} backgcheck={disable} onClick={right}>
             ✔
@@ -160,9 +175,17 @@ const [show, setShow] = useState()
             ✖
           </WrongBtn>
         </CtnButton>
-       {/*  { show  === false  && 
-          } */}
-      </Tr>
+      
+          } 
+          
+          
+          
+          </Letter>
+        <Ask backg={color}>{ask}</Ask>
+        <Answer backg={color}>{answer}</Answer>
+        </Tr>
+    
+      
     </>
   );
 }
