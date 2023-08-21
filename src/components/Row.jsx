@@ -102,7 +102,7 @@ const RightBtn = styled.button`
   text-shadow: 1px 1.5px #3f6901;
 
   &:hover {
-    background-color: #acf144;
+    background-color: #7abd15;
   }
 
   @media (max-width: 700px) {
@@ -120,7 +120,8 @@ const PassBtn = styled.button`
 
 
   &:hover {
-    background-color: #6b6b6b;
+    background-color: #9e9e9e;
+    border-color:#444 ;
   }
 `;
 
@@ -134,7 +135,8 @@ const WrongBtn = styled.button`
   text-shadow: 1px 1.5px #8d0a0a;
 
   &:hover {
-    background-color: #ff5a5a;
+    background-color: #df2e2e;
+    border-color:#444 ;
   }
 `;
 
