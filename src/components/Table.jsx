@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
-import { A, B, C, D, E, F,G,H,I,J,K ,L,M,N,O,P,Q,R,S,T,U,V,W,Y,Z } from "../data";
+import { A, B, C, D, E, F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,Y,Z } from "../data";
 import Row from "./Row";
-
+import CachedIcon from '@mui/icons-material/Cached';
 
 const Wrapper = styled.div`
 width: 100%;
@@ -24,7 +24,15 @@ const Button = styled.button`
   text-shadow: 1px 1px #0b397e;
   font-weight: 400;
   transition: 0.5s;
-  margin-top: 1em;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 5px;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
 &:hover{
   background-color: #0b57c9;
 
@@ -97,33 +105,27 @@ const FirstRow = styled.td`
 
 
 
+
 export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
-
   const [roll, setRoll] = useState(0)
   const [rollStatus, setRollStatus] = useState(false)
 
 function start(){
   setRoll(Math.floor(Math.random()* 50))
   setRollStatus(true)
-  console.log(roll);
-
 }
 
   return (
     <>
-    <Button onClick={start}>GENERAR</Button>
-      
-      
-
+    <Button onClick={start}><CachedIcon></CachedIcon>GENERAR</Button>
        { rollStatus  === true  && 
-
        <>
        <Wrapper>
        <CtnInfo>
         <TxtInfo color="#acf144" >✔ {rightAnswers}</TxtInfo>
-        <TxtInfo color="#ff5a5a" >✖: {wrongAnswers}</TxtInfo>
-        <TxtInfo color="#b9b9b9" >PASS: {pending}</TxtInfo>
+        <TxtInfo color="#ff5a5a" >✖ {wrongAnswers}</TxtInfo>
+        <TxtInfo color="#b9b9b9" >PASS {pending}</TxtInfo>
       </CtnInfo>
       <Tabl>
          <tr>

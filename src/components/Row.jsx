@@ -12,7 +12,7 @@ const Letter = styled.td`
   font-weight: 700;
   color: #befd95;
   background-color: #22272e;
-
+  font-size: 1.2em;
   @media (max-width: 700px) {
     padding-inline: 20px;
   }
@@ -117,7 +117,7 @@ const PassBtn = styled.button`
   border-top: 1px solid #444;
   border-left: 1px solid #444;
   text-shadow: 1px 1.5px #444;
-  width: 50%;
+
 
   &:hover {
     background-color: #6b6b6b;
