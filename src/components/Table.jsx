@@ -120,7 +120,9 @@ export default function Table() {
               pending={pending}
             />
 
+  
             <Tabl>
+            <FirstTableRow />
               <tbody>{rowComponents}</tbody>
             </Tabl>
           </Wrapper>
