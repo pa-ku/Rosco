@@ -26,7 +26,7 @@ const Question = styled.td`
   color: floralwhite;
   padding-block: 1.7em;
   font-size: 1.2em;
-  background-color: ${(props) => props.backg};
+  background-color: ${(props) => props.$backg};
 
   @media (max-width: 700px) {
     font-size: 1.1em;
@@ -45,7 +45,7 @@ const Answer = styled.td`
   font-size: 1em;
   color: floralwhite;
   background-color: #373e47;
-  background-color: ${(props) => props.backg};
+  background-color: ${(props) => props.$backg};
   padding-block: 5px;
   z-index: 5;
 
@@ -62,21 +62,21 @@ const CtnButton = styled.div`
   align-items: center;
   gap: 5px;
   justify-content: center;
-
   & * {
+    font-size: 1.2em;
     border: 4px solid #373e47;
+    padding: 8px 14px;
+    font-weight: 600;
   }
 
   @media (max-width: 700px) {
     margin-inline: 5px;
-    padding: 0px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
     padding-block: 5px;
     & * {
       border: 0px;
-      padding: 10px 15px;
     }
   }
 
@@ -92,51 +92,19 @@ const CtnButton = styled.div`
   }
 `;
 
-const RightBtn = styled.button`
-  display: ${(props) => props.display};
-  background-color: #61a002;
-  border-bottom: 2px solid #3f6901;
-  border-right: 2px solid #3f6901;
-  border-top: 1px solid #3f6901;
-  border-left: 1px solid #3f6901;
-  text-shadow: 1px 1.5px #3f6901;
-
+const RowBtn = styled.button`
+  display: ${(props) => props.$display};
+  background-color: ${(props) => props.$backgcolor};
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  text-shadow: 1px 1px ${(props) => props.$bordercolor};
+  border-color: ${(props) => props.$bordercolor};
+  transition: 0.3s;
   &:hover {
-    background-color: #7abd15;
-  }
-
-  @media (max-width: 700px) {
-  }
-`;
-
-const PassBtn = styled.button`
-  display: ${(props) => props.display};
-  background-color: #888;
-  border-bottom: 2px solid #444;
-  border-right: 2px solid #444;
-  border-top: 1px solid #444;
-  border-left: 1px solid #444;
-  text-shadow: 1px 1.5px #444;
-
-
-  &:hover {
-    background-color: #9e9e9e;
-    border-color:#444 ;
-  }
-`;
-
-const WrongBtn = styled.button`
-  display: ${(props) => props.display};
-  background-color: #c71717;
-  border-bottom: 2px solid #8d0a0a;
-  border-right: 2px solid #8d0a0a;
-  border-top: 1px solid #8d0a0a;
-  border-left: 1px solid #8d0a0a;
-  text-shadow: 1px 1.5px #8d0a0a;
-
-  &:hover {
-    background-color: #df2e2e;
-    border-color:#444 ;
+    filter: brightness(1.1);
+    border-color: ${(props) => props.$bordercolor};
   }
 `;
 
@@ -144,68 +112,83 @@ const Tr = styled.tr`
   width: 100%;
 `;
 
-export default function Row({ letter, ask, answer }) {
+export default function Row ({  letter,
+  question,
+  answer}) {
+
   const [color, setColor] = useState();
-  const [disable, setDisable] = useState();
-  const [disablePending, setDisablePending] = useState();
+  const [display, setDisplay] = useState("block");
+  const [displayPending, setDisplayPending] = useState("block");
 
   const {
-    wrongAnswers,
     setWrongAnswers,
-    rightAnswers,
     setRightAnswers,
     pending,
     setPending,
-  } = useContext(StatusContext); //acceder al contexto, y al value
+  } = useContext(StatusContext);
 
-  const right = () => {
+ function rightBtn() {
     setColor("#2c462e");
-    setRightAnswers(rightAnswers + 1);
-    setDisable((prevState) => "none");
-    setDisablePending("none");
+    setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
+    setDisplay("none");
+    setDisplayPending("none");
 
     if (pending > 0) {
-      setPending((prevPending) => pending - 1);
+      setPending((prevPending) => prevPending - 1);
     }
-  };
+  }
 
-  const pass = () => {
-    setColor("#4a5058");
-    setPending((prevPending) => pending + 1);
-    setDisablePending("none");
-  };
-
-  const wrong = () => {
+  function wrongBtn() {
     setColor("#4d2626");
-    setDisable((prevState) => "none");
-    setDisablePending("none");
-    setWrongAnswers((prevWrongAnswers) => wrongAnswers + 1);
-
+    setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
+    setDisplayPending("none");
+    setDisplay("none");
     if (pending > 0) {
-      setPending((prevPending) => pending - 1);
+      setPending((prevPending) => prevPending - 1);
     }
-  };
+  }
 
+  const passBtn = () => {
+    setColor("#4a5058");
+    setPending((prevPending) => prevPending + 1);
+    setDisplayPending("none");
+  };
+  const beginsWithLetter = answer.toLowerCase().startsWith(letter);
   return (
     <>
       <Tr>
-        <Letter>{letter}</Letter>
-        <Question backg={color}>{ask}</Question>
-        <Answer backg={color}>
+        <Letter>{beginsWithLetter ? "Comienza " : ""} {letter}</Letter>
+
+        <Question $backg={color}> 
+          {question}</Question>
+
+        <Answer $backg={color}>
           {answer}
           <CtnButton>
-
-            <RightBtn display={disable} disabled={disable} onClick={right}>
+            <RowBtn
+              $bordercolor={"#3f6901"}
+              $backgcolor={"#61a002"}
+              $display={display}
+              onClick={rightBtn}
+            >
               ✔
-            </RightBtn>
-
-            <WrongBtn display={disable} disabled={disable} onClick={wrong}>
+            </RowBtn>
+            <RowBtn
+              $bordercolor={"#8d0a0a"}
+              $backgcolor={"#c71717"}
+              $display={display}
+              onClick={wrongBtn}
+            >
               ✖
-            </WrongBtn>
-
-            <PassBtn display={disablePending} disabled={disablePending} onClick={pass}>
+            </RowBtn>
+            <RowBtn
+              $bordercolor={"#555"}
+              $backgcolor={"#888"}
+              $display={displayPending}
+              onClick={passBtn}
+            >
               PASS
-            </PassBtn>
+            </RowBtn>
           </CtnButton>
         </Answer>
       </Tr>
