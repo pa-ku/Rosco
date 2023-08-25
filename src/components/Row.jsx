@@ -112,6 +112,11 @@ const Tr = styled.tr`
   width: 100%;
 `;
 
+const ContieneTxt = styled.p`
+font-size: 0.5em;
+
+`
+
 export default function Row ({  letter,
   question,
   answer}) {
@@ -157,7 +162,11 @@ export default function Row ({  letter,
   return (
     <>
       <Tr>
-        <Letter>{beginsWithLetter ? "Comienza " : ""} {letter}</Letter>
+        <Letter>
+          <ContieneTxt>    {beginsWithLetter ? " " : "CON"} </ContieneTxt>
+      
+          
+          {letter}</Letter>
 
         <Question $backg={color}> 
           {question}</Question>
