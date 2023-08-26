@@ -1,7 +1,8 @@
 import React from 'react'
 import { words } from "../words";
 import styled from "styled-components";
-
+import { Link } from 'react-router-dom';
+import HomeButton from '../components/HomeButton';
 
 //crear una tabla con todas las palabras, e informacion de cada palabra,
 //cantidad de palabras
@@ -13,7 +14,8 @@ import styled from "styled-components";
 export default function WordList() {
   return (
 <>
-
+<HomeButton />
+<h1>Lista en progreso</h1>
 </>
   )
 }
