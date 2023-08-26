@@ -28,7 +28,10 @@ export default function Game() {
 
 
 </Link>
-<MainButton logo={true} text="Roll" onClick={() => window.location.reload()} />
+<Link to={"/game"}>
+
+<MainButton logo={true} text="Roll" onClick={()=> alert("EN REPARACION")}/>
+</Link>
 </ButtonCtn>
 
 
