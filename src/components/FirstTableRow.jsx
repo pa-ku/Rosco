@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import AbcIcon from '@mui/icons-material/Abc';
 const FirstRow = styled.td`
   background-color: #111;
   border-radius: 2px solid #333;
@@ -21,7 +21,7 @@ export default function FirstTableRow() {
   return (
     <>
       <tr>
-        <FirstRow>Word</FirstRow>
+        <FirstRow></FirstRow>
         <FirstRow>Question</FirstRow>
         <FirstRow>Answer</FirstRow>
       </tr>
