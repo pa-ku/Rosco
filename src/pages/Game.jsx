@@ -13,8 +13,6 @@ justify-content: center;
 gap: 2em;
 margin-block:2em;
 `
-
-
 export default function Game() {
   return (
     <>

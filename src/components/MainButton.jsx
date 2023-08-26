@@ -1,12 +1,15 @@
 import React from 'react'
 import CachedIcon from "@mui/icons-material/Cached";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Btn = styled.button`
   color: #fff;
   background-color: #064ebb;
   border-bottom: 5px solid #0b397e;
   border-right: 5px solid #0b397e;
+  border-left: 2px solid #0b397e;
+  border-top: 2px solid #0b397e;
   text-shadow: 1px 1px #0b397e;
   font-weight: 400;
   transition: 0.5s;
@@ -14,15 +17,15 @@ const Btn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  gap: 7px;
-  padding: 12px 18px;
+  gap: 4px;
+  padding: 12px 15px;
   &:hover {
     background-color: #0b57c9;
     border-bottom: 5px solid;
     border-right: 5px solid;
     border-color: #184c99;
   }
+
 `;
 
 const ReloadLogo = styled(CachedIcon)`

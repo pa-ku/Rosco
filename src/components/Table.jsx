@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useState, useContext, useMemo} from "react";
+import { useState, useContext, useMemo } from "react";
 import { StatusContext } from "../context/StatusContext";
 import { words } from "../words";
 import Row from "./Row";
-import MainButton from "./MainButton";
 import TableInfo from "./TableInfo";
 import FirstTableRow from "./FirstTableRow";
 
@@ -30,29 +29,15 @@ const Tabl = styled.table`
   }
 `;
 
-const WordCount = styled.p`
-padding: 10px 20px;
-color: #be94e8;
-`
-
-
 const RowComponent = React.memo(({ letter, question, answer }) => {
   return <Row letter={letter} question={question} answer={answer} />;
 });
 export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
-  const [rollStatus, setRollStatus] = useState(false);
-  const [disableButton, setDisableButton] = useState();
-
-
-  const wordCount = words.length;
-
 
   const filterWords = useMemo(() => {
     return (words, letter) => {
-      return words.filter((item) =>
-        item.word.toLowerCase().includes(letter)
-      );
+      return words.filter((item) => item.word.toLowerCase().includes(letter));
     };
   }, []);
 
@@ -93,11 +78,6 @@ export default function Table() {
   const wordArrays = letters.map((letter) => filterWords(words, letter));
   const randomNumbers = wordArrays.map((arr) => rollNumber(arr.length));
 
-  function reload() {
-    setRollStatus(true);
-    setDisableButton("none");
-  }
-
   const handleAsk = (index, letter) => {
     return wordArrays[index][randomNumbers[index]].clue;
   };
@@ -118,24 +98,22 @@ export default function Table() {
 
   return (
     <>
-        <>
-        
-          <Wrapper>
-            <WordCount>Palabras disponibles {wordCount}</WordCount>
-            <TableInfo
-              rightAnswers={rightAnswers}
-              wrongAnswers={wrongAnswers}
-              pending={pending}
-              />
+      <>
+        <Wrapper>
+          <TableInfo
+            rightAnswers={rightAnswers}
+            wrongAnswers={wrongAnswers}
+            pending={pending}
+          />
 
-            <Tabl>
-              <tbody>
-                <FirstTableRow />
-                {rowComponents}
-              </tbody>
-            </Tabl>
-          </Wrapper>
-        </>
+          <Tabl>
+            <tbody>
+              <FirstTableRow />
+              {rowComponents}
+            </tbody>
+          </Tabl>
+        </Wrapper>
+      </>
     </>
   );
 }
