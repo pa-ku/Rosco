@@ -3,7 +3,9 @@ import styled from "styled-components";
 import MainButton from "../components/MainButton";
 import { Link } from "react-router-dom";
 import MainTitle from "../components/MainTitle";
-
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import SettingsIcon from '@mui/icons-material/Settings';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 const ButtonCtn = styled.div`
 display: flex;
@@ -27,9 +29,10 @@ export default function Home() {
 <ButtonCtn>
 
       <Link to={"/game"}>
-      <MainButton to="/home" text="START"  />
+      <MainButton logo={<PlayArrowIcon></PlayArrowIcon>} to="/home" text="START"  />
       </Link>
-      <MainButton text="WORD LIST" onClick={() => alert("AUN ESTAMOS TRABAJANDO EN ELLO")}/>
+      <MainButton text="CONFIG" logo={<SettingsIcon></SettingsIcon>} onClick={() => alert("AUN ESTAMOS TRABAJANDO EN ELLO")} />
+      <MainButton logo={<FormatListBulletedIcon></FormatListBulletedIcon>} text="WORD LIST" onClick={() => alert("AUN ESTAMOS TRABAJANDO EN ELLO")}/>
 </ButtonCtn>
     </>
   );

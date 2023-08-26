@@ -42,12 +42,12 @@ const ReloadLogo = styled(CachedIcon)`
 `;
 
 
-export default function MainButton({text,onClick,logo,altLogo}) {
+export default function MainButton({text,color,onClick,logo,altLogo}) {
   return (
     <>
      <Btn onClick={onClick}>
-{altLogo}
-      {logo === true &&
+{logo}
+      {altLogo === true &&
         <ReloadLogo ></ReloadLogo>
       }
         

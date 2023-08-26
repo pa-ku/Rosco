@@ -23,14 +23,14 @@ export default function Game() {
 
 <ButtonCtn>
 <Link to={"/"}>
-<MainButton text={"Home"} altLogo={<HomeIcon></HomeIcon>}/>
+<MainButton text={"Home"} logo={<HomeIcon></HomeIcon>}/>
 
 
 
 </Link>
 <Link to={"/game"}>
 
-<MainButton logo={true} text="Roll" onClick={()=> alert("SE ROMPIERON LOS DADOS PERO YA ESTAMOS TALLANDO UNOS NUEVOS, CON UN BUEN f5 FUNCIONA IGUAL")}/>
+<MainButton altLogo={true} text="Roll" onClick={()=> alert("SE ROMPIERON LOS DADOS PERO YA ESTAMOS TALLANDO UNOS NUEVOS, CON UN BUEN f5 FUNCIONA IGUAL")}/>
 </Link>
 </ButtonCtn>
 
