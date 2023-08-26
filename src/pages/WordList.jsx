@@ -10,7 +10,7 @@ import styled from "styled-components";
 //pushear palabras al local storage para luego subirlas
 //marcar palabras en el local storage para eliminar posteriormente
 
-export default function Words() {
+export default function WordList() {
   return (
 <>
 

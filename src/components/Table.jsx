@@ -118,13 +118,10 @@ export default function Table() {
 
   return (
     <>
-      <MainButton txt="ROLL" onClick={reload} btndisplay={disableButton} />
-  
-      {rollStatus === true && (
         <>
-          <MainButton txt="Restart" onClick={() => window.location.reload()} />
+        
           <Wrapper>
-            <WordCount>Palabras disponibles actualmente:  {wordCount}</WordCount>
+            <WordCount>Palabras disponibles {wordCount}</WordCount>
             <TableInfo
               rightAnswers={rightAnswers}
               wrongAnswers={wrongAnswers}
@@ -139,7 +136,6 @@ export default function Table() {
             </Tabl>
           </Wrapper>
         </>
-      )}
     </>
   );
 }

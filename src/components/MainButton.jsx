@@ -14,12 +14,9 @@ const Btn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  
   gap: 7px;
   padding: 12px 18px;
-  margin-block: 2em;
-
-  display: ${(props) => props.$btndisplay};
   &:hover {
     background-color: #0b57c9;
     border-bottom: 5px solid;
@@ -33,6 +30,7 @@ const ReloadLogo = styled(CachedIcon)`
   text-shadow: 2px 2px #14181d;
   rotate: 60deg;
   scale: 1.2;
+  display: block;
   @keyframes reload {
     0% {
       rotate: 40deg;
@@ -44,13 +42,17 @@ const ReloadLogo = styled(CachedIcon)`
 `;
 
 
-export default function MainButton({txt,onClick,btndisplay}) {
+export default function MainButton({text,onClick,logo,altLogo}) {
   return (
     <>
-     <Btn $btndisplay={btndisplay} onClick={onClick}>
-        <ReloadLogo></ReloadLogo>
+     <Btn onClick={onClick}>
+{altLogo}
+      {logo === true &&
+        <ReloadLogo ></ReloadLogo>
+      }
         
-        {txt}
+        
+        {text}
       </Btn>
     
     

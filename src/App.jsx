@@ -1,35 +1,19 @@
 import "./App.css";
-import Table from "./components/Table";
-import styled from "styled-components";
+import { Route,Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Game from "./pages/Game";
+import WordList from "./pages/WordList";
 
-
-const Title = styled.h1`
-  font-size: 2.5em;
-
-  font-weight: 500;
-  text-shadow: 3px 1px #064ebb;
-  padding-top: 1em;
-
-  @media (max-width: 700px) {
-    font-size: 2.5em;
-
-  }
-`;
-
-const Author = styled.p`
-color: #696969;
-padding-top: 1em;
-`
 
 function App() {
   return (
-    <>
-    <Author>
-    Con 💜 por pablito
+    <>  
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/game" element={<Game />} />
+      <Route path="/wordlist" element={<WordList />} />
+    </Routes>
 
-    </Author>
-      <Title>ROSQUEWE</Title>
-      <Table />
     </>
   );
 }
