@@ -28,7 +28,7 @@ function App() {
     Con 💜 por pablito
 
     </Author>
-      <Title>Anyone's Guess</Title>
+      <Title>Rosquewe</Title>
       <Table />
     </>
   );

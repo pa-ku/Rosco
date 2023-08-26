@@ -2101,10 +2101,6 @@ export const words = [
         clue: "Principio o causa de algo.",
     },
     {
-        word: "Oblicuo",
-        clue: "Inclinado u orientado en un ángulo.",
-    },
-    {
         word: "Orfanato",
         clue: "Institución que cuida y educa a niños huérfanos.",
     },
