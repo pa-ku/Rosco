@@ -28,7 +28,7 @@ function App() {
     Con 💜 por pablito
 
     </Author>
-      <Title>Rosquewe</Title>
+      <Title>ROSQUEWE</Title>
       <Table />
     </>
   );
