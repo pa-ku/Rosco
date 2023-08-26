@@ -41,7 +41,7 @@ export default function Table() {
   const filterWords = useMemo(() => {
     return (words, letter) => {
       return words.filter((item) =>
-        item.palabra.toLowerCase().includes(letter)
+        item.word.toLowerCase().includes(letter)
       );
     };
   }, []);
@@ -89,10 +89,10 @@ export default function Table() {
   }
 
   const handleAsk = (index, letter) => {
-    return wordArrays[index][randomNumbers[index]].significado;
+    return wordArrays[index][randomNumbers[index]].clue;
   };
   const handleAnswer = (index, letter) => {
-    return wordArrays[index][randomNumbers[index]].palabra;
+    return wordArrays[index][randomNumbers[index]].word;
   };
 
   const rowComponents = useMemo(() => {
