@@ -19,6 +19,7 @@ const Btn = styled.button`
   justify-content: center;
   gap: 4px;
   padding: 12px 15px;
+  width: 155px;
   &:hover {
     background-color: #0b57c9;
     border-bottom: 5px solid;
