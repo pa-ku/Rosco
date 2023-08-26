@@ -30,6 +30,12 @@ const Tabl = styled.table`
   }
 `;
 
+const WordCount = styled.p`
+padding: 10px 20px;
+color: #be94e8;
+`
+
+
 const RowComponent = React.memo(({ letter, question, answer }) => {
   return <Row letter={letter} question={question} answer={answer} />;
 });
@@ -37,6 +43,10 @@ export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
   const [rollStatus, setRollStatus] = useState(false);
   const [disableButton, setDisableButton] = useState();
+
+
+  const wordCount = words.length;
+
 
   const filterWords = useMemo(() => {
     return (words, letter) => {
@@ -109,16 +119,17 @@ export default function Table() {
   return (
     <>
       <MainButton txt="ROLL" onClick={reload} btndisplay={disableButton} />
-
+  
       {rollStatus === true && (
         <>
           <MainButton txt="Restart" onClick={() => window.location.reload()} />
           <Wrapper>
+            <WordCount>Palabras disponibles actualmente:  {wordCount}</WordCount>
             <TableInfo
               rightAnswers={rightAnswers}
               wrongAnswers={wrongAnswers}
               pending={pending}
-            />
+              />
 
             <Tabl>
               <tbody>
