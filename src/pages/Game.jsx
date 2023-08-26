@@ -30,7 +30,7 @@ export default function Game() {
 </Link>
 <Link to={"/game"}>
 
-<MainButton logo={true} text="Roll" onClick={()=> alert("EN REPARACION")}/>
+<MainButton logo={true} text="Roll" onClick={()=> alert("SE ROMPIERON LOS DADOS PERO YA ESTAMOS TALLANDO UNOS NUEVOS, CON UN BUEN f5 FUNCIONA IGUAL")}/>
 </Link>
 </ButtonCtn>
 
