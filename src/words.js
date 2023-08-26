@@ -1436,7 +1436,7 @@ export const words = [
 
     {
         word: "Llamarada",
-        clue: "Resplandor momentáneo y brillante.",
+        clue: "Llama grande que se forma de manera repentina y violenta, y que se apaga o pierde intensidad rápidamente.",
     },
     {
         word: "Legado",
@@ -2487,7 +2487,7 @@ export const words = [
     },
     {
         word: "Rey",
-        clue: "Monarca o gobernante de un país.",
+        clue: "Soberano de una monarquía o un reino.",
     },
     {
         word: "Reina",
@@ -2499,7 +2499,7 @@ export const words = [
     },
     {
         word: "Ruido",
-        clue: "Sonido desagradable o molesto.",
+        clue: "Alboroto o mezcla confusa de sonidos.",
     },
     {
         word: "Raza",
