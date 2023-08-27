@@ -24,6 +24,7 @@ const Cell = styled.td`
   padding: 10px;
   color: ${(props) => props.$color};
   text-align: left;
+  text-transform: ${props => props.$uppercase};
   background-color: ${props => props.$backgroundcolor};
   font-weight: 600;
 `;
