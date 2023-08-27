@@ -8,8 +8,8 @@ const Btn = styled.button`
   background-color: #064ebb;
   border-bottom: 5px solid #0b397e;
   border-right: 5px solid #0b397e;
-  border-left: 2px solid #0b397e;
-  border-top: 2px solid #0b397e;
+  border-left: 1px solid #0b397e;
+  border-top: 1px solid #0b397e;
   text-shadow: 1px 1px #0b397e;
   font-weight: 400;
   transition: 0.5s;
@@ -20,6 +20,7 @@ const Btn = styled.button`
   gap: 4px;
   padding: 12px 15px;
   width: 155px;
+  border-radius: 20px;
   &:hover {
     background-color: #0b57c9;
     border-bottom: 5px solid;
