@@ -22,12 +22,11 @@ const Btn = styled.button`
   width: 155px;
   border-radius: 20px;
   &:hover {
-    background-color: #0b57c9;
+  filter: brightness(1.2);
     border-bottom: 5px solid;
     border-right: 5px solid;
-    border-color: #184c99;
+    border-color: #0b397e;
   }
-
 `;
 
 const ReloadLogo = styled(CachedIcon)`

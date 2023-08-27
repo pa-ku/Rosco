@@ -14,7 +14,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-gap: 1.5em;
+gap: 1em;
 margin-block: 2em;
 `
 

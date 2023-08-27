@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useState, useContext, useMemo } from "react";
+import {  useContext, useMemo } from "react";
 import { StatusContext } from "../context/StatusContext";
 import { words } from "../words";
 import Row from "./Row";

@@ -13,6 +13,10 @@ align-items: center;
 justify-content: center;
 width: 100px;
 gap: 5px;
+&:hover{
+  filter: brightness(1.2);
+  color: white;
+}
 `
 
 export default function HomeButton() {

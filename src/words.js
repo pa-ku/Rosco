@@ -2209,10 +2209,6 @@ export const words = [
         clue: "Situación que requiere solución o resolución.",
     },
     {
-        word: "Piedra angular",
-        clue: "Primera piedra colocada en la construcción de un edificio, importante para su estabilidad.",
-    },
-    {
         word: "Princesa",
         clue: "Hija de un rey o una reina, con título nobiliario.",
     },
