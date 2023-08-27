@@ -11,5 +11,7 @@ export default function WordCount({ text }) {
     const wordCount = words.length;
   return (
     <Text>{text} {wordCount}</Text>
+
+    
   )
 }

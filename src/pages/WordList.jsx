@@ -14,8 +14,7 @@ import HomeButton from '../components/HomeButton';
 export default function WordList() {
   return (
 <>
-<HomeButton />
-<h1>Lista en progreso</h1>
+<HomeButton /> 
 </>
   )
 }
