@@ -94,6 +94,7 @@ const OptionWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 1em;
+
 `;
 
 const BtnContainer = styled.div`
@@ -102,6 +103,8 @@ const BtnContainer = styled.div`
   justify-content: center;
   gap: 1em;
   margin: auto;
+  flex-wrap: wrap;
+  max-width: 400px ;
 `;
 
 const Input = styled.input`
@@ -115,14 +118,16 @@ const Input = styled.input`
   border-right: 5px solid;
   border-left: 1px solid;
   border-top: 1px solid;
-  text-shadow: 1px 1px;
+  
+  font-weight: 600;
   border-color: #717171;
-  padding: 5px 12px;
+  color: #1c2128;
+  padding: 6px 14px;
   color: #222;
   font-size: 1.3rem;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
-  height: 40px;
+
 
   &:hover {
     filter: brightness(1.1);
@@ -130,6 +135,8 @@ const Input = styled.input`
   &:checked {
     background-color: #d5adfd;
     border-color: #a579d2;
+    border-color: ${props => props.$bordercolor};
+    background-color: ${props => props.$backgroundcolor};
   }
   &:nth-child(1)::before {
     content: "Easy";
@@ -140,6 +147,9 @@ const Input = styled.input`
   &:nth-child(3)::before {
     content: "Hard";
   }
+  &:nth-child(4)::before {
+    content: "Simpsons";
+  }
 `;
 
 const ModeCtn = styled.div`
@@ -148,7 +158,9 @@ const ModeCtn = styled.div`
   justify-content: center;
   flex-direction: column;
   color: #dfbeff;
+
   gap: 1em;
+  padding-inline: 1em;
 `;
 
 export default function Settings() {
@@ -166,7 +178,7 @@ export default function Settings() {
         <OptionWrapper>
           <OptionCtn>
             <Checkbox checked="cheked" id="Option1" type="checkbox" />
-            <Label htmlFor="Option1">Words containing the letter</Label>
+             <Label htmlFor="Option1">Words containing the letter</Label>
           </OptionCtn>
           <OptionCtn>
             <Checkbox id="Option2" type="checkbox" />
@@ -195,17 +207,29 @@ export default function Settings() {
               value={"hard"}
               onChange={modeHandler}
             />
+            <Input
+              name="mode"
+              type="radio"
+              value={"simpsons"}
+              onChange={modeHandler}
+              $backgroundcolor={"#ffd404"}
+              $bordercolor={"#c9a802"}
+            />
           </BtnContainer>
           {mode === "easy" && (
             <p>
-              Palabras Faciles, para debiles e indesisos. no hay palabras que
-              contengan
+              Para debiles e indesisos. Todas las palabras comienzan con la letra
             </p>
           )}
           {mode === "normal" && <p> 20% de que contengan la letra</p>}
           {mode === "hard" && (
             <p>
               Palabras mas dificiles, con 50% de que contengan la letra
+            </p>
+          )}
+          {mode === "simpsons" && (
+            <p>
+             Una lista especial con preguntas de los Simpsons Duh!
             </p>
           )}
         </ModeCtn>

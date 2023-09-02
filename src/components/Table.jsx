@@ -59,7 +59,7 @@ export default function Table() {
     "h",
     "i",
     "j",
-    "k",
+  /*   "k", */
     "l",
     "m",
     "n",
@@ -71,9 +71,9 @@ export default function Table() {
     "t",
     "u",
     "v",
-    "w",
+    /* "w", */
     "x",
-    "y",
+    /* "y", */
     "z",
   ];
   const wordArrays = letters.map((letter) => filterWords(words, letter));
