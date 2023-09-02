@@ -74,7 +74,7 @@ export default function Settings() {
         <MainTitle text={"SETTINGS"} />
         <OptionCtn>
           <Checkbox checked="cheked" id="Option1" type="checkbox" />
-          <Label htmlFor="Option1">Palabras que contengan la letra</Label>
+          <Label htmlFor="Option1">Palabras que contengan</Label>
         </OptionCtn>
         <OptionCtn>
           <Checkbox id="Option2" type="checkbox" />

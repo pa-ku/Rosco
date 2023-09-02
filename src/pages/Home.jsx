@@ -17,6 +17,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
+@media(max-width:700px){
+  height: 100vh;
+}
 `
 
 const ButtonCtn = styled.div`
@@ -42,7 +46,8 @@ animation: 2s start forwards 500ms;
 const Author = styled.p`
   color: #696969;
   animation: 2s start forwards 500ms;
-  padding-bottom: 3em;
+  margin-top: auto;
+  padding-top: 2em;
 `;
 
 const Img = styled.img`
@@ -62,6 +67,7 @@ width: 100%;
 
 
 @keyframes logoStart {
+
   100%{
     right: 50px;
     opacity: 1;
@@ -80,7 +86,6 @@ export default function Home() {
     
   
 
-      <Author>Con 💜 por paku</Author>
 
       <LogoContainer>
 
@@ -105,6 +110,7 @@ export default function Home() {
 
 
 </ButtonCtn>
+      <Author>Con 💜 por paku</Author>
 </Wrapper>
     </>
   );
