@@ -17,7 +17,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
+width: 100%;
+height: 100%;
 @media(max-width:700px){
   height: 80vh;
 }
@@ -83,12 +84,7 @@ export default function Home() {
   return (
     <>
     <Wrapper>
-    
-  
-
-
       <LogoContainer>
-
 <Img $right="150px" src={logoFirst} alt="" />
 <Img $right="-20px" src={logoSecond} alt="" />
 

@@ -20,6 +20,7 @@ const Btn = styled.button`
   gap: 4px;
   padding: 12px 15px;
   width: 155px;
+  cursor: pointer;
   border-radius: 20px;
   &:hover {
   filter: brightness(1.2);

@@ -102,6 +102,8 @@ const RowBtn = styled.button`
   text-shadow: 1px 1px ${(props) => props.$bordercolor};
   border-color: ${(props) => props.$bordercolor};
   transition: 0.3s;
+  border-radius: 8px;
+  cursor: pointer;
   &:hover {
     filter: brightness(1.1);
     border-color: ${(props) => props.$bordercolor};
