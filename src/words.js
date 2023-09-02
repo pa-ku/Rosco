@@ -3530,7 +3530,7 @@ export const words = [
 
 
     { word: "Votacion", clue: "Proceso de elegir o expesar su preferencia por una opción, candidato o propuesta en una elección o referéndum. Es una parte fundamental de los sistemas democráticos y permite a los ciudadanos ejercer su derecho a tomar decisiones políticas. " },
-    
+    4
     { word: "Vulnerable", clue: "Susceptible de ser dañado." },
     { word: "Voluble", clue: "persona que es cambiante o inconstante en su carácter, opinión o comportamiento. Puede referirse a alguien que cambia de manera rápida y frecuente sus decisiones o actitudes. " },
     { word: "Volquete", clue: "vehículo utilizado para transportar carga, como tierra, arena, escombros u otros materiales. Tiene una caja o plataforma en la parte trasera que puede elevarse o bascular para descargar su contenido. Se utiliza en la construcción, la minería y otros sectores industriales. " },

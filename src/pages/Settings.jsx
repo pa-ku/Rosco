@@ -122,7 +122,7 @@ const Input = styled.input`
   font-weight: 600;
   border-color: #717171;
   color: #1c2128;
-  padding: 6px 14px;
+  padding: 8px 14px;
   color: #222;
   font-size: 1.3rem;
   border-radius: 20px;
@@ -162,6 +162,10 @@ const ModeCtn = styled.div`
   gap: 1em;
   padding-inline: 1em;
 `;
+
+const ModeTxt = styled.p`
+color: #ffd404;
+`
 
 export default function Settings() {
   const [mode, setMode] = useState("normal");
@@ -228,9 +232,9 @@ export default function Settings() {
             </p>
           )}
           {mode === "simpsons" && (
-            <p>
+            <ModeTxt>
              Una lista especial con preguntas de los Simpsons Duh!
-            </p>
+            </ModeTxt>
           )}
         </ModeCtn>
 
