@@ -6,12 +6,19 @@ import HomeIcon from '@mui/icons-material/Home';
 const Button = styled(Link)`
 background-color: #064ebb;
 color: white;
-padding: 10px 15px;
-border-radius: 8px;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 100px;
+border-bottom: 3px solid;
+  border-right: 3px solid;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: #0b397e;
+  padding: 12px 15px;
+  width: 155px;
+  font-size: 1.5em;
+  font-weight: 400;
+  border-radius: 20px;
 gap: 5px;
 &:hover{
   filter: brightness(1.2);
@@ -19,7 +26,7 @@ gap: 5px;
 }
 `
 
-export default function HomeButton() {
+export default function LinkButton() {
   return (
     <Button to={"/"}> <HomeIcon></HomeIcon>Home</Button>
   )

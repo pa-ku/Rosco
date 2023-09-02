@@ -6,6 +6,7 @@ import MainTitle from "../components/MainTitle";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import diceLogo from "../assets/img/dice.png"
+import LinkButton from "../components/LinkButton";
 
 const Img = styled.img`
 height: 150px;
@@ -27,9 +28,7 @@ export default function Game() {
     <>
 
       <ButtonCtn>
-        <Link to={"/"}>
-          <MainButton text={"Home"} logo={<HomeIcon></HomeIcon>} />
-        </Link>
+        <LinkButton />
         <Link to={"/game"}>
           <MainButton
             altLogo={true}

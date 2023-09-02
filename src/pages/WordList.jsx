@@ -1,9 +1,10 @@
 import React from "react";
 import { words } from "../words";
 import styled from "styled-components";
-import HomeButton from "../components/HomeButton";
+
 import WordCount from "../components/WordCount";
-import MainButton from "../components/MainButton";
+
+import LinkButton from "../components/LinkButton";
 
 //crear una tabla con todas las palabras, e informacion de cada palabra,
 //cantidad de palabras
@@ -27,6 +28,9 @@ const Cell = styled.td`
   text-transform: ${props => props.$uppercase};
   background-color: ${props => props.$backgroundcolor};
   font-weight: 600;
+  @media(max-width:700px){
+    font-size: 0.8rem;
+  }
 `;
 
 const Header = styled.div`
@@ -92,7 +96,7 @@ export default function WordList() {
   return (
     <>
       <Header>
-        <HomeButton />
+     <LinkButton />
         <WordCount text={"Palabras totales:"} />
       </Header>
 
@@ -114,8 +118,8 @@ export default function WordList() {
         <tbody>
           {words.map((words, index) => (
             <Row key={index}>
-              <Cell $backgroundcolor="#649aea" $color="#1c2128">{index}</Cell>
-              <Cell $uppercase="uppercase" $color="#cbb2ff">{words.word}</Cell>
+              <Cell $backgroundcolor="#111" $color="#a0c5fd">{index}</Cell>
+              <Cell $uppercase="uppercase" $color="#a0c5fd">{words.word}</Cell>
               <Cell $color="#f8ebfe"> {words.clue}</Cell>
             </Row>
           ))}
