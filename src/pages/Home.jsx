@@ -19,7 +19,7 @@ justify-content: center;
 flex-direction: column;
 
 @media(max-width:700px){
-  height: 100vh;
+  height: 80vh;
 }
 `
 
