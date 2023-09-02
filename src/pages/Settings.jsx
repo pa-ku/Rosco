@@ -33,6 +33,8 @@ const Checkbox = styled.input`
   border-radius: 10px;
 position: relative;
 transition: 1s;
+outline: 2px solid #103c7c;
+border: 2px solid #4387ed;
   &:checked{
   background-color: #4387ed;
   }
@@ -41,28 +43,32 @@ transition: 1s;
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 5px;
-    right: 20px;
+    top: 3px;
+    right: 19px;
+   
     border-radius: 100%;
     background-color: #4387ed;
     animation: 500ms unCheked ;
+
   }
   &:checked::before{
     background-color: #a0c5fd;
     animation: 500ms cheked forwards;
-   
+
   }
   @keyframes cheked {
    100%{
-    right: 5px;
+    right: 1px;
+    border: 2px solid #a0c5fd;
    } 
   }
   @keyframes unCheked {
    0%{
-    right: 5px;
+    right: 9px;
+  
    } 
    100%{
-    right: 20px;
+    right: 19px;
    } 
   }
 `;
