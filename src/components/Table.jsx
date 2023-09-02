@@ -7,6 +7,7 @@ import Row from "./Row";
 import TableInfo from "./TableInfo";
 import FirstTableRow from "./FirstTableRow";
 
+
 const Wrapper = styled.div`
   width: 100%;
   display: flex;

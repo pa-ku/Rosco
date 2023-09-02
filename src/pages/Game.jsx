@@ -5,6 +5,12 @@ import MainButton from "../components/MainButton";
 import MainTitle from "../components/MainTitle";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
+import diceLogo from "../assets/img/dice.png"
+
+const Img = styled.img`
+height: 150px;
+padding-top: 1em ;
+`
 
 const ButtonCtn = styled.div`
   display: flex;
@@ -13,10 +19,12 @@ const ButtonCtn = styled.div`
   gap: 2em;
   margin-block: 2em;
 `;
+
+
+
 export default function Game() {
   return (
     <>
-      <MainTitle text={"ROSQUEWE"} />
 
       <ButtonCtn>
         <Link to={"/"}>
