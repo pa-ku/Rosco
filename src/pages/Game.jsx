@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Table from "../components/Table";
-import MainButton from "../components/MainButton";
-import MainTitle from "../components/MainTitle";
-import { Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
-import diceLogo from "../assets/img/dice.png"
 import LinkButton from "../components/LinkButton";
+import HomeIcon from "@mui/icons-material/Home";
+import ReloadLogo from "@mui/icons-material/Cached";
+
 
 const Img = styled.img`
 height: 150px;
@@ -21,6 +19,21 @@ const ButtonCtn = styled.div`
   margin-block: 2em;
 `;
 
+const ReloadIcon = styled(ReloadLogo)`
+  animation: reload 1s;
+  text-shadow: 2px 2px #14181d;
+  rotate: 60deg;
+  scale: 1.2;
+  display: block;
+  @keyframes reload {
+    0% {
+      rotate: 40deg;
+    }
+    100% {
+      rotate: 420deg;
+    }
+  }
+`;
 
 
 export default function Game() {
@@ -28,15 +41,8 @@ export default function Game() {
     <>
 
       <ButtonCtn>
-        <LinkButton />
-        <Link to={"/game"}>
-          <MainButton
-            altLogo={true}
-            text="Roll"
-            onClick={()=>window.location.reload()
-            }
-          />
-        </Link>
+         <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
+        <LinkButton to={"/game"} logo={<ReloadIcon></ReloadIcon>} text="Roll" onClick={()=>window.location.reload()}/>
       </ButtonCtn>
 
       <Table />

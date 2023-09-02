@@ -139,7 +139,6 @@ export default function Row ({  letter,
     setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
     setDisplay("none");
     setDisplayPending("none");
-
     if (pending > 0) {
       setPending((prevPending) => prevPending - 1);
     }

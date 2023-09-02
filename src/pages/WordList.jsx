@@ -1,10 +1,10 @@
 import React from "react";
 import { words } from "../words";
 import styled from "styled-components";
-
 import WordCount from "../components/WordCount";
-
 import LinkButton from "../components/LinkButton";
+import HomeIcon from "@mui/icons-material/Home";
+import Title from "../components/Title";
 
 //crear una tabla con todas las palabras, e informacion de cada palabra,
 //cantidad de palabras
@@ -95,8 +95,10 @@ export default function WordList() {
 
   return (
     <>
+<Title text={"WORD LIST"} />
+
       <Header>
-     <LinkButton />
+      <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
         <WordCount text={"Palabras totales:"} />
       </Header>
 

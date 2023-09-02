@@ -35,3 +35,10 @@ body {
 }
 
 
+
+
+@keyframes start {
+  100%{
+    opacity: 1;
+  }
+}
