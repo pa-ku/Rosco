@@ -6,6 +6,9 @@ import StartIcon from "@mui/icons-material/SportsEsports";
 import logoFirst from "../assets/img/first.png";
 import logoSecond from "../assets/img/second.png";
 import LinkButton from "../components/LinkButton";
+import startSound from "../assets/sounds/start-sound.mp3";
+import randomSound from "../assets/sounds/random_word.wav";
+import useSound from "use-sound";
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +22,6 @@ const Wrapper = styled.div`
     height: 80vh;
   }
 `;
-
 const ButtonCtn = styled.div`
   display: flex;
   align-items: center;
@@ -29,7 +31,6 @@ const ButtonCtn = styled.div`
   opacity: 0;
   animation: 1s start forwards;
 `;
-
 const Author = styled.p`
   color: #696969;
   animation: 2s start forwards 500ms;
@@ -38,7 +39,6 @@ const Author = styled.p`
   opacity: 0;
   animation: 1s start forwards;
 `;
-
 const Img = styled.img`
   height: 150px;
   position: absolute;
@@ -63,23 +63,23 @@ const LogoContainer = styled.div`
       scale: 0.9;
     }
   }
-  @keyframes Bounce{
-  70%{
-    rotate: 190deg;
-  }
-  100%{
-    rotate: 180deg;
-  }
+  @keyframes Bounce {
+    70% {
+      rotate: 190deg;
+    }
+    100% {
+      rotate: 180deg;
+    }
   }
 `;
 
-
-
 export default function Home() {
+  //Sounds
+
+  const [random] = useSound(randomSound, { volume: 0.4 });
+
   return (
     <>
-
- 
       <Wrapper>
         <LogoContainer>
           <Img $right="70px" src={logoFirst} alt="" />
@@ -87,7 +87,12 @@ export default function Home() {
         </LogoContainer>
 
         <ButtonCtn>
-          <LinkButton to="/game" text="Start" logo={<StartIcon></StartIcon>} />
+          <LinkButton
+            onClick={random}
+            to="/game"
+            text="Start"
+            logo={<StartIcon></StartIcon>}
+          />
           <LinkButton
             to={"/wordlist"}
             text="Words"

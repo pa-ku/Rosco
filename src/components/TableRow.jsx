@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
+import useSound from "use-sound";
+import rightSound from "../assets/sounds/right.wav"
+import errorSound from "../assets/sounds/error.wav"
+
 
 const Letter = styled.td`
   border: 2px solid #1c2128;
@@ -115,30 +119,23 @@ const Tr = styled.tr`
 `;
 
 const ContieneTxt = styled.p`
-font-size: 0.5em;
+  font-size: 0.5em;
+`;
 
-`
-
-export default function Row ({  letter,
-  question,
-  answer}) {
-
+export default function TableRow({ letter, question, answer }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
   const [displayPending, setDisplayPending] = useState("block");
 
-  const {
-    setWrongAnswers,
-    setRightAnswers,
-    pending,
-    setPending,
-  } = useContext(StatusContext);
+  const { setWrongAnswers, setRightAnswers, pending, setPending } =
+    useContext(StatusContext);
 
- function rightBtn() {
+  function rightBtn() {
     setColor("#2c462e");
     setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
     setDisplay("none");
     setDisplayPending("none");
+    right();
     if (pending > 0) {
       setPending((prevPending) => prevPending - 1);
     }
@@ -149,6 +146,7 @@ export default function Row ({  letter,
     setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
     setDisplayPending("none");
     setDisplay("none");
+    error();
     if (pending > 0) {
       setPending((prevPending) => prevPending - 1);
     }
@@ -160,17 +158,21 @@ export default function Row ({  letter,
     setDisplayPending("none");
   };
   const beginsWithLetter = answer.toLowerCase().startsWith(letter);
+
+  //Sounds
+  const [right] = useSound(rightSound, { volume: 0.4 });
+  const [error] = useSound(errorSound, { volume: 0.4 });
+
   return (
     <>
       <Tr>
         <Letter>
-          <ContieneTxt>    {beginsWithLetter ? " " : "CON"} </ContieneTxt>
-      
-          
-          {letter}</Letter>
+          <ContieneTxt> {beginsWithLetter ? " " : "CON"} </ContieneTxt>
 
-        <Question $backg={color}> 
-          {question}</Question>
+          {letter}
+        </Letter>
+
+        <Question $backg={color}>{question}</Question>
 
         <Answer $backg={color}>
           {answer}

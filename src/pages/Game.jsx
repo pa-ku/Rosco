@@ -6,11 +6,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import ReloadLogo from "@mui/icons-material/Cached";
 
 
-const Img = styled.img`
-height: 150px;
-padding-top: 1em ;
-`
-
 const ButtonCtn = styled.div`
   display: flex;
   align-items: center;
@@ -18,7 +13,6 @@ const ButtonCtn = styled.div`
   gap: 2em;
   margin-block: 2em;
 `;
-
 const ReloadIcon = styled(ReloadLogo)`
   animation: reload 1s;
   text-shadow: 2px 2px #14181d;
@@ -35,14 +29,17 @@ const ReloadIcon = styled(ReloadLogo)`
   }
 `;
 
-
 export default function Game() {
   return (
     <>
-
       <ButtonCtn>
-         <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
-        <LinkButton to={"/game"} logo={<ReloadIcon></ReloadIcon>} text="Roll" onClick={()=>window.location.reload()}/>
+        <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
+        <LinkButton
+          to={"/game"}
+          logo={<ReloadIcon></ReloadIcon>}
+          text="Roll"
+          onClick={() => window.location.reload()}
+        />
       </ButtonCtn>
 
       <Table />

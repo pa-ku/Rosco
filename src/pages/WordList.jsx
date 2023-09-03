@@ -5,7 +5,6 @@ import WordCount from "../components/WordCount";
 import LinkButton from "../components/LinkButton";
 import HomeIcon from "@mui/icons-material/Home";
 import Title from "../components/Title";
-import { useState } from "react";
 
 //crear una tabla con todas las palabras, e informacion de cada palabra,
 //cantidad de palabras
@@ -17,11 +16,9 @@ const Table = styled.table`
   border: 2px solid #1c2128;
   width: 100%;
 `;
-
 const Row = styled.tr`
   background-color: #00193e29;
 `;
-
 const Cell = styled.td`
   border: 1px solid #0b397e;
   padding: 10px;
@@ -34,28 +31,6 @@ const Cell = styled.td`
     font-size: 0.8rem;
   }
 `;
-
-const Column = styled.th`
-  background-color: #00193e29;
-  width: 50px;
-`;
-
-const CellColumn = styled.td`
-  display: flex;
-  flex-wrap: wrap;
-  width: 50px;
-  border: 1px solid #0b397e;
-  padding: 10px;
-  color: ${(props) => props.$color};
-  text-align: left;
-  text-transform: ${(props) => props.$uppercase};
-  background-color: ${(props) => props.$backgroundcolor};
-  font-weight: 600;
-  @media (max-width: 700px) {
-    font-size: 0.8rem;
-  }
-`;
-
 const Header = styled.div`
   display: flex;
   align-items: center;
@@ -63,14 +38,12 @@ const Header = styled.div`
   padding-block: 2em;
   flex-direction: column;
 `;
-
 const CountWrapper = styled.div`
 display: flex;
 flex-wrap: wrap;
 flex-grow: 1;
 width: 100%;
 `
-
 const CountContainer  = styled.div`
 display: flex;
 align-items: center;

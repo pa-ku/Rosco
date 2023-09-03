@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {  useContext, useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { StatusContext } from "../context/StatusContext";
 import { words } from "../words";
-import Row from "./Row";
+import Row from "./TableRow";
 import TableInfo from "./TableInfo";
 import FirstTableRow from "./FirstTableRow";
-
 
 const Wrapper = styled.div`
   width: 100%;
@@ -59,7 +58,7 @@ export default function Table() {
     "h",
     "i",
     "j",
-  /*   "k", */
+    /*   "k", */
     "l",
     "m",
     "n",

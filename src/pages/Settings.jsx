@@ -4,7 +4,9 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import HomeIcon from "@mui/icons-material/Home";
 import { useState } from "react";
-
+import selectSound from "../assets/sounds/select-sound.wav";
+import dohSound from "../assets/sounds/doh.mp3";
+import useSound from "use-sound";
 
 const Wrapper = styled.div`
   display: flex;
@@ -38,8 +40,7 @@ const Checkbox = styled.input`
   position: relative;
   transition: 1s;
   outline: 2px solid #814fb3;
-  &:hover{
-
+  &:hover {
     filter: brightness(1.1);
   }
   &:checked {
@@ -55,17 +56,15 @@ const Checkbox = styled.input`
     border-radius: 100%;
     background-color: #c791fd;
     animation: 700ms unCheked;
-  
   }
   &:checked::before {
     animation: 600ms cheked forwards;
   }
   @keyframes cheked {
-    
-    50%{
+    50% {
       width: 17px;
     }
-    
+
     100% {
       right: 3px;
       width: 14px;
@@ -76,7 +75,7 @@ const Checkbox = styled.input`
     0% {
       right: 5px;
     }
-    50%{
+    50% {
       width: 17px;
     }
     100% {
@@ -86,15 +85,12 @@ const Checkbox = styled.input`
   }
 `;
 
-
-
 const OptionWrapper = styled.div`
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
   gap: 1em;
-
 `;
 
 const BtnContainer = styled.div`
@@ -104,7 +100,7 @@ const BtnContainer = styled.div`
   gap: 1em;
   margin: auto;
   flex-wrap: wrap;
-  max-width: 400px ;
+  max-width: 400px;
 `;
 
 const Input = styled.input`
@@ -118,16 +114,15 @@ const Input = styled.input`
   border-right: 5px solid;
   border-left: 1px solid;
   border-top: 1px solid;
-  
+
   font-weight: 600;
   border-color: #717171;
   color: #1c2128;
   padding: 8px 14px;
   color: #222;
   font-size: 1.3rem;
-  border-radius: 20px;
+  border-radius: 15px;
   cursor: pointer;
-
 
   &:hover {
     filter: brightness(1.1);
@@ -135,8 +130,8 @@ const Input = styled.input`
   &:checked {
     background-color: #d5adfd;
     border-color: #a579d2;
-    border-color: ${props => props.$bordercolor};
-    background-color: ${props => props.$backgroundcolor};
+    border-color: ${(props) => props.$bordercolor};
+    background-color: ${(props) => props.$backgroundcolor};
   }
   &:nth-child(1)::before {
     content: "Easy";
@@ -148,7 +143,7 @@ const Input = styled.input`
     content: "Hard";
   }
   &:nth-child(4)::before {
-    content: "Simpsons";
+    content: "Simpson";
   }
 `;
 
@@ -164,14 +159,18 @@ const ModeCtn = styled.div`
 `;
 
 const ModeTxt = styled.p`
-color: #ffd404;
-`
+  color: #ffd404;
+`;
 
 export default function Settings() {
   const [mode, setMode] = useState("normal");
+  const [select] = useSound(selectSound, { volume: 0.4 });
+  const [doh] = useSound(dohSound, { volume: 0.2 });
+
 
   function modeHandler(event) {
-    setMode(prevMode => event.target.value);
+    setMode((prevMode) => event.target.value);
+
   }
 
   return (
@@ -181,8 +180,8 @@ export default function Settings() {
 
         <OptionWrapper>
           <OptionCtn>
-            <Checkbox checked="cheked" id="Option1" type="checkbox" />
-             <Label htmlFor="Option1">Words containing the letter</Label>
+            <Checkbox onClick={select} checked="cheked" id="Option1" type="checkbox" />
+            <Label htmlFor="Option1">Words containing the letter</Label>
           </OptionCtn>
           <OptionCtn>
             <Checkbox id="Option2" type="checkbox" />
@@ -197,20 +196,25 @@ export default function Settings() {
               type="radio"
               value={"easy"}
               onChange={modeHandler}
+              onClick={select}
             />
             <Input
               name="mode"
               type="radio"
               value={"normal"}
               onChange={modeHandler}
-              defaultChecked 
+              defaultChecked
+              onClick={select}
             />
             <Input
               name="mode"
               type="radio"
               value={"hard"}
-              onChange={modeHandler}
+              onChange={modeHandler }
+              onClick={select}
+             
             />
+
             <Input
               name="mode"
               type="radio"
@@ -218,22 +222,22 @@ export default function Settings() {
               onChange={modeHandler}
               $backgroundcolor={"#ffd404"}
               $bordercolor={"#c9a802"}
+              onClick={doh}
             />
           </BtnContainer>
           {mode === "easy" && (
             <p>
-              Para debiles e indesisos. Todas las palabras comienzan con la letra
+              Para debiles e indesisos. Todas las palabras comienzan con la
+              letra
             </p>
           )}
           {mode === "normal" && <p> 20% de que contengan la letra</p>}
           {mode === "hard" && (
-            <p>
-              Palabras mas dificiles, con 50% de que contengan la letra
-            </p>
+            <p>Palabras mas dificiles, con 50% de que contengan la letra</p>
           )}
           {mode === "simpsons" && (
             <ModeTxt>
-             Una lista especial con preguntas de los Simpsons Duh!
+              Una lista especial con preguntas de los Simpsons Duh!
             </ModeTxt>
           )}
         </ModeCtn>
