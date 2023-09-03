@@ -35,8 +35,11 @@ const RowComponent = React.memo(({ letter, question, answer }) => {
 });
 export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
-  const { containsCounter, setContainsCounter, rollChance, setRollChance } =
+  const { containsCounter, setContainsCounter, rollChance } =
     useContext(SettingsContext);
+const [breakCounter, setBreakCounter] = useState(0)
+
+
 
   const letters = [
     "a",
@@ -72,10 +75,11 @@ export default function Table() {
     return Math.floor(Math.random() * 9);
   }
 
+
   //FILTRO PARA CONTIENE
   function handleFilter(letter) {
-    if (roll9() < rollChance && containsCounter != 0) {
-      setContainsCounter((prevCounter) => containsCounter - 1);
+    if (roll9() < rollChance && containsCounter > breakCounter) {
+      setBreakCounter(breakCounter + 1)
 
       return words.filter((item) => item.word.toLowerCase().includes(letter));
     } else {
