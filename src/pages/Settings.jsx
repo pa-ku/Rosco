@@ -6,6 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import { useState } from "react";
 import selectSound from "../assets/sounds/select-sound.wav";
 import dohSound from "../assets/sounds/doh.mp3";
+import checkSound from "../assets/sounds/cheksound.wav";
 import useSound from "use-sound";
 
 const Wrapper = styled.div`
@@ -166,6 +167,7 @@ export default function Settings() {
   const [mode, setMode] = useState("normal");
   const [select] = useSound(selectSound, { volume: 0.4 });
   const [doh] = useSound(dohSound, { volume: 0.2 });
+  const [check] = useSound(checkSound, { volume: 0.3 });
 
 
   function modeHandler(event) {
@@ -180,11 +182,11 @@ export default function Settings() {
 
         <OptionWrapper>
           <OptionCtn>
-            <Checkbox onClick={select} checked="cheked" id="Option1" type="checkbox" />
+            <Checkbox onChange={check}  checked="cheked" id="Option1" type="checkbox" />
             <Label htmlFor="Option1">Words containing the letter</Label>
           </OptionCtn>
           <OptionCtn>
-            <Checkbox id="Option2" type="checkbox" />
+            <Checkbox onChange={check} id="Option2" type="checkbox" />
             <Label htmlFor="Option2">Sound</Label>
           </OptionCtn>
         </OptionWrapper>
@@ -195,23 +197,23 @@ export default function Settings() {
               name="mode"
               type="radio"
               value={"easy"}
-              onChange={modeHandler}
-              onClick={select}
+              onChange={select}
+              onClick={modeHandler}
             />
             <Input
               name="mode"
               type="radio"
               value={"normal"}
-              onChange={modeHandler}
+              onChange={select}
               defaultChecked
-              onClick={select}
+              onClick={modeHandler}
             />
             <Input
               name="mode"
               type="radio"
               value={"hard"}
-              onChange={modeHandler }
-              onClick={select}
+              onChange={select }
+              onClick={modeHandler}
              
             />
 
@@ -219,10 +221,10 @@ export default function Settings() {
               name="mode"
               type="radio"
               value={"simpsons"}
-              onChange={modeHandler}
+              onChange={doh}
               $backgroundcolor={"#ffd404"}
               $bordercolor={"#c9a802"}
-              onClick={doh}
+              onClick={modeHandler}
             />
           </BtnContainer>
           {mode === "easy" && (
