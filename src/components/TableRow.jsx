@@ -26,7 +26,7 @@ const Question = styled.td`
   border: 2px solid #1c2128;
   text-align: center;
   padding-inline: 10px;
-  background-color: #343e4a;
+  background-color: #373e47;
   color: floralwhite;
   padding-block: 1.7em;
   font-size: 1.2em;
@@ -48,11 +48,11 @@ const Answer = styled.td`
   letter-spacing: 2px;
   font-size: 1em;
   color: floralwhite;
-  background-color: #343e4a;
+  background-color: #373e47;
   background-color: ${(props) => props.$backg};
   padding-block: 5px;
   z-index: 5;
-  padding-inline: 5px;
+
   @media (max-width: 700px) {
   }
 `;

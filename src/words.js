@@ -601,15 +601,15 @@ export const words = [
     },
     {
         word: "destacar",
-        clue: "Acción de resaltar o sobresalir de manera notable en comparación con otros",
+        clue: "Ser más prominente o visible que otras cosas",
     },
     {
         word: "dado",
-        clue: "Objeto cúbico con números o puntos en cada una de sus seis caras",
+        clue: "Un objeto pequeño y cúbico con seis caras numeradas del 1 al 6",
     },
     {
         word: "desastre",
-        clue: "Evento o situación que resulta en daño, destrucción, caos o un impacto negativo significativo. Puede referirse a fenómenos naturales como terremotos, inundaciones o huracanes, así como a situaciones humanas como accidentes graves o crisis. ",
+        clue: "Un evento que causa una gran destrucción o daño",
     },
     { word: "durar", clue: "Continuar durante un tiempo determinado" }
     ,
@@ -622,7 +622,7 @@ export const words = [
     },
     {
         word: "difuminar",
-        clue: "Verbo para describir la acción de suavizar o hacer menos nítido un borde, una línea o una transición entre colores o elementos. Se utiliza comúnmente en el arte, la fotografía y el diseño gráfico para crear efectos suaves o para mezclar colores de manera gradual",
+        clue: "Hacer que algo sea menos claro o definido",
     },
     {
         word: "definir",
@@ -993,7 +993,7 @@ export const words = [
     },
     {
         word: "Guardia",
-        clue: "Persona o grupo de personas que tienen la responsabilidad de proteger, vigilar o mantener la seguridad de un lugar, persona o bienes. Pueden ser parte de fuerzas de seguridad, como la policía, o pueden ser personal de seguridad privada.",
+        clue: "Una persona que protege y vigila un lugar o a alguien.",
     },
     {
         word: "Gente",
@@ -1255,7 +1255,7 @@ export const words = [
     },
     {
         word: "incertidumbre",
-        clue: "Falta de seguridad o certeza sobre un evento o resultado futuro. Es una sensación de desconocimiento o duda acerca de lo que sucederá. ",
+        clue: "Falta de certeza o seguridad acerca de algo",
     },
     {
         word: "imparcial",
@@ -1356,7 +1356,7 @@ export const words = [
     },
     {
         word: "Kinesiología",
-        clue: "Campo de la medicina y la ciencia que se enfoca en el estudio del movimiento del cuerpo humano y en la aplicación de ejercicios y terapia física para prevenir y tratar lesiones musculoesqueléticas",
+        clue: "Estudio del movimiento del cuerpo humano.",
     },
     {
         word: "Karaoke",
@@ -1462,7 +1462,7 @@ export const words = [
     },
     {
         word: "Lenteja",
-        clue: "Legumbre comestible que se utiliza en la cocina de muchas culturas en todo el mundo. Es pequeña, redonda y generalmente de color marrón o verde. Se usa en una variedad de platos, como sopas, guisos y ensaladas, y es conocida por su alto contenido de proteínas y fibra",
+        clue: "Legumbre pequeña y redonda.",
     },
     {
         word: "Lujuria",
@@ -2176,7 +2176,7 @@ export const words = [
     },
     {
         word: "Piano",
-        clue: "Instrumento Musical de cuerda percutida que se toca mediante teclas. A diferencia de otros instrumentos, la intensidad del sonido puede controlarse tocando las teclas con diferentes niveles de fuerza",
+        clue: "Instrumento musical de teclado que produce sonidos mediante cuerdas.",
     },
     {
         word: "Poema",
@@ -2446,6 +2446,10 @@ export const words = [
     {
         word: "Quirúrgicamente",
         clue: "De manera relacionada con una cirugía.",
+    },
+    {
+        word: "Quemacocos",
+        clue: "Techo corredizo de un vehículo.",
     },
     {
         word: "Río",
@@ -2861,7 +2865,7 @@ export const words = [
     },
     {
         word: "Té",
-        clue: "bebida que se obtiene a partir de la infusión de hojas secas de una planta llamada Camellia sinensis. Es una bebida popular en muchas culturas y se sirve caliente o fría. ",
+        clue: "Bebida hecha con hojas de té infusionadas en agua caliente.",
     },
     {
         word: "Techo",
@@ -2869,7 +2873,7 @@ export const words = [
     },
     {
         word: "Técnica",
-        clue: "Conjunto de métodos, habilidades o procedimientos específicos que se aplican de manera sistemática para lograr un resultado particular en un campo o disciplina. Puede referirse a la forma en que se realizan tareas o actividades de manera eficiente y efectiva.",
+        clue: "Conjunto de procedimientos para realizar una actividad o tarea.",
     },
     {
         word: "Tinta",

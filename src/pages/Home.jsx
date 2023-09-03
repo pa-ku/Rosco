@@ -75,6 +75,18 @@ const LogoContainer = styled.div`
 `;
 
 export default function Home() {
+/*   const [logoSound] = useSound(checkAudio, { volume: 0.1 });
+  
+  function logoAudi(){
+    setTimeout(() => {
+      logoSound()
+    }, 550);
+    
+  }
+
+  
+  logoAudi()
+   */
   return (
     <>
       <Wrapper>
