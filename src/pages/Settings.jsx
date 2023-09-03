@@ -162,16 +162,14 @@ const ModeTxt = styled.p`
 `;
 
 export default function Settings() {
-  
-  const [mode, setMode] = useLocalStorage("mode","");
+  const [mode, setMode] = useLocalStorage("mode", "");
 
   const [buttonState, setButtonState] = useLocalStorage("ButtonState", {
     easy: false,
     normal: false,
     hard: false,
-    simpsons: false
+    simpsons: false,
   });
-
 
   const {
     setContainsCounter,
@@ -198,7 +196,7 @@ export default function Settings() {
           easy: true,
           normal: false,
           hard: false,
-          simpsons: false
+          simpsons: false,
         }));
         break;
       case "normal":
@@ -210,7 +208,7 @@ export default function Settings() {
           easy: false,
           normal: true,
           hard: false,
-          simpsons: false
+          simpsons: false,
         }));
         break;
       case "hard":
@@ -222,7 +220,7 @@ export default function Settings() {
           easy: false,
           normal: false,
           hard: true,
-          simpsons: false
+          simpsons: false,
         }));
         break;
       case "simpsons":
@@ -234,7 +232,7 @@ export default function Settings() {
           easy: false,
           normal: false,
           hard: false,
-          simpsons: true
+          simpsons: true,
         }));
         break;
     }

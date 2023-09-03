@@ -7,6 +7,10 @@ import logoFirst from "../assets/img/first.png";
 import logoSecond from "../assets/img/second.png";
 import LinkButton from "../components/LinkButton";
 
+import useSound from "use-sound";
+import checkAudio from "../assets/sounds/right.wav";
+
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -71,6 +75,18 @@ const LogoContainer = styled.div`
 `;
 
 export default function Home() {
+  const [logoSound] = useSound(checkAudio, { volume: 0.1 });
+  
+  function logoAudi(){
+    setTimeout(() => {
+      logoSound()
+    }, 550);
+    
+  }
+
+  
+  logoAudi()
+  
   return (
     <>
       <Wrapper>
