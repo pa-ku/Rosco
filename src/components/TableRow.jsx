@@ -108,6 +108,7 @@ const RowBtn = styled.button`
   transition: 0.3s;
   border-radius: 8px;
   cursor: pointer;
+  color: ${props => props.$color};
   &:hover {
     filter: brightness(1.1);
     border-color: ${(props) => props.$bordercolor};
@@ -179,25 +180,28 @@ export default function TableRow({ letter, question, answer }) {
           <CtnButton>
             <RowBtn
               $bordercolor={"#3f6901"}
-              $backgcolor={"#61a002"}
+              $backgcolor={"#76bf08"}
               $display={display}
               onClick={rightBtn}
+              $color={"#467401"}
             >
               ✔
             </RowBtn>
             <RowBtn
               $bordercolor={"#8d0a0a"}
-              $backgcolor={"#c71717"}
+              $backgcolor={"#dd1f1f"}
               $display={display}
               onClick={wrongBtn}
+              $color={"#790d0d"}
             >
               ✖
             </RowBtn>
             <RowBtn
-              $bordercolor={"#555"}
-              $backgcolor={"#888"}
+              $backgcolor={"#d2a4ff"}
+              $bordercolor={"#a579d2"}
               $display={displayPending}
               onClick={passBtn}
+              $color={"#762dbf"}
             >
               PASS
             </RowBtn>
