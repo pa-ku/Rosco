@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useContext, useMemo,useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { StatusContext } from "../context/StatusContext";
 import { SettingsContext } from "../context/SettingsContext";
 import { words } from "../words";
@@ -35,8 +35,9 @@ const RowComponent = React.memo(({ letter, question, answer }) => {
 });
 export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
-  const {containsCounter,setContainsCounter,rollChance,setRollChance  } = useContext(SettingsContext);
- 
+  const { containsCounter, setContainsCounter, rollChance, setRollChance } =
+    useContext(SettingsContext);
+
   const letters = [
     "a",
     "b",
@@ -61,57 +62,45 @@ export default function Table() {
     "u",
     "v",
     /* "w", */
-  /*   "x", */
+    /*   "x", */
     /* "y", */
     "z",
   ];
 
-
-//CREAR ROLL 0-9 
-function roll9(){
-  return Math.floor(Math.random() * 9);
-}
+  //CREAR ROLL 0-9
+  function roll9() {
+    return Math.floor(Math.random() * 9);
+  }
 
   //FILTRO PARA CONTIENE
-function handleFilter(letter){
+  function handleFilter(letter) {
+    if (roll9() < rollChance && containsCounter != 0) {
+      setContainsCounter((prevCounter) => containsCounter - 1);
 
-  if(roll9() < rollChance && containsCounter != 0  ){
-    setContainsCounter(prevCounter => containsCounter - 1)
-
-    return words.filter((item) => 
-    item.word.toLowerCase().includes(letter));
+      return words.filter((item) => item.word.toLowerCase().includes(letter));
+    } else {
+      return words.filter((item) => item.word.toLowerCase().startsWith(letter));
+    }
   }
+  
+  //TIRAR UN NUMERO PARA EL ARRAY
+  const rollNumber = (length) => {
+    return Math.floor(Math.random() * length);
+  };
 
-  else{
-    return words.filter((item) => 
-    item.word.toLowerCase().startsWith(letter))
-  }
+  const wordArrays = letters.map((letter) => handleFilter(letter));
 
-}
-    //TIRAR UN NUMERO PARA EL ARRAY
-const rollNumber =(length) => {
-  return Math.floor(Math.random() * length);
-};
-
-  const wordArrays = letters.map((letter) => 
-  handleFilter(letter));
-
-  const randomNumbers = wordArrays.map((arr) =>
-   rollNumber(arr.length));
+  const randomNumbers = wordArrays.map((arr) => rollNumber(arr.length));
 
   //PREGUNTA
   const handleAsk = (index, letter) => {
-    console.log("wordArrays:", wordArrays);
-console.log("randomNumbers:", randomNumbers);
     return wordArrays[index][randomNumbers[index]].clue;
   };
 
-//RESPUESTA
+  //RESPUESTA
   const handleAnswer = (index, letter) => {
-
     return wordArrays[index][randomNumbers[index]].word;
   };
-
 
   //USE MEMO PARA EVITAR EL RE-RENDERIZADO DE LOS COMPONENTES
   const rowComponents = useMemo(() => {
