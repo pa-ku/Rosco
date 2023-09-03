@@ -76,7 +76,7 @@ const LogoContainer = styled.div`
 export default function Home() {
   //Sounds
 
-  const [random] = useSound(randomSound, { volume: 0.4 });
+  const [random] = useSound(randomSound, { volume: 0.2 });
 
   return (
     <>

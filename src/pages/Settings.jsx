@@ -165,9 +165,9 @@ const ModeTxt = styled.p`
 
 export default function Settings() {
   const [mode, setMode] = useState("normal");
-  const [select] = useSound(selectSound, { volume: 0.4 });
-  const [doh] = useSound(dohSound, { volume: 0.2 });
-  const [check] = useSound(checkSound, { volume: 0.3 });
+  const [select] = useSound(selectSound, { volume: 0.2 });
+  const [doh] = useSound(dohSound, { volume: 0.1 });
+  const [check] = useSound(checkSound, { volume: 0.2 });
 
 
   function modeHandler(event) {

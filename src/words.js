@@ -202,7 +202,7 @@ export const words = [
         clue: "una planta leñosa que tiene un tronco alto y ramas.",
     },
     { word: "Acelerar", clue: "aumentar la velocidad de algo." },
-    { word: "Anhelo", clue: "un deseo intenso de algo." },
+    { word: "Anhelo", clue: "un deseo intenso por alcanzar o experimentar algo deseado." },
     {
         word: "Aullido",
         clue: "un sonido agudo que hacen los lobos y otros animales.",
@@ -611,9 +611,11 @@ export const words = [
         word: "desastre",
         clue: "Un evento que causa una gran destrucción o daño",
     },
-    { word: "durar", clue: "Continuar durante un tiempo determinado" },
-    { word: "decidir", clue: "Tomar una decisión sobre algo" },
-    { word: "disfrutar", clue: "Encontrar placer en algo" },
+    { word: "durar", clue: "Continuar durante un tiempo determinado" }
+    ,
+    { word: "decidir", clue: "Acción de tomar una elección o una determinación después de considerar diferentes opciones o alternativas" },
+
+    { word: "disfrutar", clue: "acto de experimentar placer, satisfacción o goce al realizar una actividad, consumir algo agradable o estar en compañía agradable. Es la sensación de gozar o apreciar algo de manera positiva." },
     {
         word: "dolor",
         clue: "Una sensación física desagradable causada por una lesión o enfermedad",
@@ -624,7 +626,7 @@ export const words = [
     },
     {
         word: "definir",
-        clue: "Dar el clue de una word o frase",
+        clue: "acción de explicar o establecer el significado preciso de una palabra, concepto, objeto o idea.",
     },
     { word: "devorar", clue: "Comer algo con gran rapidez y avidez" },
     { word: "dudar", clue: "No estar seguro de algo" },
@@ -836,7 +838,7 @@ export const words = [
     },
     {
         word: "fluctuar",
-        clue: "Cambiar de manera irregular o inconstante",
+        clue: "verbo que se utiliza para describir el acto de cambiar o variar de manera irregular o inconstante en su valor, posición o nivel a lo largo del tiempo. ",
     },
 
     {
@@ -2098,7 +2100,7 @@ export const words = [
     },
     {
         word: "Origen",
-        clue: "Principio o causa de algo.",
+        clue: "punto de partida o al lugar donde algo comienza. También puede referirse al motivo o la causa de algo. Es la raíz o el principio de algo que posteriormente se desarrolla o se extiende",
     },
     {
         word: "Orfanato",
@@ -2206,7 +2208,7 @@ export const words = [
     },
     {
         word: "Problema",
-        clue: "Situación que requiere solución o resolución.",
+        clue: "Término que se utiliza para describir una situación, cuestión o dificultad que requiere una solución o resolución. Puede referirse a un desafío, una pregunta sin respuesta o un obstáculo que debe superarse.",
     },
     {
         word: "Princesa",
@@ -2847,7 +2849,7 @@ export const words = [
     },
     {
         word: "Tiempo",
-        clue: "Duración de los acontecimientos y acciones.",
+        clue: "Magnitud física que mide la duración y el orden sucesivo de los acontecimientos",
     },
     {
         word: "Tren",
@@ -3384,11 +3386,6 @@ export const words = [
     {
         word: "mate",
         clue: "Infusión tradicional de América del Sur, que se toma con bombilla.",
-    },
-    ,
-    {
-        word: "Zafiro",
-        clue: "Gema preciosa de color azul o cualquier variante del azul.",
     },
     {
         word: "Zarpar",
