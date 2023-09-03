@@ -5,7 +5,7 @@ import { StatusContext } from "../context/StatusContext";
 import useSound from "use-sound";
 import rightSound from "../assets/sounds/right.wav"
 import errorSound from "../assets/sounds/error.wav"
-
+import { SettingsContext } from "../context/SettingsContext";
 
 const Letter = styled.td`
   border: 2px solid #1c2128;
@@ -130,7 +130,7 @@ export default function TableRow({ letter, question, answer }) {
 
   const { setWrongAnswers, setRightAnswers, pending, setPending } =
     useContext(StatusContext);
-
+    const {volume } = useContext(SettingsContext);
   function rightBtn() {
     setColor("#2c462e");
     setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
@@ -161,8 +161,8 @@ export default function TableRow({ letter, question, answer }) {
   const beginsWithLetter = answer.toLowerCase().startsWith(letter);
 
   //Sounds
-  const [right] = useSound(rightSound, { volume: 0.4 });
-  const [error] = useSound(errorSound, { volume: 0.4 });
+  const [right] = useSound(rightSound, { volume: volume });
+  const [error] = useSound(errorSound, { volume: volume });
 
   return (
     <>
@@ -180,28 +180,28 @@ export default function TableRow({ letter, question, answer }) {
           <CtnButton>
             <RowBtn
               $bordercolor={"#3f6901"}
-              $backgcolor={"#76bf08"}
+              $backgcolor={"#69ae01"}
               $display={display}
               onClick={rightBtn}
-              $color={"#467401"}
+          
             >
               ✔
             </RowBtn>
             <RowBtn
               $bordercolor={"#8d0a0a"}
-              $backgcolor={"#dd1f1f"}
+              $backgcolor={"#c30000"}
               $display={display}
               onClick={wrongBtn}
-              $color={"#790d0d"}
+           
             >
               ✖
             </RowBtn>
             <RowBtn
-              $backgcolor={"#d2a4ff"}
-              $bordercolor={"#a579d2"}
+              $backgcolor={"#6c6c6c"}
+              $bordercolor={"#4a4a4a"}
               $display={displayPending}
               onClick={passBtn}
-              $color={"#762dbf"}
+           
             >
               PASS
             </RowBtn>

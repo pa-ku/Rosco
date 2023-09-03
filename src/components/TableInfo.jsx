@@ -1,16 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
 
-const TxtInfo = styled.p`
-  font-weight: 600;
-  font-size: 1.1em;
-  padding: 20px;
-  color: ${(props) => props.$infocolor};
-  @media (max-width: 700px) {
-    padding: 5px;
-  }
-`;
-
 const CtnInfo = styled.div`
   display: flex;
   align-items: center;
@@ -19,18 +9,32 @@ const CtnInfo = styled.div`
   position: sticky;
   top: 0px;
   background-color: #111;
-  border-radius: 8px;
+
   width: 100%;
   text-align: center;
+  outline: 2px solid #111;
   color: #a0c5fd;
-
+  z-index: 100;
+  padding: 0.8em 2em;
+  border-bottom: 2px solid #1c2128;
   @media (max-width: 700px) {
     font-size: 1em;
-    padding: 0.5em 2em;
     border: 0px;
     border-radius: 0px;
+    padding: 0.1em 2em;
   }
 `;
+
+const TxtInfo = styled.p`
+  font-weight: 600;
+  font-size: 1.1em;
+
+  color: ${(props) => props.$infocolor};
+  @media (max-width: 700px) {
+    padding: 5px;
+  }
+`;
+
 
 export default function TableInfo({rightAnswers,wrongAnswers,pending}) {
   return (

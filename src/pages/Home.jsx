@@ -6,9 +6,6 @@ import StartIcon from "@mui/icons-material/SportsEsports";
 import logoFirst from "../assets/img/first.png";
 import logoSecond from "../assets/img/second.png";
 import LinkButton from "../components/LinkButton";
-import startSound from "../assets/sounds/start-sound.mp3";
-import randomSound from "../assets/sounds/random_word.wav";
-import useSound from "use-sound";
 
 const Wrapper = styled.div`
   display: flex;
@@ -74,10 +71,6 @@ const LogoContainer = styled.div`
 `;
 
 export default function Home() {
-  //Sounds
-
-  const [random] = useSound(randomSound, { volume: 0.2 });
-
   return (
     <>
       <Wrapper>
@@ -88,7 +81,6 @@ export default function Home() {
 
         <ButtonCtn>
           <LinkButton
-            onClick={random}
             to="/game"
             text="Start"
             logo={<StartIcon></StartIcon>}
