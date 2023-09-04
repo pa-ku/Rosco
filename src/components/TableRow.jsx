@@ -84,11 +84,14 @@ const CtnButton = styled.div`
   display: flex;
   flex-direction: column;
   opacity: 0;
-  animation: ButtonShow 1s forwards 300ms;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 8px;
+  animation: ButtonShow 1s forwards 300ms;
+
+
+
 
   @media (max-width: 700px) {
 
@@ -99,7 +102,6 @@ const CtnButton = styled.div`
   
     }
   }
-
   @keyframes ButtonShow {
     0% {
       opacity: 0;
@@ -175,7 +177,7 @@ export default function TableRow({ letter, question, answer }) {
 
   const passBtn = () => {
  /*    setColor("#324257"); */
-    setColor("#4a2c50");
+    setColor("#4c3150");
     setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
   };
