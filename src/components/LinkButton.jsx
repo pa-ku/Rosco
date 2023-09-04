@@ -14,12 +14,13 @@ const Button = styled(Link)`
   border-top: 1px solid;
   text-shadow: 1px 1px #0b397e;
   border-color: #0b397e;
-  padding: 10px 15px;
-  width: 155px;
+  padding: 10px 28px;
+  width: 170px;
   font-size: 1.5em;
   font-weight: 400;
   border-radius: 20px;
   gap: 5px;
+ 
   &:hover {
     filter: brightness(1.2);
     color: white;

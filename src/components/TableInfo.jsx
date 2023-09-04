@@ -28,7 +28,6 @@ const CtnInfo = styled.div`
 const TxtInfo = styled.p`
   font-weight: 600;
   font-size: 1.1em;
-
   color: ${(props) => props.$infocolor};
   @media (max-width: 700px) {
     padding: 5px;

@@ -22,6 +22,7 @@ const Tabl = styled.table`
   margin: auto;
   background-color: #111;
   font-size: 0.9em;
+  text-align: center;
   border-radius: 8px;
   border: 2px solid #1c2128;
   @media (max-width: 700px) {

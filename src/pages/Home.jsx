@@ -12,13 +12,13 @@ import checkAudio from "../assets/sounds/right.wav";
 
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+width: 100%;
+height: 100vh;
+gap: 7em;
   @media (max-width: 700px) {
     height: 80vh;
   }
@@ -31,12 +31,13 @@ const ButtonCtn = styled.div`
   gap: 1em;
   opacity: 0;
   animation: 1s start forwards;
+
 `;
 const Author = styled.p`
   color: #696969;
   animation: 2s start forwards 500ms;
-  margin-top: auto;
-  padding-top: 2em;
+
+
   opacity: 0;
   animation: 1s start forwards;
 `;
@@ -53,13 +54,12 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 200px;
   width: 100%;
   animation: 1.5s Bounce forwards;
 
   @keyframes logoStart {
     100% {
-      right: 12px;
+      right: 19px;
       opacity: 1;
       scale: 0.9;
     }
@@ -101,11 +101,11 @@ export default function Home() {
             text="Start"
             logo={<StartIcon></StartIcon>}
           />
-          <LinkButton
+         {/*  <LinkButton
             to={"/wordlist"}
             text="Words"
             logo={<ListIcon></ListIcon>}
-          />
+          /> */}
           <LinkButton
             to={"/settings"}
             text="Settings"

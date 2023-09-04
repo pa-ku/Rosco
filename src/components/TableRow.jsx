@@ -8,22 +8,19 @@ import errorSound from "../assets/sounds/error.wav"
 import { SettingsContext } from "../context/SettingsContext";
 
 const Letter = styled.td`
-  border: 2px solid #1c2128;
-  padding: 8px;
-  padding-inline: 1em;
+  border: 4px solid #1c2128;
+  padding-inline: 10px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   color: #befd95;
   background-color: #22272e;
   font-size: 1.2em;
-  @media (max-width: 700px) {
-    padding-inline: 20px;
-  }
+  height: 150px;
 `;
 
 const Question = styled.td`
-  border: 2px solid #1c2128;
+  border-bottom: 4px solid #1c2128;
   text-align: center;
   padding-inline: 10px;
   background-color: #373e47;
@@ -41,20 +38,17 @@ const Question = styled.td`
 `;
 
 const Answer = styled.td`
-  border: 2px solid #1c2128;
+  border-bottom: 4px  solid #1c2128;
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
-  font-size: 1em;
+  font-size: 1.1em;
   color: floralwhite;
   background-color: #373e47;
   background-color: ${(props) => props.$backg};
   padding-block: 5px;
   z-index: 5;
-
-  @media (max-width: 700px) {
-  }
 `;
 
 const CtnButton = styled.div`
@@ -65,7 +59,11 @@ const CtnButton = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  width: 100px;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
+  margin-top: 10px;
   & * {
     font-size: 1.2em;
     border: 4px solid #373e47;

@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route,Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
@@ -21,7 +20,7 @@ object-fit: cover;
 function App() {
   return (
     <>  
-         <Background src={background} alt="" />
+  <Background src={background} alt="" />
     <Routes>
       <Route index path="/" element={<Home />} />
       <Route path="/game" element={<Game />} />

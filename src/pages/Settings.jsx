@@ -17,13 +17,16 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 3em;
+  height: 100vh;
 `;
 const OptionCtn = styled.div`
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 1em;
   opacity: 0;
+  width: 100%;
+  
   animation: 1s start forwards;
 `;
 const Label = styled.label`
@@ -117,8 +120,10 @@ const Input = styled.input`
   font-weight: 600;
   border-color: #717171;
   color: #1c2128;
-  padding: 8px 14px;
+  padding: 8px;
+  width: 120px;
   color: #222;
+  text-align: center;
   font-size: 1.3rem;
   border-radius: 15px;
   cursor: pointer;
@@ -151,7 +156,7 @@ const ModeCtn = styled.div`
   justify-content: center;
   flex-direction: column;
   color: #dfbeff;
-
+text-align:center;
   gap: 1em;
   padding-inline: 1em;
 `;
