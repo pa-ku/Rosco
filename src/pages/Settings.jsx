@@ -293,7 +293,7 @@ export default function Settings() {
               onChange={modeHandler}
             />
 
-            <Input
+         {/*    <Input
               name="mode"
               checked={buttonState.simpsons}
               type="radio"
@@ -301,7 +301,7 @@ export default function Settings() {
               onChange={modeHandler}
               $backgroundcolor={"#ffd404"}
               $bordercolor={"#c9a802"}
-            />
+            /> */}
           </BtnContainer>
           {mode === "easy" && (
             <ModeTxt>

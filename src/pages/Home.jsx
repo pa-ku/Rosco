@@ -31,13 +31,16 @@ const ButtonCtn = styled.div`
   animation: 1s start forwards;
 
 `;
-const Author = styled.p`
+const Author = styled.a`
   color: #696969;
   animation: 2s start forwards 500ms;
 
-
+  cursor: pointer;
   opacity: 0;
   animation: 1s start forwards;
+  &:hover{
+  color: #d5adfd;
+  }
 `;
 const Img = styled.img`
   height: 150px;
@@ -110,7 +113,8 @@ export default function Home() {
             logo={<SettingsIcon></SettingsIcon>}
           />
         </ButtonCtn>
-        <Author>With 💜 by paku</Author>
+        
+        <Author href="https://github.com/pa-ku?tab=repositories" target="blank" >With 💜 by paku</Author>
       </Wrapper>
     </>
   );

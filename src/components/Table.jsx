@@ -31,12 +31,12 @@ const Tabl = styled.table`
   }
 `;
 
-const RowComponent = React.memo(({ letter, question, answer }) => {
+const RowComponent = React.memo(({ letter, question, answer}) => {
   return <Row letter={letter} question={question} answer={answer} />;
 });
 export default function Table() {
   const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
-  const { containsCounter, setContainsCounter, rollChance } =
+  const { containsCounter, rollChance } =
     useContext(SettingsContext);
 const [breakCounter, setBreakCounter] = useState(0)
 
@@ -115,6 +115,7 @@ const [breakCounter, setBreakCounter] = useState(0)
         letter={letter}
         question={handleAsk(index, letter)}
         answer={handleAnswer(index, letter)}
+  
       />
     ));
   }, []);
@@ -122,6 +123,7 @@ const [breakCounter, setBreakCounter] = useState(0)
   return (
     <>
       <>
+      
         <Wrapper>
           <TableInfo
             rightAnswers={rightAnswers}
