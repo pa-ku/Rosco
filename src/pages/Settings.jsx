@@ -121,7 +121,8 @@ const Input = styled.input`
   border-color: #717171;
   color: #1c2128;
   padding: 8px;
-  width: 120px;
+  min-width: 110px;
+  padding-inline: 18px;
   color: #222;
   text-align: center;
   font-size: 1.3rem;
