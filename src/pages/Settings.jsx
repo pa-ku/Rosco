@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 3em;
-  height: 95vh;
+  height: 90vh;
 `;
 const OptionCtn = styled.div`
   display: flex;
@@ -26,7 +26,6 @@ const OptionCtn = styled.div`
   gap: 1em;
   opacity: 0;
   width: 100%;
-  
   animation: 1s start forwards;
 `;
 const Label = styled.label`
@@ -121,8 +120,8 @@ const Input = styled.input`
   border-color: #717171;
   color: #1c2128;
   padding: 8px;
-  min-width: 110px;
-  padding-inline: 18px;
+  min-width: 100px;
+  padding-inline: 15px;
   color: #222;
   text-align: center;
   font-size: 1.3rem;
@@ -159,7 +158,7 @@ const ModeCtn = styled.div`
   color: #dfbeff;
 text-align:center;
   gap: 1em;
-  padding-inline: 1em;
+  padding-inline: 0.5em;
 `;
 const ModeTxt = styled.p`
   color: ${(props) => props.$color};
