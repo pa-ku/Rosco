@@ -25,7 +25,7 @@ const Letter = styled.td`
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
   padding-inline: 10px;
-  background-color: #324257;
+  background-color: #212f42;
   color: floralwhite;
   padding-block: 1.7em;
   font-size: 1.2em;
@@ -41,7 +41,7 @@ const Question = styled.td`
 `;
 
 const ButtonRow = styled.td`
-  background-color: #324257;
+  background-color: #212f42;
   border-bottom: 4px solid #1c2128;
   background-color: ${(props) => props.$backg};
   padding-right: 1em;
@@ -161,7 +161,7 @@ export default function TableRow({ letter, question, answer }) {
   }
 
   const passBtn = () => {
-    setColor("#212f42");
+    setColor("#324257");
     setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
   };
@@ -210,7 +210,7 @@ export default function TableRow({ letter, question, answer }) {
               $display={displayPending}
               onClick={passBtn}
             >
-              O
+            〇
             </Button>
           </CtnButton>
         </ButtonRow>
