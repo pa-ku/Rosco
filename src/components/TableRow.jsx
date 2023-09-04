@@ -74,13 +74,6 @@ const CtnButton = styled.div`
   align-items: center;
   gap: 8px;
 
-  & * {
-    font-size: 1.2em;
-    border: 4px solid #373e47;
-    padding: 8px 14px;
-    font-weight: 600;
-  }
-
   @media (max-width: 700px) {
 
     flex-direction: row;
@@ -114,9 +107,13 @@ const Button = styled.button`
   border-color: ${(props) => props.$bordercolor};
   transition: 0.3s;
   border-radius: 8px;
-  width: 50px;
+  width: 45px;
+  height: 40px;
+  font-size: 1.5em;
   cursor: pointer;
-  color: ${(props) => props.$color};
+  color: ${(props) => props.$bordercolor};
+  font-weight: 600;
+
   &:hover {
     filter: brightness(1.1);
     border-color: ${(props) => props.$bordercolor};
@@ -191,24 +188,24 @@ export default function TableRow({ letter, question, answer }) {
         <ButtonRow $backg={color}>
           <CtnButton>
             <Button
-              $bordercolor={"#3f6901"}
-              $backgcolor={"#69ae01"}
+              $bordercolor={"#2a4700"}
+              $backgcolor={"#63a402"}
               $display={display}
               onClick={rightBtn}
             >
               ✔
             </Button>
             <Button
-              $bordercolor={"#8d0a0a"}
-              $backgcolor={"#c30000"}
+              $bordercolor={"#520000"}
+              $backgcolor={"#bd0000"}
               $display={display}
               onClick={wrongBtn}
             >
               ✖
             </Button>
             <Button
-              $backgcolor={"#774889"}
-              $bordercolor={"#502a5f"}
+              $backgcolor={"#824999"}
+              $bordercolor={"#3f164f"}
               $display={displayPending}
               onClick={passBtn}
             >
