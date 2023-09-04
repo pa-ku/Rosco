@@ -204,7 +204,7 @@ export default function TableRow({ letter, question, answer }) {
               ✖
             </Button>
             <Button
-              $backgcolor={"#824999"}
+              $backgcolor={"#ad73c4"}
               $bordercolor={"#371046"}
               $display={displayPending}
               onClick={passBtn}
