@@ -17,7 +17,7 @@ const Wrapper = styled.div`
  justify-content: center;
  flex-direction: column;
 width: 100%;
-height: 100vh;
+height: 95vh;
 gap: 7em;
 
 `;

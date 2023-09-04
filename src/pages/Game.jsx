@@ -14,8 +14,13 @@ const ButtonCtn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 2em;
   margin-block: 4em;
+  @media(max-width:700px){
+    flex-direction: column;
+    gap: 1em;
+  }
 `;
 const ReloadIcon = styled(ReloadLogo)`
   animation: reload 1s;

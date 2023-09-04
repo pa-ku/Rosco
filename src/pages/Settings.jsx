@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 3em;
-  height: 100vh;
+  height: 95vh;
 `;
 const OptionCtn = styled.div`
   display: flex;
