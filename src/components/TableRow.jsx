@@ -27,11 +27,11 @@ const Question = styled.td`
   padding-inline: 10px;
   background-color: #212f42;
   color: floralwhite;
-  padding-block: 1.7em;
+  padding-inline: 2em;
   font-size: 1.2em;
 
   background-color: ${(props) => props.$backg};
-  width: 80ch;
+  width: 70ch;
   @media (max-width: 700px) {
     font-size: 1.1em;
   }
@@ -42,6 +42,7 @@ const Question = styled.td`
 
 const ButtonRow = styled.td`
   background-color: #212f42;
+
   border-bottom: 4px solid #1c2128;
   background-color: ${(props) => props.$backg};
   padding-right: 1em;
@@ -205,8 +206,8 @@ export default function TableRow({ letter, question, answer }) {
               ✖
             </Button>
             <Button
-              $backgcolor={"#064ebb"}
-              $bordercolor={"#0b397e"}
+              $backgcolor={"#774889"}
+              $bordercolor={"#502a5f"}
               $display={displayPending}
               onClick={passBtn}
             >
