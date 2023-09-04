@@ -17,6 +17,9 @@ const Letter = styled.td`
   background-color: #22272e;
   font-size: 1.2em;
   height: 150px;
+  @media(max-width:700px){
+    font-size: 1em;
+  }
 `;
 
 const Question = styled.td`
@@ -49,6 +52,11 @@ const Answer = styled.td`
   background-color: ${(props) => props.$backg};
   padding-block: 5px;
   z-index: 5;
+  @media(max-width:700px){
+    font-size: 1em;
+    width: 5ch;
+
+  }
 `;
 
 const CtnButton = styled.div`
@@ -76,6 +84,7 @@ const CtnButton = styled.div`
     flex-wrap: wrap;
     gap: 5px;
     padding-block: 5px;
+    scale: 0.9;
     & * {
       border: 0px;
     }
