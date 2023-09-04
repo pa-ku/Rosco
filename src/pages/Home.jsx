@@ -19,9 +19,7 @@ const Wrapper = styled.div`
 width: 100%;
 height: 100vh;
 gap: 7em;
-  @media (max-width: 700px) {
-    height: 80vh;
-  }
+
 `;
 const ButtonCtn = styled.div`
   display: flex;
