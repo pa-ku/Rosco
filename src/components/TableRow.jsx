@@ -162,7 +162,8 @@ export default function TableRow({ letter, question, answer }) {
   }
 
   const passBtn = () => {
-    setColor("#324257");
+ /*    setColor("#324257"); */
+    setColor("#513257");
     setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
   };

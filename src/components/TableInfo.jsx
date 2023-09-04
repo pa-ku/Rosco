@@ -28,10 +28,9 @@ const CtnInfo = styled.div`
 const TxtInfo = styled.p`
   font-weight: 600;
   font-size: 1.1em;
+  padding: 10px;
   color: ${(props) => props.$infocolor};
-  @media (max-width: 700px) {
-    padding: 5px;
-  }
+
 `;
 
 
@@ -42,7 +41,7 @@ export default function TableInfo({rightAnswers,wrongAnswers,pending}) {
     <CtnInfo>
     <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
     <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
-    <TxtInfo $infocolor="#b9b9b9">PASS {pending}</TxtInfo>
+    <TxtInfo $infocolor="#c56fd6">PASS {pending}</TxtInfo>
   </CtnInfo>
 
     </>
