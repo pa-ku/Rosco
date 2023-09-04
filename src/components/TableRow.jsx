@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { useState, useContext } from "react";
 import { StatusContext } from "../context/StatusContext";
 import useSound from "use-sound";
-import rightSound from "../assets/sounds/right.wav"
-import errorSound from "../assets/sounds/error.wav"
+import rightSound from "../assets/sounds/right.wav";
+import errorSound from "../assets/sounds/error.wav";
 import { SettingsContext } from "../context/SettingsContext";
 
 const Letter = styled.td`
@@ -16,22 +16,22 @@ const Letter = styled.td`
   color: #befd95;
   background-color: #22272e;
   font-size: 1.2em;
-  height: 150px;
-  @media(max-width:700px){
+  height: 180px;
+  @media (max-width: 700px) {
     font-size: 1em;
   }
 `;
 
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
-  text-align: center;
   padding-inline: 10px;
   background-color: #373e47;
   color: floralwhite;
   padding-block: 1.7em;
   font-size: 1.2em;
+
   background-color: ${(props) => props.$backg};
-width: 80ch;
+  width: 80ch;
   @media (max-width: 700px) {
     font-size: 1.1em;
   }
@@ -40,37 +40,36 @@ width: 80ch;
   }
 `;
 
-const Answer = styled.td`
-  border-bottom: 4px  solid #1c2128;
+const ButtonRow = styled.td`
+  background-color: #373e47;
+  border-bottom: 4px solid #1c2128;
+  background-color: ${(props) => props.$backg};
+  padding-right: 1em;
+`;
+
+const Answer = styled.p`
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 1.1em;
   color: floralwhite;
-  background-color: #373e47;
-  background-color: ${(props) => props.$backg};
-  padding-block: 5px;
   z-index: 5;
-  @media(max-width:700px){
+  @media (max-width: 700px) {
     font-size: 1em;
-    width: 5ch;
-
   }
 `;
 
 const CtnButton = styled.div`
   display: flex;
-  margin-inline: 0.5em;
+  flex-direction: column;
   animation: ButtonShow 1s;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
 
-  margin-top: 10px;
   & * {
     font-size: 1.2em;
     border: 4px solid #373e47;
@@ -83,8 +82,6 @@ const CtnButton = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
-    padding-block: 5px;
-    scale: 0.9;
     & * {
       border: 0px;
     }
@@ -114,7 +111,7 @@ const RowBtn = styled.button`
   transition: 0.3s;
   border-radius: 8px;
   cursor: pointer;
-  color: ${props => props.$color};
+  color: ${(props) => props.$color};
   &:hover {
     filter: brightness(1.1);
     border-color: ${(props) => props.$bordercolor};
@@ -136,7 +133,7 @@ export default function TableRow({ letter, question, answer }) {
 
   const { setWrongAnswers, setRightAnswers, pending, setPending } =
     useContext(StatusContext);
-    const {volume } = useContext(SettingsContext);
+  const { volume } = useContext(SettingsContext);
   function rightBtn() {
     setColor("#2c462e");
     setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
@@ -179,17 +176,19 @@ export default function TableRow({ letter, question, answer }) {
           {letter}
         </Letter>
 
-        <Question $backg={color}>{question}</Question>
+        <Question $backg={color}>
+          <Answer > {answer} 
+          </Answer> 
+          {question}
+        </Question>
 
-        <Answer $backg={color}>
-          {answer}
+        <ButtonRow $backg={color}>
           <CtnButton>
             <RowBtn
               $bordercolor={"#3f6901"}
               $backgcolor={"#69ae01"}
               $display={display}
               onClick={rightBtn}
-          
             >
               ✔
             </RowBtn>
@@ -198,7 +197,6 @@ export default function TableRow({ letter, question, answer }) {
               $backgcolor={"#c30000"}
               $display={display}
               onClick={wrongBtn}
-           
             >
               ✖
             </RowBtn>
@@ -207,12 +205,11 @@ export default function TableRow({ letter, question, answer }) {
               $bordercolor={"#4a4a4a"}
               $display={displayPending}
               onClick={passBtn}
-           
             >
-              PASS
+              O
             </RowBtn>
           </CtnButton>
-        </Answer>
+        </ButtonRow>
       </Tr>
     </>
   );
