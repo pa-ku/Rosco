@@ -29,7 +29,7 @@ const Question = styled.td`
   color: floralwhite;
   padding-inline: 2em;
   font-size: 1.2em;
-
+  padding-block: 1em;
   background-color: ${(props) => props.$backg};
   width: 70ch;
   @media (max-width: 700px) {
