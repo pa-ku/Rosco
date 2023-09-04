@@ -17,8 +17,17 @@ const Letter = styled.td`
   background-color: #22272e;
   font-size: 1.2em;
   height: 180px;
+  & *{
+    opacity: 0;
+  animation: visible 1s forwards;
+  }
   @media (max-width: 700px) {
     font-size: 1em;
+  }
+  @keyframes visible {
+   100%{
+    opacity: 1;
+   } 
   }
 `;
 
@@ -32,13 +41,18 @@ const Question = styled.td`
   padding-block: 1em;
   background-color: ${(props) => props.$backg};
   width: 80ch;
+  & *:first-letter {
+    text-transform: uppercase;
+  }
+  & *{
+    opacity: 0;
+  animation: visible 1s forwards 200ms;
+  }
   @media (max-width: 700px) {
     font-size: 1.1em;
 
   }
-  &:first-letter {
-    text-transform: uppercase;
-  }
+  
 `;
 
 const ButtonRow = styled.td`
@@ -69,7 +83,8 @@ const Answer = styled.p`
 const CtnButton = styled.div`
   display: flex;
   flex-direction: column;
-  animation: ButtonShow 1s;
+  opacity: 0;
+  animation: ButtonShow 1s forwards 300ms;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -103,8 +118,8 @@ const Button = styled.button`
   border-bottom: 3px solid;
   border-right: 3px solid;
   border-top: 1px solid;
-  border-left: 1px solid;
-
+  border-left:1px solid;
+  text-shadow: 1px 1px ${(props) => props.$bordercolor};
   border-color: ${(props) => props.$bordercolor};
   transition: 0.3s;
   border-radius: 8px;
@@ -112,7 +127,6 @@ const Button = styled.button`
   height: 40px;
   font-size: 1.5em;
   cursor: pointer;
-  color: ${(props) => props.$bordercolor};
   font-weight: 800;
 
   &:hover {
@@ -176,20 +190,20 @@ export default function TableRow({ letter, question, answer }) {
       <Tr>
         <Letter>
           <ContieneTxt> {beginsWithLetter ? " " : "CON"} </ContieneTxt>
-
-          {letter}
+<p>{letter}</p>
+          
         </Letter>
 
         <Question $backg={color}>
           <Answer > {answer} 
           </Answer> 
-          {question}
+          <p>{question}</p> 
         </Question>
 
         <ButtonRow $backg={color}>
           <CtnButton>
             <Button
-              $bordercolor={"#213604"}
+              $bordercolor={"#304e06"}
               $backgcolor={"#5c9902"}
               $display={display}
               onClick={rightBtn}
@@ -197,7 +211,7 @@ export default function TableRow({ letter, question, answer }) {
               ✔
             </Button>
             <Button
-              $bordercolor={"#3d0909"}
+              $bordercolor={"#650404"}
               $backgcolor={"#bd0000"}
               $display={display}
               onClick={wrongBtn}
@@ -206,7 +220,7 @@ export default function TableRow({ letter, question, answer }) {
             </Button>
             <Button
               $backgcolor={"#ad73c4"}
-              $bordercolor={"#371046"}
+              $bordercolor={"#6f228d"}
               $display={displayPending}
               onClick={passBtn}
             >
