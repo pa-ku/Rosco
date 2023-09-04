@@ -31,9 +31,10 @@ const Question = styled.td`
   font-size: 1.2em;
   padding-block: 1em;
   background-color: ${(props) => props.$backg};
-  width: 70ch;
+  width: 80ch;
   @media (max-width: 700px) {
     font-size: 1.1em;
+
   }
   &:first-letter {
     text-transform: uppercase;
