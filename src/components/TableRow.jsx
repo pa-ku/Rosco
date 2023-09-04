@@ -25,7 +25,7 @@ const Letter = styled.td`
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
   padding-inline: 10px;
-  background-color: #373e47;
+  background-color: #324257;
   color: floralwhite;
   padding-block: 1.7em;
   font-size: 1.2em;
@@ -41,10 +41,13 @@ const Question = styled.td`
 `;
 
 const ButtonRow = styled.td`
-  background-color: #373e47;
+  background-color: #324257;
   border-bottom: 4px solid #1c2128;
   background-color: ${(props) => props.$backg};
   padding-right: 1em;
+  @media(max-width:700px){
+    padding-right: 0.3em;
+  }
 `;
 
 const Answer = styled.p`
@@ -68,7 +71,7 @@ const CtnButton = styled.div`
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 
   & * {
     font-size: 1.2em;
@@ -78,12 +81,12 @@ const CtnButton = styled.div`
   }
 
   @media (max-width: 700px) {
-    margin-inline: 5px;
+
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
     & * {
-      border: 0px;
+  
     }
   }
 
@@ -99,7 +102,7 @@ const CtnButton = styled.div`
   }
 `;
 
-const RowBtn = styled.button`
+const Button = styled.button`
   display: ${(props) => props.$display};
   background-color: ${(props) => props.$backgcolor};
   border-bottom: 3px solid;
@@ -110,6 +113,7 @@ const RowBtn = styled.button`
   border-color: ${(props) => props.$bordercolor};
   transition: 0.3s;
   border-radius: 8px;
+  width: 50px;
   cursor: pointer;
   color: ${(props) => props.$color};
   &:hover {
@@ -157,7 +161,7 @@ export default function TableRow({ letter, question, answer }) {
   }
 
   const passBtn = () => {
-    setColor("#4a5058");
+    setColor("#212f42");
     setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
   };
@@ -184,30 +188,30 @@ export default function TableRow({ letter, question, answer }) {
 
         <ButtonRow $backg={color}>
           <CtnButton>
-            <RowBtn
+            <Button
               $bordercolor={"#3f6901"}
               $backgcolor={"#69ae01"}
               $display={display}
               onClick={rightBtn}
             >
               ✔
-            </RowBtn>
-            <RowBtn
+            </Button>
+            <Button
               $bordercolor={"#8d0a0a"}
               $backgcolor={"#c30000"}
               $display={display}
               onClick={wrongBtn}
             >
               ✖
-            </RowBtn>
-            <RowBtn
-              $backgcolor={"#6c6c6c"}
-              $bordercolor={"#4a4a4a"}
+            </Button>
+            <Button
+              $backgcolor={"#064ebb"}
+              $bordercolor={"#0b397e"}
               $display={displayPending}
               onClick={passBtn}
             >
               O
-            </RowBtn>
+            </Button>
           </CtnButton>
         </ButtonRow>
       </Tr>
