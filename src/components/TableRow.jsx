@@ -28,7 +28,7 @@ const Question = styled.td`
   padding-block: 1.7em;
   font-size: 1.2em;
   background-color: ${(props) => props.$backg};
-
+width: 80ch;
   @media (max-width: 700px) {
     font-size: 1.1em;
   }
@@ -59,10 +59,9 @@ const CtnButton = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  width: 100px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+
   margin-top: 10px;
   & * {
     font-size: 1.2em;
