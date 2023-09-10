@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components'
 
@@ -13,6 +13,8 @@ border: 0px;
 color: #ff7f7f;
 background-color: rgba(255, 0, 0, 0);
 cursor: pointer;
+position: relative;
+pointer-events: ${props => props.$Disable};
 &:hover{
     color: #fea8a8;
 }
@@ -24,8 +26,12 @@ color: green;
 background-color: gray;
 `
 
+
+
 export const ReportButton = ({clueValue,wordValue}) => {
   const form = useRef();
+    const [report, setReport] = useState()
+    const [disableButton, setDisableButton] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -38,11 +44,16 @@ export const ReportButton = ({clueValue,wordValue}) => {
       });
   };
 
+  function handleSubmit(){
+    setReport("Reportada!")
+    setDisableButton("none")
+  }
+
   return (
-    <Form ref={form} onSubmit={sendEmail}>
+      <Form ref={form} onSubmit={sendEmail}>
       <Message type="text" value={wordValue} name="word" />
       <Message type="text" value={clueValue} name="description" />
-      <SendButton type="submit" value="Report" />
+      <SendButton $Disable={disableButton} onClick={handleSubmit} type="submit" value={report} />
     </Form>
   );
 };
