@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 const OptionCtn = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 1em;
   opacity: 0;
   width: 100%;
@@ -279,10 +279,10 @@ export default function Settings() {
               type="checkbox"
             />
 
-            <Label htmlFor="Option1">Use team table</Label>
+            <Label htmlFor="Option1" >Team Table </Label>
           </OptionCtn>
           <OptionCtn>
-            <Checkbox
+            <Checkbox 
               checked={sound}
               onChange={handleSound}
               onClick={checkSound}

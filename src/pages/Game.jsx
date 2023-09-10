@@ -53,7 +53,7 @@ export default function Game() {
   return (
     <>
     <Wrapper>
-    <Title text={"WORD WHIRL"} />
+    <Title text={"ROSQUEWE"} />
       <ButtonCtn>
         <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
         <LinkButton

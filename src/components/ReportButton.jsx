@@ -51,7 +51,7 @@ export const ReportButton = ({clueValue,wordValue}) => {
       <Form ref={form} onSubmit={sendEmail}>
       <Message type="text" value={wordValue} name="word" />
       <Message type="text" value={clueValue} name="description" />
-      <SendButton $Color={disableButton} $Disable={disableButton} onClick={handleSubmit} type="submit" value={report} />
+      <SendButton title='Report the actual word' $Color={disableButton} $Disable={disableButton} onClick={handleSubmit} type="submit" value={report} />
     </Form>
   );
 };

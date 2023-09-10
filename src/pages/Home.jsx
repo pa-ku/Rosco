@@ -92,8 +92,8 @@ export default function Home() {
     <>
       <Wrapper>
         <LogoContainer>
-          <Img $right="70px" src={logoFirst} alt="" />
-          <Img $right="-30px" src={logoSecond} alt="" />
+          <Img $right="70px" src={logoFirst} alt="Logo First Part" />
+          <Img $right="-30px" src={logoSecond} alt="Logo Second Part" />
         </LogoContainer>
 
         <ButtonCtn>
@@ -114,7 +114,7 @@ export default function Home() {
           />
         </ButtonCtn>
         
-        <Author href="https://github.com/pa-ku?tab=repositories" target="blank" >With 💜 by paku</Author>
+        <Author title="Author" href="https://pablokuhn.onedev.com.ar/" target="blank" >With 💜 by paku</Author>
       </Wrapper>
     </>
   );
