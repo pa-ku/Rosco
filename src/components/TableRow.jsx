@@ -6,6 +6,7 @@ import useSound from "use-sound";
 import rightSound from "../assets/sounds/right.wav";
 import errorSound from "../assets/sounds/error.wav";
 import { SettingsContext } from "../context/SettingsContext";
+import { ReportButton } from "./ReportButton";
 
 const Letter = styled.td`
   border: 4px solid #1c2128;
@@ -17,23 +18,23 @@ const Letter = styled.td`
   background-color: #22272e;
   font-size: 1.2em;
   height: 180px;
-  & *{
+  & * {
     opacity: 0;
-  animation: visible 1s forwards;
+    animation: visible 1s forwards;
   }
   @media (max-width: 700px) {
     font-size: 1em;
   }
   @keyframes visible {
-   100%{
-    opacity: 1;
-   } 
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
-  padding-inline: 10px;
+
   background-color: #212f42;
   color: floralwhite;
   padding-inline: 2em;
@@ -45,15 +46,13 @@ const Question = styled.td`
   & *:first-letter {
     text-transform: uppercase;
   }
-  & *{
+  & * {
     opacity: 0;
-  animation: visible 1s forwards 200ms;
+    animation: visible 1s forwards 200ms;
   }
   @media (max-width: 700px) {
     font-size: 1.1em;
-
   }
-  
 `;
 
 const ButtonRow = styled.td`
@@ -62,7 +61,7 @@ const ButtonRow = styled.td`
   border-bottom: 4px solid #1c2128;
   background-color: ${(props) => props.$backg};
   padding-right: 1em;
-  @media(max-width:700px){
+  @media (max-width: 700px) {
     padding-right: 0.3em;
   }
 `;
@@ -91,16 +90,11 @@ const CtnButton = styled.div`
   gap: 8px;
   animation: ButtonShow 1s forwards 300ms;
 
-
-
-
   @media (max-width: 700px) {
-
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
     & * {
-  
     }
   }
   @keyframes ButtonShow {
@@ -121,7 +115,7 @@ const Button = styled.button`
   border-bottom: 3px solid;
   border-right: 3px solid;
   border-top: 1px solid;
-  border-left:1px solid;
+  border-left: 1px solid;
   text-shadow: 1px 1px ${(props) => props.$bordercolor};
   border-color: ${(props) => props.$bordercolor};
   transition: 0.3s;
@@ -145,19 +139,7 @@ const Tr = styled.tr`
 const ContieneTxt = styled.p`
   font-size: 0.5em;
 `;
-const ReportButton = styled.input`
 
-border: none;
-border-radius: 8px;
-top: 0px;
-cursor: pointer;
-font-size: 1rem;
-position: absolute;
-color: #fa8989;
-left: 0px;
-padding: 0.5em;
-background-color: rgba(255, 255, 255, 0);
-`
 export default function TableRow({ letter, question, answer }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
@@ -189,7 +171,7 @@ export default function TableRow({ letter, question, answer }) {
   }
 
   const passBtn = () => {
- /*    setColor("#324257"); */
+    /*    setColor("#324257"); */
     setColor("#4c3150");
     setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
@@ -202,18 +184,16 @@ export default function TableRow({ letter, question, answer }) {
 
   return (
     <>
-
-
       <Tr>
         <Letter>
           <ContieneTxt> {beginsWithLetter ? " " : "CON"} </ContieneTxt>
-<p>{letter}</p>
+          <p>{letter}</p>
         </Letter>
 
         <Question $backg={color}>
-            <Answer > {answer} </Answer> 
-          <p>{question}</p> 
-
+          <Answer> {answer} </Answer>
+          <p>{question}</p>
+          <ReportButton wordValue={answer} clueValue={question}/>
         </Question>
         <ButtonRow $backg={color}>
           <CtnButton>
@@ -239,7 +219,7 @@ export default function TableRow({ letter, question, answer }) {
               $display={displayPending}
               onClick={passBtn}
             >
-            ➔
+              ➔
             </Button>
           </CtnButton>
         </ButtonRow>
