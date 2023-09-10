@@ -150,6 +150,10 @@ const Input = styled.input`
     content: "Simpson";
   }
 `;
+
+
+
+
 const ModeCtn = styled.div`
   display: flex;
   align-items: center;

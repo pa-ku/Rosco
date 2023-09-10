@@ -21,12 +21,14 @@ const Row = styled.tr`
 `;
 const Cell = styled.td`
   border: 1px solid #0b397e;
-  padding: 10px;
+padding-block: 20px;
+
   color: ${(props) => props.$color};
-  text-align: left;
+text-align: center;
   text-transform: ${(props) => props.$uppercase};
   background-color: ${(props) => props.$backgroundcolor};
   font-weight: 600;
+
   @media (max-width: 700px) {
     font-size: 0.8rem;
   }
@@ -41,8 +43,16 @@ const Header = styled.div`
 const CountWrapper = styled.div`
 display: flex;
 flex-wrap: wrap;
+
+align-items: center;
+justify-content: center;
 flex-grow: 1;
-width: 100%;
+margin: auto;
+width: 70ch;
+margin-bottom: 4em;
+@media(max-width:700px){
+width: auto;
+}
 `
 const CountContainer  = styled.div`
 display: flex;
@@ -52,8 +62,10 @@ gap: 1em;
 flex-grow: 1;
 background-color: #111;
 border: 2px solid #0b397e;
-padding: 10px 15px;
+padding: 10px 0px;
 text-transform: uppercase;
+width: 14ch;
+
 `
 
 export default function WordList() {

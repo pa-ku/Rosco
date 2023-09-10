@@ -102,11 +102,11 @@ export default function Home() {
             text="Start"
             logo={<StartIcon></StartIcon>}
           />
-         {/*  <LinkButton
+       <LinkButton
             to={"/wordlist"}
             text="Words"
             logo={<ListIcon></ListIcon>}
-          /> */}
+          /> 
           <LinkButton
             to={"/settings"}
             text="Settings"

@@ -1,5 +1,137 @@
 export const words = [
     {
+        word: "Up",
+        clue: "película de animación producida por Pixar, lanzada por Walt Disney Pictures. La historia sigue las aventuras de un anciano llamado Carly un joven explorador mientras viajan en una casa flotante impulsada por globos.",
+    },
+    {
+        word: "UFO",
+        clue: "acrónimo que se utiliza en ingles para referirse a un 'Objeto Volador No Identificado'",
+    },
+    {
+        word: "Usain Bolt",
+        clue: "atleta jamaicano ampliamente considerado como uno de los corredores más rápidos de la historia del atletismo. Ha ganado múltiples medallas de oro olímpicas y ha establecido varios récords mundiales en pruebas de velocidad, como los 100 metros y los 200 metros.",
+    },
+    {
+        word: "U2",
+        clue: "banda de rock irlandesa formada en Dublín en la década de 1970. Han lanzado numerosos álbumes exitosos y son conocidos por canciones como 'With or Without You' y 'Sunday Bloody Sunday'.",
+    },
+    {
+        word: "Uma Thurman",
+        clue: "actriz estadounidense conocida por su papel en películas populares como 'Pulp Fiction' y 'Kill Bill'.",
+    },
+    {
+        word: "Urólogo",
+        clue: "especialista médico que se dedica al estudio, diagnóstico y tratamiento de las enfermedades y trastornos del sistema urinario y del sistema reproductor masculino.",
+    },
+    {
+        word: "Urbe",
+        clue: "ciudad o una localidad, especialmente una ciudad grande y densamente poblada. Es un término que se utiliza para describir un centro urbano con una alta concentración de población y actividades. ",
+    },
+    {
+        word: "Util",
+        clue: "Este adjetivo se utiliza para describir algo que tiene la capacidad de ser aprovechado, empleado o utilizado para cumplir una función o propósito específico. ",
+    },
+    {
+        word: "Urgente",
+        clue: "algo que requiere acción inmediata debido a su importancia o gravedad. Se refiere a situaciones que no pueden esperar y que necesitan ser abordadas de inmediato. ",
+    },
+    {
+        word: "Utilizable",
+        clue: "algo que puede ser usado, aprovechado o empleado de manera efectiva para cumplir una función o propósito. Indica que un objeto, recurso o herramienta puede ser usado con éxito para un propósito específico",
+    },
+    {
+        word: "Universal",
+        clue: "aplicable o válido en todo el mundo, en todas partes o para todas las personas sin excepción.",
+    },
+    {
+        word: "Umbral",
+        clue: "sustantivo que se utiliza en un contexto figurado para referirse al punto en el cual se inicia o se cruza una acción, experiencia o condición. Es el límite o punto en el que algo comienza a ser percibido o considerado. tambien puede hacer referencia a la Pieza empotrada, escalón o espacio que constituye la parte inferior de una puerta, contrapuesta al dintel",
+    },
+    {
+        word: "Últimamente",
+        clue: "adverbio que describe eventos, acciones o situaciones que han ocurrido en un período de tiempo reciente o en los días, semanas o meses más cercanos al momento presente. ",
+    },
+    {
+        word: "Ultrasónico",
+        clue: "adjetivo utilizado para describir sonidos o vibraciones que tienen una frecuencia más alta que el límite superior del espectro de audición humano, es decir, sonidos que no pueden ser escuchados por el oído humano. ",
+    },
+    {
+        word: "Unicelular",
+        clue: "organismos que están formados por una sola célula como su unidad básica de vida.",
+    },
+    {
+        word: "Uniforme",
+        clue: "Que presenta similitud o continuidad en su conjunto, desarrollo, distribución o duración.",
+    },
+    {
+        word: "Uno",
+        clue: "juego de cartas popular en el que el objetivo es deshacerse de todas las cartas en la mano, siguiendo reglas específicas relacionadas con los números y colores de las cartas. También se pueden utilizar cartas especiales para complicar el juego. ",
+    },
+    {
+        word: "Usurpar",
+        clue: "tomar ilegalmente el control, los derechos o el poder de algo o alguien, generalmente de manera injusta o ilegítima. Implica apropiarse de algo que no le pertenece a uno de manera indebida. ",
+    },
+    {
+        word: "Utopía",
+        clue: "lugar, estado o sociedad ideal y perfecta en términos políticos, sociales o culturales. Es una visión o concepto de un mundo ideal en el que todo funciona de manera armoniosa y justa.",
+    },
+    {
+        word: "Útero",
+        clue: "órgano que forma parte del sistema reproductor femenino y es el lugar donde se desarrolla y crece un embrión durante el embarazo.",
+    },
+    {
+        word: "Usina",
+        clue: "instalación o planta industrial donde se genera, produce o se transforma energía, generalmente en forma de electricidad.",
+    },
+    {
+        word: "Urna",
+        clue: "objeto utilizado en procesos electorales y votaciones. Se utiliza para recoger de manera segura y confidencial las papeletas o votos de los ciudadanos.",
+    },
+    {
+        word: "Universitario",
+        clue: "persona Que cursa o estudios en la universidad.",
+    },
+    {
+        word: "Unipersonal",
+        clue: "obra de teatro, un espectáculo o una actuación en la que solo participa una persona, generalmente como actor o intérprete principal.",
+    },
+    {
+        word: "Unisex",
+        clue: "ropa, peinados o productos, que es adecuado o diseñado para ser utilizado por personas de cualquier género, sin distinción entre masculino o femenino.",
+    },
+    {
+        word: "Ultravioleta",
+        clue: "radiación electromagnética que se encuentra en el espectro electromagnético, justo después de la luz visible. Es invisible para el ojo humano, pero se utiliza en diversas aplicaciones, como la esterilización, la fotografía forense y la detección de sustancias fluorescentes.",
+    },
+    {
+        word: "Ufología",
+        clue: "estudio y la investigación de los objetos voladores no identificados ",
+    },
+    {
+        word: "Uruguay",
+        clue: "país ubicado en América del Sur, conocido por su costa sobre el océano Atlántico, su paisaje diverso que incluye playas, ríos y colinas, y su cultura influida por las tradiciones europeas y africanas. Su capital es Montevideo.",
+    },
+    {
+        word: "Untar",
+        clue: "acción de aplicar una sustancia, como manteca, aceite, crema o alguna otra sustancia similar, sobre una superficie, generalmente para agregar sabor o facilitar la cocción. ",
+    },
+    {
+        word: "Urgente",
+        clue: " algo que requiere acción inmediata o atención inmediata debido a su importancia o gravedad. Se refiere a situaciones que no pueden esperar y que necesitan ser abordadas de inmediato.",
+    },
+    {
+        word: "Ubre",
+        clue: "glándula mamaria o la teta de una vaca u otro mamífero hembra.",
+    },
+    {
+        word: "Ukelele",
+        clue: "instrumento musical de cuerda similar a una pequeña guitarra. Tiene un sonido característico y a menudo se asocia con la música hawaiana. ",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
         word: "Amigo",
         clue: "una persona con la que uno tiene una relación de afecto y confianza.",
     },
