@@ -10,7 +10,7 @@ left: -300px;
 
 const SendButton = styled.input`
 border: 0px;
-color: #ff7f7f;
+color: ${props => props.$Color ? '#8eff8e' : ' #ff7f7f'};
 background-color: rgba(255, 0, 0, 0);
 cursor: pointer;
 position: relative;
@@ -22,15 +22,13 @@ pointer-events: ${props => props.$Disable};
 const Message = styled.input`
 opacity: 0;
 visibility: hidden;
-color: green;
-background-color: gray;
 `
 
 
 
 export const ReportButton = ({clueValue,wordValue}) => {
   const form = useRef();
-    const [report, setReport] = useState("Reportar")
+    const [report, setReport] = useState("Report")
     const [disableButton, setDisableButton] = useState(false)
 
   const sendEmail = (e) => {
@@ -45,7 +43,7 @@ export const ReportButton = ({clueValue,wordValue}) => {
   };
 
   function handleSubmit(){
-    setReport("Reportada!")
+    setReport("Thanks! 🐽")
     setDisableButton("none")
   }
 
@@ -53,7 +51,7 @@ export const ReportButton = ({clueValue,wordValue}) => {
       <Form ref={form} onSubmit={sendEmail}>
       <Message type="text" value={wordValue} name="word" />
       <Message type="text" value={clueValue} name="description" />
-      <SendButton $Disable={disableButton} onClick={handleSubmit} type="submit" value={report} />
+      <SendButton $Color={disableButton} $Disable={disableButton} onClick={handleSubmit} type="submit" value={report} />
     </Form>
   );
 };
