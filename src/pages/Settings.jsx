@@ -3,7 +3,7 @@ import LinkButton from "../components/LinkButton";
 import styled from "styled-components";
 import Title from "../components/Title";
 import HomeIcon from "@mui/icons-material/Home";
-import { useState, useContext } from "react";
+import {useContext } from "react";
 import selectAudio from "../assets/sounds/select-sound.wav";
 import dohAudio from "../assets/sounds/doh.mp3";
 import checkAudio from "../assets/sounds/cheksound.wav";
@@ -156,7 +156,7 @@ const ModeCtn = styled.div`
   justify-content: center;
   flex-direction: column;
   color: #dfbeff;
-text-align:center;
+  text-align: center;
   gap: 1em;
   padding-inline: 0.5em;
 `;
@@ -183,6 +183,8 @@ export default function Settings() {
     setVolume,
     sound,
     volume,
+    teamTable,
+    setTeamTable,
   } = useContext(SettingsContext);
 
   //SOUND MANAGER
@@ -252,6 +254,16 @@ export default function Settings() {
     }
   }
 
+  function handleTeam(event) {
+  
+    if(teamTable === true){
+      setTeamTable(false);
+    }
+    else{
+      setTeamTable(true);
+    }
+  }
+
   return (
     <>
       <Wrapper>
@@ -260,12 +272,24 @@ export default function Settings() {
         <OptionWrapper>
           <OptionCtn>
             <Checkbox
+              checked={teamTable}
+              onChange={handleTeam}
+              onClick={checkSound}
+              id="Option1"
+              type="checkbox"
+            />
+
+            <Label htmlFor="Option1">Use team table</Label>
+          </OptionCtn>
+          <OptionCtn>
+            <Checkbox
               checked={sound}
               onChange={handleSound}
               onClick={checkSound}
               id="Option2"
               type="checkbox"
             />
+
             <Label htmlFor="Option2">SOUND</Label>
           </OptionCtn>
         </OptionWrapper>
@@ -293,7 +317,7 @@ export default function Settings() {
               onChange={modeHandler}
             />
 
-         {/*    <Input
+            {/*    <Input
               name="mode"
               checked={buttonState.simpsons}
               type="radio"

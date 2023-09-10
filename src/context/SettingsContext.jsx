@@ -10,10 +10,11 @@ export function SettingsProvider({ children }) {
   const [rollChance, setRollChance] = useLocalStorage("RollChange", 3);
   const [sound, setSound] = useLocalStorage("Sound_On/Off", "");
 const [volume, setVolume] = useLocalStorage("SoundVolume", 0.2);
+const [teamTable, setTeamTable] = useLocalStorage("TeamTable", false)
 
   return (
     <SettingsContext.Provider
-      value={{ setContainsCounter, setRollChance, rollChance, containsCounter,setSound,setVolume,sound,volume }}
+      value={{ setContainsCounter, setRollChance, rollChance, containsCounter,setSound,setVolume,sound,volume,teamTable,setTeamTable }}
     >
       {children}
     </SettingsContext.Provider>

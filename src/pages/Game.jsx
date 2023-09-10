@@ -5,6 +5,8 @@ import LinkButton from "../components/LinkButton";
 import HomeIcon from "@mui/icons-material/Home";
 import ReloadLogo from "@mui/icons-material/Cached";
 import Title from "../components/Title";
+import { useContext } from "react";
+import { SettingsContext } from "../context/SettingsContext";
 
 const Wrapper = styled.div`
 padding-top:4em;
@@ -41,6 +43,13 @@ const ReloadIcon = styled(ReloadLogo)`
 
 
 export default function Game() {
+
+
+
+  const {
+    teamTable
+  } = useContext(SettingsContext);
+
   return (
     <>
     <Wrapper>
@@ -55,7 +64,18 @@ export default function Game() {
         />
       </ButtonCtn>
 
+      {teamTable === true && (<Title text={"Team A"} /> )}
+
       <Table />
+
+
+{teamTable === true && (<>
+  <Title text={"Team B"} />
+  <Table /> 
+</> 
+)}
+
+
       </Wrapper>
     </>
   );

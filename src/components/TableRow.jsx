@@ -41,6 +41,7 @@ const Question = styled.td`
   padding-block: 1em;
   background-color: ${(props) => props.$backg};
   width: 80ch;
+  position: relative;
   & *:first-letter {
     text-transform: uppercase;
   }
@@ -144,7 +145,19 @@ const Tr = styled.tr`
 const ContieneTxt = styled.p`
   font-size: 0.5em;
 `;
+const ReportButton = styled.input`
 
+border: none;
+border-radius: 8px;
+top: 0px;
+cursor: pointer;
+font-size: 1rem;
+position: absolute;
+color: #fa8989;
+left: 0px;
+padding: 0.5em;
+background-color: rgba(255, 255, 255, 0);
+`
 export default function TableRow({ letter, question, answer }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
@@ -189,19 +202,19 @@ export default function TableRow({ letter, question, answer }) {
 
   return (
     <>
+
+
       <Tr>
         <Letter>
           <ContieneTxt> {beginsWithLetter ? " " : "CON"} </ContieneTxt>
 <p>{letter}</p>
-          
         </Letter>
 
         <Question $backg={color}>
-          <Answer > {answer} 
-          </Answer> 
+            <Answer > {answer} </Answer> 
           <p>{question}</p> 
-        </Question>
 
+        </Question>
         <ButtonRow $backg={color}>
           <CtnButton>
             <Button
