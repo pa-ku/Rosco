@@ -30,7 +30,7 @@ background-color: gray;
 
 export const ReportButton = ({clueValue,wordValue}) => {
   const form = useRef();
-    const [report, setReport] = useState()
+    const [report, setReport] = useState("Reportar")
     const [disableButton, setDisableButton] = useState(false)
 
   const sendEmail = (e) => {
