@@ -1,4 +1,364 @@
 export const words = [
+
+    {
+        word: "Agasajar",
+        clue: "acto de atender o dar placer a alguien con regalos, comida, bebida o entretenimiento.",
+    },
+    {
+        word: "Cacique",
+        clue: "Un líder o jefe de una comunidad indígena o grupo étnico.",
+    },
+    {
+        word: "Panqueque",
+        clue: "término coloquial que se usa para referirse a una persona que cambia de opinión o de lealtades políticas muy fácilmente",
+    },
+    {
+        word: "Queen",
+        clue: "Una influyente banda de rock británica, conocida por éxitos como 'Bohemian Rhapsody' y 'We Will Rock You'.",
+    },
+    {
+        word: "Quijote",
+        clue: " personaje principal de la novela escrita por Miguel de Cervantes, un relato satírico del género medieval de las novelas de caballería, donde Alonso Quijano el hidalgo es un caballero andante .",
+    },
+    {
+        word: "Quentin Tarantino",
+        clue: "famoso director de cine conocido por películas como 'Pulp Fiction', 'Kill Bill' y 'Django Unchained'.",
+    },
+    {
+        word: "Injusticia",
+        clue: "Falta de equidad o de trato justo hacia alguien.",
+    },
+    {
+        word: "Laja",
+        clue: "Losa plana y delgada utilizada en la construcción, a menudo hecha de piedra o baldosa. ",
+    },
+    {
+        word: "Manjar",
+        clue: "Término que se utiliza para describir un alimento o plato que es especialmente delicioso o exquisito.",
+    },
+    {
+        word: "Hijo",
+        clue: "Un descendiente en relación con sus padres.",
+    },
+    {
+        word: "Hojear",
+        clue: "El acto de pasar páginas de un libro, revista u otro documento para leer o examinar su contenido.",
+    },
+    {
+        word: "Gajo",
+        clue: "Una división o segmento de una fruta cítrica u otro objeto similar, como una porción de naranja o limón.",
+    },
+    {
+        word: "Forja",
+        clue: "Un lugar donde se moldea o se trabaja el metal a través de la aplicación de calor y martilleo.",
+    },
+    {
+        word: "Quebracho",
+        clue: "tipo de árbol que se encuentra en América del Sur y es conocido por su madera dura y resistente. También se utiliza para describir la madera extraída de este árbol.",
+    },
+    {
+        word: "Quemadura",
+        clue: "lesión en la piel o el tejido causada por el calor, el fuego, productos químicos u otras fuentes que dañan los tejidos corporales.",
+    },
+    {
+        word: "Queja",
+        clue: "Una expresión de insatisfacción, disgusto o descontento sobre algo o alguien.",
+    },
+    {
+        word: "Queroseno",
+        clue: "Un tipo de combustible líquido que se utiliza en motores de avión, calefacción y lámparas.",
+    },
+    {
+        word: "Quetzal",
+        clue: "Un ave colorida que habita en las selvas de América Central y es conocida por su belleza y plumaje vibrante.",
+    },
+    {
+        word: "Quebrar",
+        clue: "Romper o fracturar algo en pedazos, o perder la solidez y la estabilidad, como en el caso de una empresa que se declara en bancarrota.",
+    },
+    {
+        word: "Quebrado",
+        clue: "djetivo que se utiliza para describir algo que está roto o fracturado, o también puede referirse a una situación financiera en dificultades.",
+    },
+    {
+        word: "Quejarse",
+        clue: "Verbo que se refiere a la acción de expresar insatisfacción o disgusto con algo o alguien, generalmente de manera verbal.",
+    },
+    {
+        word: "Quieto",
+        clue: "Un adjetivo que se refiere a la ausencia de movimiento o actividad, estando en reposo o en calma.",
+    },
+    {
+        word: "Quisquilloso",
+        clue: "adjetivo que se utiliza para describir a alguien que es muy escrupuloso o meticuloso en cuanto a detalles, o que se molesta fácilmente por cosas pequeñas o insignificantes.",
+    },
+    {
+        word: "Quirúrgico",
+        clue: "Adjetivo que se relaciona con la cirugía o los procedimientos médicos que involucran operaciones en el cuerpo humano.",
+    },
+    {
+        word: "Quíntuple",
+        clue: "Un número que es cinco veces mayor que otro número o una serie de cinco elementos que están relacionados o agrupados.",
+    },
+    {
+        word: "Quinoa",
+        clue: "grano comestible que se cultiva principalmente en América del Sur y es conocido por su alto valor nutricional. Es una fuente de proteínas y otros nutrientes.",
+    },
+    {
+        word: "Quiniela",
+        clue: "Un juego de azar en el que los participantes eligen una serie de números y apuestan en función de los resultados de un sorteo o evento deportivo.",
+    },
+    {
+        word: "Quincena",
+        clue: "Período de 15 días",
+    },
+    {
+        word: "Química",
+        clue: "Una ciencia que estudia la composición de la materia, sus propiedades y transformaciones.",
+    },
+    {
+        word: "Quejoso",
+        clue: "Una persona que se queja con frecuencia o de manera excesiva sobre situaciones o problemas.",
+    },
+    {
+        word: "Jurásico",
+        clue: "período que se caracteriza por la hegemonía de los grandes dinosaurios y por la escisión de Pangea en los continentes Laurasia y Gondwana",
+    },
+    {
+        word: "Jungla",
+        clue: "Un área de selva densa y salvaje, generalmente en regiones tropicales.",
+    },
+    {
+        word: "Juliana",
+        clue: "Técnica de corte utilizada en cocina para cortar verduras en tiras delgadas y uniformes.",
+    },
+    {
+        word: "Jorobar",
+        clue: "Molestar o fastidiar a alguien.",
+    },
+    {
+        word: "Júpiter",
+        clue: "El quinto planeta del sistema solar, conocido por ser el planeta más grande.",
+    },
+    {
+        word: "Harry potter",
+        clue: "Famosa serie de libros escrita por J.K. Rowling que se convirtió en una franquicia literaria y cinematográfica sobre un joven mago.",
+    },
+    {
+        word: "jurasick park",
+        clue: "Película de ciencia ficción dirigida por Steven Spielberg basada en una novela de Michael Crichton sobre dinosaurios clonados.",
+    },
+    {
+        word: "jefe",
+        clue: "Título utilizado para describir a la persona de mayor autoridad en una organización o empresa.",
+    },
+    {
+        word: "jetlag",
+        clue: "Término que se utiliza para describir la fatiga y la desorientación causada por viajar a través de diferentes zonas horarias.",
+    },
+    {
+        word: "Jack Daniel's",
+        clue: "marca de whiskey estadounidense muy conocida. Su whiskey Tennessee se produce en Lynchburg, Tennessee, y es famoso por su sabor distintivo.",
+    },
+    {
+        word: "Jeep",
+        clue: "marca de vehículos todoterreno estadounidense conocida por sus vehículos robustos y aptos para terrenos difíciles.",
+    },
+    {
+        word: "Jaguar",
+        clue: "marca de automóviles británica conocida por sus vehículos de lujo y alto rendimiento. El logotipo de la marca presenta un jaguar en movimiento.",
+    },
+    {
+        word: "Jumbo",
+        clue: "hipermercado de origen chileno, perteneciente y pilar del consorcio empresarial Cencosud, Su logo, es un circulo verde",
+    },
+    {
+        word: "JVC",
+        clue: "empresa japonesa de 3 siglas que se dedica a la electrónica y la fabricación de equipos de audio y video. Han producido una amplia gama de productos, desde televisores hasta sistemas de sonido.",
+    },
+    {
+        word: "jetlag",
+        clue: "personaje ficticio de la literatura y el cine, conocido por ser un espía británico elegante y sofisticado. Ha sido el protagonista de numerosas películas de espionaje llenas de acción.",
+    },
+    {
+        word: "James bond",
+        clue: "personaje ficticio de la literatura y el cine, conocido por ser un espía británico elegante y sofisticado, con su nombre en clave el 007",
+    },
+    {
+        word: "jetpack",
+        clue: "dispositivo que permite a una persona propulsarse en el aire utilizando chorros de gas a presión. A menudo se utiliza en la ciencia ficción y en la exploración espacial.",
+    },
+    {
+        word: "juegos del hambre",
+        clue: "Pelicula donde 24 jóvenes compiten el uno contra el otro en una batalla en la que solo puede haber un superviviente. La joven Katniss se ofrece voluntaria para participar en los juegos para salvar a su hermana.",
+    },
+    {
+        word: "juez",
+        clue: " persona que tiene autoridad para emitir juicios y tomar decisiones legales en un tribunal de justicia.",
+    },
+    {
+        word: "justin biber",
+        clue: "cantante pop canadiense que se convirtió en una sensación mundial desde una edad temprana. con canciones como 'baby', 'Love Yoursel' y 'Love me'",
+    },
+    {
+        word: "James Blunt",
+        clue: "cantante y compositor británico conocido por su música pop y sus baladas emotivas. Algunas de sus canciones más conocidas incluyen 'You're Beautiful' y 'Goodbye My Lover'",
+    },
+    {
+        word: "julieta venegas",
+        clue: "cantante y compositora mexicana conocida por su música pop y rock en español. Algunas de sus ccanciones mas conocidas incluyen 'Limon y sal' y 'Eres para mi'",
+    },
+ 
+    {
+        word: "joroba",
+        clue: "protuberancia o una curvatura anormal en la espalda de una persona o en la de un animal.",
+    },
+    {
+        word: "jaqueca",
+        clue: "Dolor fuerte de cabeza que afecta, generalmente, a un lado o una parte de ella y a menudo va acompañado de náuseas y vómitos.",
+    },
+    {
+        word: "Jaque",
+        clue: "xpresión utilizada en el de ajedrez para indicar que el rey esta siendo atacado",
+    },
+    {
+        word: "Jaquemate",
+        clue: "xpresión utilizada en el  de ajedrez para indicar que el rey no puede moverse a ninguna casilla que lo ponga fuera de peligro ",
+    },
+    {
+        word: "jardinero",
+        clue: " persona que se dedica al cuidado, poda, riego y mantenimiento de plantas o flores en espacios exteriores. ",
+    },
+    {
+        word: "jesuita",
+        clue: " miembro de la Compañía de Jesús, una orden religiosa de la Iglesia Católica fundada por San Ignacio de Loyola. Son conocidos por su educación y sus actividades misioneras en todo el mundo.",
+    },
+    {
+        word: "jeta",
+        clue: "parte frontal de la cabeza de una persona, que incluye la boca, la nariz y el mentón. También se puede utilizar en un sentido coloquial para referirse al rostro o expresión facial de alguien.",
+    },
+    {
+        word: "jornada",
+        clue: "período de tiempo durante el cual se lleva a cabo un trabajo, una actividad o una tarea. Puede referirse a una laboral o a cualquier otra actividad que abarque un período de tiempo determinado. ",
+    },
+    {
+        word: "joorobar",
+        clue: "acción de molestar, fastidiar o incomodar a alguien. Implica causar irritación o disgusto a otra persona. ",
+    },
+
+    {
+        word: "joya",
+        clue: "objeto precioso, como una gema, un diamante o una pieza de oro, que generalmente se usa como adorno personal.Suelen tener un alto valor estético y económico.",
+    },
+    {
+        word: "joyero",
+        clue: "persona que se dedica a la fabricación y reparación de metales preciosos y piedras preciosas para crear piezas ",
+    },
+    {
+        word: "jubilado",
+        clue: "persona que ha dejado de trabajar de manera activa, por lo general después de alcanzar una cierta edad o cumplir con los requisitos para recibir una pensión.",
+    },
+    {
+        word: "judío",
+        clue: "persona que pertenece a la religión judía o que es de ascendencia judía.",
+    },
+    {
+        word: "judo",
+        clue: "deporte y arte marcial que se originó en Japón. Los competidores utilizan técnicas de lanzamiento y control para derribar a sus oponentes y ganar puntos.",
+    },
+    {
+        word: "Jarabe",
+        clue: "sustancia líquida, a menudo dulce y viscosa, que se utiliza para aliviar la tos o para dar sabor a alimentos y bebidas. Suele contener ingredientes como azúcar, agua y sabores naturales o artificiales.",
+    },
+    {
+        word: "Jovial",
+        clue: "persona que es alegre, animada y de buen humor. Se refiere a alguien que muestra una actitud positiva y entusiasta hacia la vida.",
+    },
+    {
+        word: "Juntar",
+        clue: "unir o poner cosas o personas en proximidad unas de otras. Implica la acción de reunir o agrupar elementos que estaban separados.",
+    },
+    {
+        word: "Jugar",
+        clue: "participar en un deporte o actividad recreativa en la que se compite o se divierte. Implica la interacción y la competencia entre jugadores. ",
+    },
+    {
+        word: "Jadear",
+        clue: "respirar con dificultad y rapidez, generalmente como resultado de un esfuerzo físico intenso o debido a la falta de aire. ",
+    },
+    {
+        word: "Joven",
+        clue: "persona que está en la etapa temprana de la vida, generalmente desde la adolescencia hasta la adultez temprana. También puede referirse a algo que es nuevo o reciente en su existencia.",
+    },
+    {
+        word: "Juzgar",
+        clue: "acción de formar una opinión o evaluación sobre algo o alguien, a menudo basada en criterios personales o normas establecidas. Implica hacer un juicio o valoración sobre algo.",
+    },
+    {
+        word: "Justificar",
+        clue: "proporcionar una razón o argumento que respalde o explique una acción, decisión o creencia. Se busca mostrar que una acción o elección es válida o correcta.",
+    },
+    {
+        word: "Jabón",
+        clue: "sustancia sólida o líquida que se utiliza para lavar y limpiar la piel, la ropa u otros objetos. Es comúnmente utilizado en la higiene personal y la limpieza doméstica. ",
+    },
+    {
+        word: "Jugoso",
+        clue: "algo que contiene una cantidad significativa de líquido, generalmente asociado con alimentos que son tiernos, sabrosos y que liberan líquido al ser mordidos o cortados.",
+    },
+    {
+        word: "Jurar",
+        clue: "hacer una promesa solemne o afirmar algo con una gran convicción. A menudo implica invocar a una deidad o utilizar una fórmula ritual.",
+    },
+    {
+        word: "Jet",
+        clue: "tipo de aeronave que es impulsada por motores a reacción y es capaz de volar a altas velocidades.Son comunes en la aviación comercial y militar. ",
+    },
+    {
+        word: "Jinete",
+        clue: "persona que monta a caballo, ya sea como pasatiempo, deporte o como parte de su trabajo. ",
+    },
+    {
+        word: "Japón",
+        clue: "país insular en Asia, conocido por su cultura única, famoso por su gastronomía, el anime,el sushi y el ramen ",
+    },
+    {
+        word: "Juvenil",
+        clue: "adjetivo se utiliza para describir algo que está relacionado con los jóvenes o que es adecuado para ellos.",
+    },
+    {
+        word: "Jarrón",
+        clue: "recipiente decorativo, generalmente de cerámica, vidrio u otro material, que se utiliza para contener flores u otros objetos decorativos.",
+    },
+    {
+        word: "Jamaica",
+        clue: "país insular en el mar Caribe, conocido por su cultura vibrante, música reggae, hermosas playas y paisajes naturales.",
+    },
+    {
+        word: "Jengibre",
+        clue: " tallo subterráneo comestible, que se utiliza como especia en la cocina y para preparar infusiones. De color amarillo con un sabor picante y se utiliza en una variedad de platos y bebidas en todo el mundo.",
+    },
+    {
+        word: "Jamón",
+        clue: "carne que se obtiene de las patas traseras del cerdo, después de un proceso de salazón, curado y, a menudo, ahumado. ",
+    },
+    {
+        word: "Jugo",
+        clue: "bebida líquida que se obtiene al exprimir frutas, verduras u otros alimentos.",
+    },
+    {
+        word: "Jaguar",
+        clue: " felino depredador que habita en las selvas de América Latina. Es conocido por su elegante pelaje amarillo con manchas negras y es uno de los animales más icónicos de la fauna americana. ",
+    },
+
+    {
+        word: "Brujo",
+        clue: "Persona que realiza actos de magia o hechicería para dominar la voluntad de las personas o modificar los acontecimientos, especialmente si provoca una influencia dañina o maléfica sobre las personas o sobre su destino.",
+    },
+    {
+        word: "Mojar",
+        clue: "cción de poner algo en contacto con un líquido, generalmente agua, de manera que quede empapado o cubierto por el líquido.",
+    },
     {
         word: "Up",
         clue: "película de animación producida por Pixar, lanzada por Walt Disney Pictures. La historia sigue las aventuras de un anciano llamado Carly un joven explorador mientras viajan en una casa flotante impulsada por globos.",

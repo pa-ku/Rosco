@@ -68,7 +68,7 @@ const [breakCounter, setBreakCounter] = useState(0)
     /* "w", */
     /*   "x", */
     /* "y", */
-    "z",
+    /* "z", */
   ];
 
   //CREAR ROLL 0-9
