@@ -41,7 +41,7 @@ export const ReportButton = ({clueValue,wordValue}) => {
   return (
     <Form ref={form} onSubmit={sendEmail}>
       <Message type="text" value={wordValue} name="word" />
-      <Message type="text" value={"clueValue"} name="description" />
+      <Message type="text" value={clueValue} name="description" />
       <SendButton type="submit" value="Report" />
     </Form>
   );
