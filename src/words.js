@@ -2,6 +2,66 @@ export const words = [
 
  
     {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
         word: "Aficionado",
         clue: "Que practica por placer una actividad, generalmente deportiva o artística, sin recibir habitualmente dinero a cambio.",
     },
@@ -33,14 +93,7 @@ export const words = [
         word: "Tim Burton",
         clue: "Director de peliculas como El cadaver de la novia, el gran pez, el planeta de los simios,",
     },
-    {
-        word: "",
-        clue: "",
-    },
-    {
-        word: "",
-        clue: "",
-    },
+
     {
         word: "Chevrolet",
         clue: "Fabricante estadounidense de automóviles y camiones con sede en Detroit, perteneciente al grupo General Motors",
@@ -101,10 +154,7 @@ export const words = [
         word: "ONOMATOPEYA",
         clue: "Palabra que imita el sonido que hace un animal o una cosa.",
     },
-    {
-        word: "Quimera",
-        clue: "Cosa que, sin ser real, alguien la imagina como posible o verdadera.",
-    },
+ 
     {
         word: "Repisa",
         clue: "Tabla o elemento similar que se coloca contra la pared para poner en ella objetos.",
@@ -118,10 +168,6 @@ export const words = [
         clue: "Escrito o declaración de palabra en el que alguien dice lo que quiere que se haga después de su muerte, sobre todo con su dinero o sus pertenencias.",
     },
     {
-        word: "Ubicación",
-        clue: "Lugar en el que está situado algo",
-    },
-    {
         word: "Avaro",
         clue: "Persona Que ansía poseer muchas riquezas por el solo placer de atesorarlas sin compartirlas con nadie.",
     },
@@ -129,10 +175,7 @@ export const words = [
         word: "Xenofobia",
         clue: "Odio o antipatía hacia los extranjeros.",
     },
-    {
-        word: "Yodo",
-        clue: "Elemento químico de color oscuro que se encuentra en el suelo en forma de sales, así como en las algas y otros animales marinos.",
-    },
+ 
     {
         word: "Azar",
         clue: "Causa o fuerza que supuestamente determina que los hechos y circunstancias imprevisibles o no intencionados se desarrollen de una manera o de otra.",
@@ -262,10 +305,7 @@ export const words = [
         word: "Jumanji",
         clue: "Pelicula protagonizada por Robin Williams, donde unos chicos quedan atrapado en un juego de mesa mágico",
     },
-    {
-        word: "Indiana Jones",
-        clue: "Saga de peliculas de un arqueologo protagonizado por harrison ford",
-    },
+
     {
         word: "HEDIONDO",
         clue: "Que desprende un olor malo, desagradable e intenso.",
@@ -389,10 +429,6 @@ export const words = [
     {
         word: "Avatar",
         clue: "Identidad virtual que escoge el usuario de una computadora o de un videojuego para que lo represente en una aplicación o sitio web.",
-    },
-    {
-        word: "Agasajar",
-        clue: "acto de atender o dar placer a alguien con regalos, comida, bebida o entretenimiento.",
     },
     {
         word: "Cacique",
@@ -567,10 +603,6 @@ export const words = [
         clue: "empresa japonesa de 3 siglas que se dedica a la electrónica y la fabricación de equipos de audio y video. Han producido una amplia gama de productos, desde televisores hasta sistemas de sonido.",
     },
     {
-        word: "jetlag",
-        clue: "personaje ficticio de la literatura y el cine, conocido por ser un espía británico elegante y sofisticado. Ha sido el protagonista de numerosas películas de espionaje llenas de acción.",
-    },
-    {
         word: "James bond",
         clue: "personaje ficticio de la literatura y el cine, conocido por ser un espía británico elegante y sofisticado, con su nombre en clave el 007",
     },
@@ -738,7 +770,7 @@ export const words = [
     },
     {
         word: "Jaguar",
-        clue: " felino depredador que habita en las selvas de América Latina. Es conocido por su elegante pelaje amarillo con manchas negras y es uno de los animales más icónicos de la fauna americana. ",
+        clue: "felino depredador que habita en las selvas de América Latina. Es conocido por su elegante pelaje amarillo con manchas negras y es uno de los animales más icónicos de la fauna americana. ",
     },
 
     {
@@ -865,10 +897,7 @@ export const words = [
         word: "Untar",
         clue: "acción de aplicar una sustancia, como manteca, aceite, crema o alguna otra sustancia similar, sobre una superficie, generalmente para agregar sabor o facilitar la cocción. ",
     },
-    {
-        word: "Urgente",
-        clue: " algo que requiere acción inmediata o atención inmediata debido a su importancia o gravedad. Se refiere a situaciones que no pueden esperar y que necesitan ser abordadas de inmediato.",
-    },
+
     {
         word: "Ubre",
         clue: "glándula mamaria o la teta de una vaca u otro mamífero hembra.",
@@ -2157,34 +2186,18 @@ export const words = [
         word: "Indiana Jones",
         clue: "Película de aventuras en busca de tesoros y artefactos históricos, protajonizada por Harrison Ford",
     },
-    { word: "joya", clue: "Una piedra preciosa o un adorno valioso" },
     { word: "joven", clue: "Que está en la primera etapa de la vida" },
     { word: "jadeo", clue: "Respirar con dificultad y rapidez" },
     {
-        word: "jefe",
-        clue: "La persona en la posición de autoridad más alta",
-    },
-    {
         word: "joroba",
         clue: "Una protuberancia en la espalda de ciertos animales",
-    },
-    {
-        word: "jugar",
-        clue: "Participar en un juego o actividad recreativa",
-    },
-    {
-        word: "jabón",
-        clue: "Una sustancia utilizada para lavar y limpiar",
     },
     { word: "jardín", clue: "Un área con plantas y flores cultivadas" },
     {
         word: "jarra",
         clue: "Un recipiente grande con asa y boca ancha",
     },
-    {
-        word: "jubilado",
-        clue: "Que ha dejado de trabajar después de alcanzar una cierta edad",
-    },
+  
     { word: "juguete", clue: "Un objeto para que los niños jueguen" },
     {
         word: "jirafa",
@@ -2298,10 +2311,7 @@ export const words = [
         word: "Lúdico",
         clue: "Relativo a los juegos y diversión.",
     },
-    {
-        word: "Laberinto",
-        clue: "Conjunto de pasillos o caminos confusos.",
-    },
+
     {
         word: "Líquido",
         clue: "Sustancia que fluye y no mantiene forma propia.",
@@ -2434,12 +2444,8 @@ export const words = [
         clue: "Estado de sueño o inactividad prolongada.",
     },
     {
-        word: "Ladrar",
+        word: "Ladrido",
         clue: "Voz característica del perro.",
-    },
-    {
-        word: "Manzana",
-        clue: "Fruto comestible de forma redondeada o alargada, con piel fina, carne jugosa y un hueso en su interior.",
     },
     {
         word: "Mariposa",
@@ -2954,10 +2960,7 @@ export const words = [
         word: "Obstrucción",
         clue: "Acción de bloquear o impedir el paso.",
     },
-    {
-        word: "Orbita",
-        clue: "Trayectoria curva que sigue un cuerpo celeste alrededor de otro.",
-    },
+
     {
         word: "Opaco",
         clue: "Que no permite el paso de la luz.",
@@ -3227,10 +3230,7 @@ export const words = [
         word: "Químico",
         clue: "Persona especializada en química.",
     },
-    {
-        word: "Quieto",
-        clue: "En reposo o sin movimiento.",
-    },
+    
     {
         word: "Quirúrgico",
         clue: "Relativo a la cirugía o a un procedimiento médico.",
@@ -3284,10 +3284,6 @@ export const words = [
         clue: "Lesión en la piel causada por el calor o productos químicos.",
     },
     {
-        word: "Queja",
-        clue: "Expresión de insatisfacción o descontento.",
-    },
-    {
         word: "Quincena",
         clue: "Período de quince días.",
     },
@@ -3322,10 +3318,6 @@ export const words = [
     {
         word: "Quilómetro",
         clue: "Medida de longitud equivalente a mil metros.",
-    },
-    {
-        word: "Química cuántica",
-        clue: "Estudio de la química a nivel de partículas subatómicas.",
     },
     {
         word: "Quincuagésimo",
@@ -3480,10 +3472,6 @@ export const words = [
         clue: "Dispositivo que recibe señales, como una radio o un televisor.",
     },
     {
-        word: "Reacción química",
-        clue: "Cambio en la composición molecular de una sustancia.",
-    },
-    {
         word: "Reacción en cadena",
         clue: "Proceso en el que una acción provoca una serie de respuestas consecutivas.",
     },
@@ -3623,10 +3611,7 @@ export const words = [
         word: "Subir",
         clue: "Moverse hacia arriba o elevar algo.",
     },
-    {
-        word: "Susto",
-        clue: "Emoción repentina causada por un evento inesperado.",
-    },
+
     {
         word: "Saborizar",
         clue: "Añadir sabor a algo.",
@@ -3736,10 +3721,6 @@ export const words = [
         clue: "Magnitud física que mide la duración y el orden sucesivo de los acontecimientos",
     },
     {
-        word: "Tren",
-        clue: "Conjunto de vagones unidos que se mueven sobre rieles.",
-    },
-    {
         word: "Tarde",
         clue: "Parte del día que sigue a la mañana y precede a la noche.",
     },
@@ -3763,10 +3744,7 @@ export const words = [
         word: "Tinta",
         clue: "Líquido coloreado utilizado para escribir con pluma.",
     },
-    {
-        word: "Tortuga",
-        clue: "Reptil de cuerpo protegido por un caparazón.",
-    },
+
     {
         word: "Taza",
         clue: "Recipiente pequeño usado para beber líquidos.",
@@ -3897,10 +3875,7 @@ export const words = [
         word: "Universo",
         clue: "Conjunto de todos los astros, galaxias y materia en el espacio.",
     },
-    {
-        word: "Urgente",
-        clue: "Que requiere acción inmediata.",
-    },
+
     {
         word: "Utilidad",
         clue: "Capacidad de ser útil o beneficiosa.",
@@ -3925,10 +3900,7 @@ export const words = [
         word: "Unánime",
         clue: "Grupo de personas que están todas completamente de acuerdo o comparten la misma opinión sobre algo.",
     },
-    {
-        word: "Ultravioleta",
-        clue: "Parte del espectro de luz invisible al ojo humano.",
-    },
+
     {
         word: "Ubicar",
         clue: "Colocar o situar algo en un lugar específico.",
@@ -3944,10 +3916,6 @@ export const words = [
     {
         word: "Unilateral",
         clue: "Que es realizado o afecta solo a un lado o parte.",
-    },
-    {
-        word: "Universal",
-        clue: "Que es válido o aplicable en todas partes.",
     },
     {
         word: "Urbano",
@@ -3987,10 +3955,6 @@ export const words = [
         clue: "Sustancia semisólida utilizada para aplicaciones medicinales.",
     },
     {
-        word: "Ufología",
-        clue: "Estudio de los objetos voladores no identificados (OVNIs).",
-    },
-    {
         word: "Vacío",
         clue: "Espacio desocupado o sin contenido.",
     },
@@ -4017,10 +3981,6 @@ export const words = [
     {
         word: "Volumen",
         clue: "Espacio ocupado por un objeto tridimensional.",
-    },
-    {
-        word: "Volar",
-        clue: "Desplazarse en el aire.",
     },
     {
         word: "Votar",
@@ -4091,10 +4051,7 @@ export const words = [
         word: "Vulnerabilidad",
         clue: "Estado de ser susceptible a daños o perjuicios.",
     },
-    {
-        word: "Viernes",
-        clue: "Día de la semana que precede al sábado.",
-    },
+
     {
         word: "Varón",
         clue: "Individuo de sexo masculino.",
@@ -4220,10 +4177,7 @@ export const words = [
         word: "Yogur",
         clue: "Producto lácteo fermentado obtenido por acción bacteriana.",
     },
-    {
-        word: "Yema",
-        clue: "Parte interior y nutritiva de un huevo.",
-    },
+
     {
         word: "Yodo",
         clue: "Elemento químico no metal usado en medicina como desinfectante, presente en el agua de mar y en algas",
@@ -4294,10 +4248,6 @@ export const words = [
         clue: "Canal o cavidad excavada en el suelo para drenar agua.",
     },
     {
-        word: "Zanahoria",
-        clue: "Planta comestible de raíz alargada y color naranja.",
-    },
-    {
         word: "Zona",
         clue: "Área o región determinada por características particulares.",
     },
@@ -4358,7 +4308,6 @@ export const words = [
     },
     { word: "Zoologico", clue: "instalación donde se exhiben una variedad de animales, tanto salvajes como domesticados, para que el público los observe y aprenda sobre ellos. " },
     { word: "Zamba", clue: "Baile y música folclórica sudamericana." },
-    { word: "Zumbido", clue: "Sonido vibrante, como el de un insecto volando." },
     { word: "Zombie", clue: "Cadáver reanimado sin alma en la cultura popular." },
     { word: "Zigzag", clue: "patrón o movimiento que consiste en una serie de ángulos agudos o cambios de dirección en rápida sucesión, similar a una serie de 'Z' invertidas." },
     { word: "Pellizcar", clue: "acción de sujetar y apretar suavemente la piel o un objeto entre el pulgar y el dedo índice." },
@@ -4366,7 +4315,6 @@ export const words = [
     { word: "Actualizar", clue: "Hacer cambios para poner al día." },
     { word: "Arroz", clue: "Grano utilizado como alimento básico en muchas culturas asiaticas." },
     { word: "Empezar", clue: "Iniciar o comenzar algo." },
-    { word: "Cerveza", clue: "Bebida alcohólica hecha de granos de cebada." },
     { word: "Llovizna", clue: "Precipitación ligera de pequeñas gotas de agua." },
     { word: "Marzo", clue: "Tercer mes del año." },
     { word: "Endulzar", clue: "Añadir azúcar para hacer algo más dulce." },
@@ -4392,7 +4340,6 @@ export const words = [
     { word: "Plaza", clue: "Espacio abierto o una área pública en una ciudad o pueblo, por lo general rodeada de edificios u otras estructuras. Las plazas suelen ser lugares de reunión, actividades culturales y eventos públicos" },
     { word: "Manzana", clue: "Fruta que es generalmente redonda y puede tener diferentes colores, como rojo, verde o amarillo. Es una de las frutas más populares y versátiles, se consume fresca y se utiliza en una variedad de preparaciones culinarias, desde pasteles hasta compotas." },
     { word: "Corazon", clue: "Órgano que impulsa la sangre." },
-    { word: "Nariz", clue: "Parte del rostro para oler y respirar." },
     { word: "Azafran", clue: "especia muy valorada que se obtiene de los estigmas de una flor. Tiene un color rojo intenso y se utiliza comúnmente para dar sabor y color a diversos platos, especialmente en la cocina mediterránea y en la preparación del arroz paella" },
     { word: "Ironizar", clue: "Accion de expresar una idea o comentario de manera sarcástica o burlona, a menudo con la intención de hacer una crítica disfrazada o resaltar la incongruencia en lo que se dice" },
     { word: "Zac snider", clue: "director de cine y productor estadounidense conocido por su trabajo en películas de superhéroes, en particular por su contribución al Universo Extendido de DC Comics. Algunas de las películas más destacadas de Zack Snyder incluyen '300', 'Watchmen', 'Man of Steel'. También es conocido por su estilo visual distintivo y su influencia en el género de superhéroes en el cine." },
@@ -4400,7 +4347,6 @@ export const words = [
     { word: "Tocayo", clue: "Persona con el mismo nombre." },
     { word: "El padrino", clue: "Serie de películas de crimen y drama estrenada en 1972 y dirigida por Francis Ford Coppola, basada en la novela homónima de Mario Puzo. La trilogía consta de tres películas principales:" },
     { word: "El señor de los anillos", clue: "Saga de fantasía escrita por Tolkien." },
-    { word: "Star Wars", clue: "Franquicia de películas de ciencia ficción creada por George Lucas." },
     { word: "Casa blanca", clue: "Residencia oficial del Presidente de los EE. UU." },
 
     { word: "Chorizo", clue: "embutido que se elabora a partir de carne de cerdo picada y condimentos como pimentón, ajo y otras especias. Suele tener un sabor picante o ahumado y puede consumirse fresco o curado." },

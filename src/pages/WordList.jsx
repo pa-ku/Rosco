@@ -13,6 +13,10 @@ import CheckBox from "../components/ui/CheckBox";
 //pushear palabras al local storage para luego subirlas
 //marcar palabras en el local storage para eliminar posteriormente
 
+const Wrapper = styled.div`
+margin-block: 3em;
+`
+
 const Table = styled.table`
   border: 2px solid #1c2128;
   width: 100%;
@@ -29,7 +33,9 @@ const Cell = styled.td`
   text-transform: ${(props) => props.$uppercase};
   background-color: ${(props) => props.$backgroundcolor};
   font-weight: 600;
-
+background-color: #0b397e;
+border-radius: 20px;
+padding: 10px;
   @media (max-width: 700px) {
     font-size: 0.8rem;
   }
@@ -44,11 +50,11 @@ const Header = styled.div`
 const CountWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: center;
   flex-grow: 1;
   margin: auto;
+
   width: 70ch;
   margin-bottom: 4em;
   @media (max-width: 700px) {
@@ -65,6 +71,7 @@ const CountContainer = styled.div`
   border: 2px solid #0b397e;
   padding: 10px 0px;
   text-transform: uppercase;
+  flex-wrap: wrap;
   width: 14ch;
 `;
 
@@ -110,7 +117,8 @@ export default function WordList() {
   ];
 
   const wordCountByLetter = {};
-  const WordIncludes = {};
+  const wordIncludes = {};
+  const wordCount = {};
 
 
 
@@ -133,14 +141,34 @@ export default function WordList() {
       const letter = letters[i].toLowerCase(); // Convertir la letra a minúsculas
       if (word.includes(letter)) {
         // Si la palabra contiene la letra, aumentar el contador correspondiente
-        if (WordIncludes[letter]) {
-          WordIncludes[letter]++;
+        if (wordIncludes[letter]) {
+          wordIncludes[letter]++;
         } else {
-          WordIncludes[letter] = 1;
+          wordIncludes[letter] = 1;
         }
       }
     }
   });
+
+
+  const repeatedWords = [];
+
+// Recorrer el array de palabras
+words.forEach((wordObj) => {
+  const word = wordObj.word.toLowerCase(); // Convertir la palabra a minúsculas
+  if (wordCount[word]) {
+    // Si la palabra ya se ha encontrado antes, aumentar el contador
+    wordCount[word]++;
+    if (!repeatedWords.includes(word)) {
+      // Si la palabra aún no está en la lista de palabras repetidas, agregarla
+      repeatedWords.push(word);
+    }
+  } else {
+    // Si es la primera vez que se encuentra la palabra, inicializar el contador en 1
+    wordCount[word] = 1;
+  }
+});
+
 
   function handleIncludes(){
     setIncludes(true)
@@ -152,7 +180,9 @@ export default function WordList() {
 
   return (
     <>
-      <Title text={"WORD LIST"} />
+    <Wrapper>
+
+      <Title text={"WORDS"} />
 
       <Header>
         <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
@@ -171,7 +201,7 @@ export default function WordList() {
         {Object.keys(wordCountByLetter).map((letter) => (
           <CountContainer key={letter}>
             <p>{letter}</p>
-            <p>{WordIncludes[letter]}</p>
+            <p>{wordIncludes[letter]}</p>
           </CountContainer>
         ))}
       </CountWrapper> 
@@ -187,11 +217,21 @@ export default function WordList() {
 </CountWrapper> }
 
 
+<Table>
+<tbody>
+<CountWrapper>
+  <CountContainer>
+    {repeatedWords.map((word, index) => (
+      <Row>
+      <Cell key={index}> {word} </Cell>
+      </Row>
+    ))}
+  </CountContainer>
+  </CountWrapper> 
+  </tbody>
+  </Table>
 
-
-  
-
-      <Table>
+  {/*     <Table>
         <tbody>
           {words.map((words, index) => (
             <Row key={index}>
@@ -205,7 +245,10 @@ export default function WordList() {
             </Row>
           ))}
         </tbody>
-      </Table>
+      </Table> */}
+
+
+  </Wrapper>
     </>
   );
 }
