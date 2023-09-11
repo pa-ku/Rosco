@@ -5,7 +5,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import StartIcon from "@mui/icons-material/SportsEsports";
 import logoFirst from "../assets/img/first.png";
 import logoSecond from "../assets/img/second.png";
-import LinkButton from "../components/LinkButton";
+import LinkButton from "../components/ui/LinkButton";
 
 import useSound from "use-sound";
 import checkAudio from "../assets/sounds/right.wav";

@@ -6,7 +6,7 @@ import useSound from "use-sound";
 import rightSound from "../assets/sounds/right.wav";
 import errorSound from "../assets/sounds/error.wav";
 import { SettingsContext } from "../context/SettingsContext";
-import { ReportButton } from "./ReportButton";
+import { ReportButton } from "./ui/ReportButton";
 
 const Letter = styled.td`
   border: 4px solid #1c2128;

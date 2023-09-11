@@ -102,8 +102,8 @@ export const words = [
         clue: "Palabra que imita el sonido que hace un animal o una cosa.",
     },
     {
-        word: "Cosa que, sin ser real, alguien la imagina como posible o verdadera.",
-        clue: "Quimera",
+        word: "Quimera",
+        clue: "Cosa que, sin ser real, alguien la imagina como posible o verdadera.",
     },
     {
         word: "Repisa",

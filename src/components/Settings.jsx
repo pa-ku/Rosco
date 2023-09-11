@@ -10,7 +10,6 @@ import checkAudio from "../assets/sounds/cheksound.wav";
 import useSound from "use-sound";
 import { SettingsContext } from "../context/SettingsContext";
 import useLocalStorage from "use-local-storage";
-import CheckBox from "../components/ui/CheckBox";
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,6 +33,60 @@ const Label = styled.label`
   text-transform: uppercase;
   font-size: 1.1rem;
   min-width: 50px;
+`;
+const Checkbox = styled.input`
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: #efdeff;
+  width: 35px;
+  height: 20px;
+  border-radius: 9px;
+  position: relative;
+  transition: 1s;
+  outline: 2px solid #814fb3;
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &:checked {
+    background-color: #c791fd;
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    right: 19px;
+    border-radius: 100%;
+    background-color: #c791fd;
+    animation: 700ms unCheked;
+  }
+  &:checked::before {
+    animation: 600ms cheked forwards;
+  }
+  @keyframes cheked {
+    50% {
+      width: 17px;
+    }
+
+    100% {
+      right: 3px;
+      width: 14px;
+      background-color: #ffffff;
+    }
+  }
+  @keyframes unCheked {
+    0% {
+      right: 5px;
+    }
+    50% {
+      width: 17px;
+    }
+    100% {
+      right: 19px;
+      background-color: #c791fd;
+    }
+  }
 `;
 const OptionWrapper = styled.div`
   display: flex;
@@ -222,7 +275,7 @@ export default function Settings() {
 
         <OptionWrapper>
           <OptionCtn>
-            <CheckBox
+            <Checkbox
               checked={teamTable}
               onChange={handleTeam}
               onClick={checkSound}
@@ -233,7 +286,7 @@ export default function Settings() {
             <Label htmlFor="Option1" >Team Table </Label>
           </OptionCtn>
           <OptionCtn>
-            <CheckBox 
+            <Checkbox 
               checked={sound}
               onChange={handleSound}
               onClick={checkSound}
