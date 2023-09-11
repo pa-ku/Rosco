@@ -98,6 +98,7 @@ export default function WordList() {
     "z",
   ];
 
+
   const wordCountByLetter = {};
 
   // Iterar a través de las palabras y contar cuántas comienzan con cada letra
@@ -130,6 +131,9 @@ export default function WordList() {
             </CountContainer>
           
           ))}
+
+          
+
    </CountWrapper>
       <Table>
         <tbody>

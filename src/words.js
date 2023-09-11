@@ -1,5 +1,395 @@
 export const words = [
 
+ 
+    {
+        word: "Aficionado",
+        clue: "Que practica por placer una actividad, generalmente deportiva o artística, sin recibir habitualmente dinero a cambio.",
+    },
+    {
+        word: "Agitar",
+        clue: "Mover una cosa repetidamente hacia un lado y otro con fuerza y rapidez.",
+    },
+    {
+        word: "Incoloro",
+        clue: "Que no tiene color",
+    },
+    {
+        word: "Anual",
+        clue: "Que ocurre, se hace o se repite cada año.",
+    },
+    {
+        word: "Migraña",
+        clue: "Dolor de cabeza que puede ocurrir con síntomas como náuseas, vómitos o sensibilidad a la luz y al sonido. En la mayoría de las personas, se siente un dolor pulsátil únicamente en un lado de la cabeza.",
+    },
+    {
+        word: "Orbita",
+        clue: "Curva que describe un cuerpo alrededor de otro en el espacio, especialmente un planeta, cometa, satélite etc., como consecuencia de la acción de la fuerza de gravedad.",
+    },
+    {
+        word: "Cepa",
+        clue: "Grupo de microorganismos, como bacterias o virus, que pertenecen a la misma especie y comparten ciertas características que no se encuentran en otros miembros de la especie.",
+    },
+    {
+        word: "Tim Burton",
+        clue: "Director de peliculas como El cadaver de la novia, el gran pez, el planeta de los simios,",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "",
+        clue: "",
+    },
+    {
+        word: "Chevrolet",
+        clue: "Fabricante estadounidense de automóviles y camiones con sede en Detroit, perteneciente al grupo General Motors",
+    },
+    {
+        word: "Arteria",
+        clue: "Conducto por donde va la sangre desde el corazón a las demás partes del cuerpo.",
+    },
+    {
+        word: "Bragueta",
+        clue: "Apertura delantera de un pantalón",
+    },
+    {
+        word: "Camisa",
+        clue: "Prenda de vestir con botones",
+    },
+    {
+        word: "Diploma",
+        clue: "Documento que expide un centro educativo o una corporación y que acredita un título o un grado académico",
+    },
+    {
+        word: "Electricista",
+        clue: "Persona que arregla o pone la electricidad",
+    },
+    {
+        word: "Favorito",
+        clue: "Sinonimo de preferido",
+    },
+    {
+        word: "Canguro",
+        clue: "Mamifero que se desplaza saltando y tiene una bolsa en su barriga para sus crías",
+    },
+    {
+        word: "Hojaldre",
+        clue: "Masa de harina con manteca, muy sobada y que, al cocerse en el horno, forma muchas hojas delgadas superpuestas",
+    },
+    {
+        word: "Imposible",
+        clue: "Antónimo de posible",
+    },
+    {
+        word: "Mamut",
+        clue: "Mamífero prehistórico de la familia del elefante y muy parecido a él, pero más grande, con los colmillos muy largos",
+    },
+    {
+        word: "Ninfa",
+        clue: "En las leyendas mitologicas, diosa con forma de muchacha que vivia en los bosques, las fuentes o los rios",
+    },
+    {
+        word: "Medusa",
+        clue: "criatura femenina de la mitologia griega con serpientes en lugar de cabello y la capacidad de petrificar a quienes la miraran directamente a los ojos. ",
+    },
+    {
+        word: "Ñandu",
+        clue: "Ave parecida al avestruz, pero más pequeña y con tres dedos en cada pie.",
+    },
+    {
+        word: "ONOMATOPEYA",
+        clue: "Palabra que imita el sonido que hace un animal o una cosa.",
+    },
+    {
+        word: "Cosa que, sin ser real, alguien la imagina como posible o verdadera.",
+        clue: "Quimera",
+    },
+    {
+        word: "Repisa",
+        clue: "Tabla o elemento similar que se coloca contra la pared para poner en ella objetos.",
+    },
+    {
+        word: "Sotana",
+        clue: "Traje negro y largo parecido a una túnica que llevan algunos curas y religiosos",
+    },
+    {
+        word: "Testamento",
+        clue: "Escrito o declaración de palabra en el que alguien dice lo que quiere que se haga después de su muerte, sobre todo con su dinero o sus pertenencias.",
+    },
+    {
+        word: "Ubicación",
+        clue: "Lugar en el que está situado algo",
+    },
+    {
+        word: "Avaro",
+        clue: "Persona Que ansía poseer muchas riquezas por el solo placer de atesorarlas sin compartirlas con nadie.",
+    },
+    {
+        word: "Xenofobia",
+        clue: "Odio o antipatía hacia los extranjeros.",
+    },
+    {
+        word: "Yodo",
+        clue: "Elemento químico de color oscuro que se encuentra en el suelo en forma de sales, así como en las algas y otros animales marinos.",
+    },
+    {
+        word: "Azar",
+        clue: "Causa o fuerza que supuestamente determina que los hechos y circunstancias imprevisibles o no intencionados se desarrollen de una manera o de otra.",
+    },
+    {
+        word: "Uretra",
+        clue: "Conducto presente en sistema reproductor masculino",
+    },
+    {
+        word: "Eolica",
+        clue: "Tipo de energia  es aquella que aprovecha la energía cinética del aire y la transforma en energía mecánica,",
+    },
+    {
+        word: "Envidia",
+        clue: "Deseo de hacer o tener lo que otra persona tiene.",
+    },
+    {
+        word: "Fotosintesis",
+        clue: "Proceso mediante el cual los autótrofos fabrican su alimento",
+    },
+    {
+        word: "Humo",
+        clue: "Producto que en forma gaseosa se desprende de una combustión, y se compone principalmente de vapor de agua y ácido carbónico.",
+    },
+    {
+        word: "Limpio",
+        clue: "Que no tiene manchas o suciedad",
+    },
+    {
+        word: "Narcicista",
+        clue: "Admiración excesiva y exagerada que siente una persona por sí misma, por su aspecto físico o por sus dotes o cualidades.",
+    },
+    {
+        word: "Obrero",
+        clue: "Persona que tiene por oficio hacer un trabajo manual o que requiere esfuerzo físico como empleada de otra persona, en especial en una industria o en el sector de la construcción.",
+    },
+    {
+        word: "Pelicano",
+        clue: "Ave palmípeda de unos 150 cm de longitud, que tiene el plumaje blanco, las patas cortas, el cuello esbelto y el pico oscuro, largo y ancho. hizo una breve aparicion en la pelicula nemo",
+    },
+    {
+        word: "Rodrigo",
+        clue: "Cantante argentino de cuarteto. Su estilo estuvo marcado por su carisma y su energía en el escenario. Algunas de sus canciones son, como lo mejor del amor y la mano de dios",
+    },
+    {
+        word: "Sombrero",
+        clue: "Prenda de vestir con la que se cubre la cabeza, que se compone generalmente de una copa alrededor de la cual va un ala.",
+    },
+    {
+        word: "Tarantino",
+        clue: "Apellido del Cineasta que dirigio peliculas como Django desencadenado, Pulp Fiction  y kill bill",
+    },
+    {
+        word: "Vibora",
+        clue: "Serpiente venenosa de longitud mediana, cuerpo robusto de piel gris con manchas negras y cabeza triangular; habita en regiones de clima templado o cálido",
+    },
+    {
+        word: "Exilio",
+        clue: "Pena que consiste en expulsar o hacer salir a una persona de un país o de un territorio",
+    },
+    {
+        word: "Yema",
+        clue: "Núcleo de los huevos de los vertebrados ovíparos; es esferoidal, de color amarillo y está rodeada por la clara.",
+    },
+    {
+        word: "Zanahoria",
+        clue: "Raíz comestible de esta planta, de color anaranjado y forma cónica y alargada",
+    },
+  
+    {
+        word: "Esperanza",
+        clue: "Confianza de lograr una cosa o de que se realice algo que se desea.",
+    },
+    {
+        word: "Yaguarete",
+        clue: "El felino mas grande de america, ubicado al norte de Argentina",
+    },
+    {
+        word: "Exagono",
+        clue: "Figura geométrica presente en los panales de abeja",
+    },
+    {
+        word: "VAN GOGH",
+        clue: "Pintor de la noche estrellada, que se corto la oreja",
+    },
+    {
+        word: "Multimetro",
+        clue: "Herramienta de prueba usada para medir dos o más valores eléctricos",
+    },
+    {
+        word: "Turbante",
+        clue: "Tocado que consiste en una tira larga de tela que se enrolla a la cabeza, usado comunmente por hindúes y musulmanes.",
+    },
+    {
+        word: "Sinonimo",
+        clue: "Que tiene el mismo significado que otra u otras palabras o expresiones.",
+    },
+    {
+        word: "Escalar",
+        clue: "Subir o trepar por una gran pendiente o a una gran altura.",
+    },
+    {
+        word: "Quincho",
+        clue: "Nexo a la vivienda, no siempre cerrado por los cuatro lados, donde se realizan reuniones y comen asados",
+    },
+    {
+        word: "Aconcagua",
+        clue: "Montaña mas alta de argentina ubicada en Mendoza",
+    },
+    {
+        word: "Carroñero",
+        clue: "Dicho de un animal que se alimenta de carne descompuesta, especialmente la de los animales muertos.",
+    },
+    {
+        word: "Manifestacion",
+        clue: "Reunión pública, generalmente al aire libre y en marcha, en la cual los asistentes a ella reclaman algo o expresan su protesta por algo",
+    },
+    {
+        word: "Magallanes",
+        clue: "Estrecho que separa la Patagonia argentina y la isla tierra del fuego",
+    },
+    {
+        word: "Litio",
+        clue: "Elemento cuyo simbolo es LI, utilizado para baterias de celulares, autos y muchas mas",
+    },
+    {
+        word: "Jumanji",
+        clue: "Pelicula protagonizada por Robin Williams, donde unos chicos quedan atrapado en un juego de mesa mágico",
+    },
+    {
+        word: "Indiana Jones",
+        clue: "Saga de peliculas de un arqueologo protagonizado por harrison ford",
+    },
+    {
+        word: "HEDIONDO",
+        clue: "Que desprende un olor malo, desagradable e intenso.",
+    },
+    {
+        word: "Guanaco",
+        clue: "Persona que escupe mucho al hablar",
+    },
+    {
+        word: "Fluor",
+        clue: "Elemento cuyo simbolo es F, ayuda a proteger los dientes porque fortalece la superficie externa del diente, llamada esmalte",
+    },
+    {
+        word: "Embarque",
+        clue: "Paso previo para subir al avior",
+    },
+    {
+        word: "Darin",
+        clue: "Apellido del actor argentino que protagonizo peliculas como, las '9 reinas' y 'el secreto de sus ojos'",
+    },
+    {
+        word: "Capicua",
+        clue: "Que se lee del derecho y del revez",
+    },
+    {
+        word: "Barnie",
+        clue: "Dinosaurio de los años 90 color rosa y que baila",
+    },
+    {
+        word: "Santiago",
+        clue: "Capital de chile",
+    },
+    {
+        word: "Zorro",
+        clue: "Animal que intentaba robar el mapa a dora la exploradora en la serie animada de mismo nombre",
+    },
+    {
+        word: "Ypf",
+        clue: "Nombre de la estacion de servicio nacional Argentina",
+    },
+    {
+        word: "Exterminio",
+        clue: "Matar o eliminar por completo de un lugar un conjunto de seres vivos.",
+    },
+    {
+        word: "Volar",
+        clue: "Moverse por el aire usando alas o un medio artificial",
+    },
+    {
+        word: "Usuahia",
+        clue: "Ciudad mas austral de argentina",
+    },
+    {
+        word: "Susto",
+        clue: "Impresión momentánea de miedo causada por algo que aparece u ocurre de forma repentina e inesperada y que generalmente altera o agita la respiración.",
+    },
+    {
+        word: "Risueño",
+        clue: "Que ríe con facilidad",
+    },
+    {
+        word: "Qatar",
+        clue: "Sede del mundial 2022",
+    },
+    {
+        word: "Patagonia",
+        clue: "Region geografica del sur del pais argentino y chileno",
+    },
+    {
+        word: "Biografia",
+        clue: "Narración de la vida de una persona.",
+    },
+    {
+        word: "Cumpleaños",
+        clue: "Aniversario del nacimiento de una persona.",
+    },
+    {
+        word: "Avalancha",
+        clue: "Masa grande de nieve que se desliza por la ladera de una montaña violenta y estrepitosamente",
+    },
+    {
+        word: "Moe",
+        clue: "Cantinero del a serie animada los simpsons, Su bar, es la famosa taberna de…  ",
+    },
+    {
+        word: "Laberinto",
+        clue: "Lugar conformado por calles y encrucijadas, para confundir a quien se adentre en él",
+    },
+    {
+        word: "AGASAJAR",
+        clue: "Halagar a una persona con regalos u otras muestras de afecto o consideración.",
+    },
+    {
+        word: "Imán",
+        clue: "Pieza mineral o metálica que tiene la propiedad de atraer el hierro, el acero y otros cuerpos.",
+    },
+    {
+        word: "Hierro",
+        clue: "Elemento cuyo simbolo es FE, cuarto elemento más abundante en la corteza terrestre, y suplemento para la anemia",
+    },
+    {
+        word: "Fabula",
+        clue: "Relato o composición literaria en prosa o en verso que proporciona una enseñanza o consejo moral.",
+    },
+    {
+        word: "MERCURIO",
+        clue: "Planeta mas pequeño y cercano  del sistema solar",
+    },
+    {
+        word: "ADIESTRAR",
+        clue: "Enseñar a un animal a ejecutar determinados movimientos o habilidades siguiendo las órdenes de una persona.",
+    },
+    {
+        word: "CHAPLIN",
+        clue: "Director de cine britanico, creador de peliculas como  “el gran dictador” y “tiempos modernos”  ",
+    },
+    {
+        word: "BOB ESPONJA",
+        clue: "Vive en una piña debajo del mar",
+    },
+    {
+        word: "Avatar",
+        clue: "Identidad virtual que escoge el usuario de una computadora o de un videojuego para que lo represente en una aplicación o sitio web.",
+    },
     {
         word: "Agasajar",
         clue: "acto de atender o dar placer a alguien con regalos, comida, bebida o entretenimiento.",
@@ -208,7 +598,7 @@ export const words = [
         word: "julieta venegas",
         clue: "cantante y compositora mexicana conocida por su música pop y rock en español. Algunas de sus ccanciones mas conocidas incluyen 'Limon y sal' y 'Eres para mi'",
     },
- 
+
     {
         word: "joroba",
         clue: "protuberancia o una curvatura anormal en la espalda de una persona o en la de un animal.",
@@ -903,7 +1293,8 @@ export const words = [
     },
     { word: "cuerpo", clue: "La estructura física de un ser vivo" },
     { word: "calma", clue: "estado de tranquilidad, paz o ausencia de agitación o disturbio. Es un momento en el que no hay actividad frenética ni perturbaciones, y todo parece estar en un estado de serenidad." },
-    { word: "curioso", clue: "Que siente curiosidad" },
+
+    { word: "curioso", clue: "Persona que tiene un fuerte deseo de aprender, explorar o conocer cosas nuevas. También puede referirse a algo inusual o extraño que despierta la atención o el interés." },
     {
         word: "cocina",
         clue: "Una habitación de una casa donde se prepara la comida",
@@ -1148,8 +1539,11 @@ export const words = [
         clue: "El conocimiento o la habilidad que se adquiere a través de la práctica o el conocimiento",
     },
     { word: "eterno", clue: "Que dura para siempre" },
-    { word: "escena", clue: "Un lugar o lugar de acción" },
+
+    { word: "escena", clue: "segmento o fragmento de una obra teatral, película, obra literaria o evento en la vida real. En el contexto del cine y el teatro, puede referirse a un conjunto de acciones y diálogos que ocurren en un lugar y momento específicos." },
+
     { word: "escritura", clue: "El proceso de escribir" },
+
     { word: "encantar", clue: "Atraer o fascinar a alguien" },
     {
         word: "ecosistema",
@@ -1161,20 +1555,20 @@ export const words = [
     },
     {
         word: "eje",
-        clue: "Una línea imaginaria que atraviesa el centro de un objeto y lo divide en dos partes iguales",
+        clue: "línea recta alrededor de la cual gira o se mueve un objeto. También puede referirse a un elemento central o fundamental alrededor del cual gira o se desarrolla algo. En el contexto de la física y la mecánica, es esencial para la rotación y el equilibrio de objetos. ",
     },
-    { word: "enfocar", clue: "Concentrar la atención en algo" },
+    { word: "enfocar", clue: "Palabra utilizada en fotografía y cinematografía para ajustar la nitidez de una imagen." },
     {
         word: "elegir",
         clue: "Decidir cuál de dos o más cosas es la mejor",
     },
     {
         word: "equilibrio",
-        clue: "El estado de algo que está nivelado o equilibrado",
+        clue: "fuerzas o elementos opuestos se compensan mutuamente, manteniendo así la estabilidad. En contextos emocionales o psicológicos, puede describir una sensación de armonía y tranquilidad.",
     },
     {
         word: "enigma",
-        clue: "Un problema o pregunta que es difícil de comprender o resolver",
+        clue: "Un problema o pregunta que es muy difícil de comprender o resolver",
     },
     {
         word: "estilo",
@@ -1186,22 +1580,23 @@ export const words = [
     },
     {
         word: "esconder",
-        clue: "Colocar algo en un lugar donde no se pueda ver",
+        clue: "Colocar algo en un lugar donde no se pueda ver o encontrar",
     },
     {
         word: "estirar",
         clue: "Hacer que algo sea más largo o más grande",
     },
     { word: "espejo", clue: "Una superficie lisa que refleja la luz" },
-    { word: "esmeralda", clue: "Una piedra preciosa verde" },
+
+    { word: "esmeralda", clue: "gema preciosa conocida por su color verde intenso y su valor en la joyería. " },
     {
         word: "esencia",
         clue: "La parte más importante o significativa de algo",
     },
-    { word: "elevado", clue: "Que está en un nivel alto" },
+    { word: "elevado", clue: " algo que se encuentra a una gran altura o que está por encima de lo común o esperado en términos de cantidad, calidad o importancia. " },
     {
-        word: "evolucionar",
-        clue: "Cambiar o desarrollarse gradualmente con el tiempo",
+        word: "Evolucionar",
+        clue: "proceso de cambio y desarrollo gradual a lo largo del tiempo. Se utiliza en biología para describir cómo las especies cambian y se adaptan a su entorno a lo largo de las generaciones. ",
     },
     {
         word: "examinar",
@@ -1211,33 +1606,33 @@ export const words = [
     { word: "esperanza", clue: "El deseo de que algo bueno suceda" },
     {
         word: "encender",
-        clue: "Hacer que algo se encienda o se vuelva brillante",
+        clue: "activar un dispositivo o máquina para que empiece a funcionar",
     },
     {
         word: "emoción",
-        clue: "Una sensación fuerte que afecta al cuerpo y la mente",
+        clue: "respuesta mental y física a un estímulo o situación que provoca sentimientos y cambios en el estado de ánimo. Puede incluir una amplia gama de sentimientos, desde la felicidad y la tristeza hasta el miedo y el enojo.",
     },
     {
         word: "explicar",
         clue: "Dar información sobre algo para que sea más fácil de entender",
     },
-    { word: "esmero", clue: "Una atención cuidadosa a los detalles" },
+    { word: "esmero", clue: "acción de realizar una tarea o actividad con gran atención, cuidado y dedicación. Suele implicar un esfuerzo meticuloso para lograr un resultado de alta calidad." },
     {
         word: "estudio",
         clue: "El proceso de aprender sobre algo leyendo, observando o experimentando",
     },
     {
         word: "edificio",
-        clue: "Una estructura construida para albergar personas u otras cosas",
+        clue: "estructura construida, generalmente de varios pisos, que se utiliza como residencia, oficina, almacén u otro propósito. ",
     },
-    { word: "ejemplar", clue: "Un ejemplo de algo" },
-    { word: "enorme", clue: "Muy grande" },
-    { word: "ejecutar", clue: "Hacer algo o completar una tarea" },
-    { word: "encajar", clue: "Hacer que algo encaje en otro lugar" },
-    { word: "establecer", clue: "Poner algo en su lugar o posición" },
+    { word: "ejemplar", clue: "un individuo o cosa que sirve como modelo, representante o ejemplo de su tipo. También puede referirse a una copia de una obra impresa, un libro o una revista." },
+    { word: "enorme", clue: "algo que es excepcionalmente grande, inmenso o gigantesco en tamaño. Se usa para enfatizar la magnitud o el volumen de algo." },
+    { word: "ejecutar", clue: "acción de llevar a cabo una tarea, una acción o un plan. También puede referirse a la acción de realizar una orden o instrucción de manera efectiva. En el contexto de la informática, se utiliza para iniciar un programa o proceso en una computadora." },
+    { word: "encajar", clue: "cuando algo se ajusta o se adapta perfectamente a otra cosa, encajando de manera precisa o armoniosa. También puede referirse a la acción de ubicar o situar algo en su lugar correcto" },
+    { word: "establecer", clue: "Este verbo se utiliza cuando creamos, fundamos o iniciamos algo, como una organización, una regla, una relación o una base de datos. También puede referirse a la acción de fijar o determinar algo de manera firme. " },
     {
         word: "fresco",
-        clue: "Que tiene una temperatura fría o moderada",
+        clue: "algo que está a una temperatura baja o que se siente agradablemente frío al tacto. También se utiliza para describir algo que es nuevo, recién hecho o que no ha estado expuesto durante mucho tiempo. ",
     },
     { word: "fiesta", clue: "Una celebración o reunión social" },
     {
@@ -1256,7 +1651,7 @@ export const words = [
     { word: "famoso", clue: "Conocido por muchas personas" },
     {
         word: "fuente",
-        clue: "Un lugar de donde viene algo, como agua o información",
+        clue: "estructura o dispositivo que expulsa agua de manera decorativa en jardines o plazas. También puede referirse a la fuente de información de la cual se obtiene conocimiento o datos.",
     },
     { word: "fragancia", clue: "Un olor agradable" },
     { word: "feroz", clue: "Que es violento o agresivo" },
@@ -1265,7 +1660,7 @@ export const words = [
 
     {
         word: "fusión",
-        clue: "El proceso de combinar dos cosas para formar una nueva cosa",
+        clue: "resultado de combinar dos o más cosas en una sola, ya sea en el ámbito de la física, la química, la música, los negocios o la cultura. ",
     },
     { word: "frío", clue: "Que tiene una temperatura baja" },
     {
@@ -1274,12 +1669,12 @@ export const words = [
     },
     {
         word: "felpa",
-        clue: "Una tela suave con un pelo corto y esponjoso",
+        clue: "un tipo de tela suave y peluda que se utiliza comúnmente en la confección de prendas de vestir, como abrigos, bufandas y juguetes de peluche. También puede referirse a una superficie suave y peluda en algunos objetos o muebles. ",
     },
     { word: "frecuente", clue: "Que sucede a menudo" },
     {
         word: "frenesí",
-        clue: "Un estado de gran excitación o agitación",
+        clue: "estado de agitación o excitación intensa en el que las personas actúan sin control. Puede estar relacionado con emociones como la ira, la euforia o la pasión. También puede referirse a una actividad intensa o a un comportamiento desenfrenado.",
     },
     { word: "fundir", clue: "Calentar algo hasta que se derrita" },
     {
@@ -1289,40 +1684,41 @@ export const words = [
     { word: "furia", clue: "Un sentimiento de ira o enojo intenso" },
     {
         word: "fortaleza",
-        clue: "Una fortaleza o ciudadela fortificada",
+        clue: " estructura o lugar fortificado, como un castillo o una ciudadela, diseñado para resistir ataques. En un sentido figurado, puede denotar la capacidad de enfrentar desafíos o adversidades con determinación y valentía.",
     },
     {
         word: "filosofía",
         clue: "El estudio de los principios fundamentales de la realidad, la existencia y el conocimiento",
     },
     { word: "fiel", clue: "Que es leal o confiable" },
-    { word: "frenético", clue: "Que es muy activo o agitado" },
     {
         word: "foso",
-        clue: "Un agujero profundo que se cava alrededor de algo para protegerlo",
+        clue: "zanja o un hoyo excavado en el suelo, a menudo alrededor de una estructura defensiva como un castillo, para proporcionar protección o como una barrera. También puede referirse a un lugar profundo o a una depresión natural en el terreno. ",
     },
     {
         word: "frontera",
         clue: "La línea que separa dos países o territorios",
     },
-    { word: "fino", clue: "Que tiene una calidad superior" },
+    { word: "fino", clue: " delgado, delicado o de calidad superior. También puede referirse a sabores, aromas o texturas que son suaves y elegantes. " },
+
     { word: "fundación", clue: "La base o el principio de algo" },
     {
         word: "llama",
-        clue: "Una columna de fuego que se produce por la combustión",
+        clue: " brillante y cálida fuente de luz y calor que se produce cuando un material combustible se quema. ",
     },
     { word: "frágil", clue: "Que se rompe fácilmente" },
     { word: "freír", clue: "Cocinar algo en aceite caliente" },
 
     {
         word: "forjar",
-        clue: "Crear algo trabajando un material en caliente",
+        clue: " moldear o crear algo, generalmente mediante la aplicación de calor y martilleo en el caso del metal.",
     },
     {
         word: "febrero",
         clue: "El segundo mes del año en el calendario gregoriano y juliano, con 28 días en años comunes y 29 días en años bisiestos.",
     },
-    { word: "floración", clue: "El proceso de florecer" },
+    { word: "Florecer", clue: "proceso en el cual las plantas producen flores como parte de su ciclo de crecimiento y reproducción." },
+
     { word: "finura", clue: "La calidad de ser fino o delicado" },
     {
         word: "frenar",
@@ -4000,7 +4396,7 @@ export const words = [
     { word: "Azafran", clue: "especia muy valorada que se obtiene de los estigmas de una flor. Tiene un color rojo intenso y se utiliza comúnmente para dar sabor y color a diversos platos, especialmente en la cocina mediterránea y en la preparación del arroz paella" },
     { word: "Ironizar", clue: "Accion de expresar una idea o comentario de manera sarcástica o burlona, a menudo con la intención de hacer una crítica disfrazada o resaltar la incongruencia en lo que se dice" },
     { word: "Zac snider", clue: "director de cine y productor estadounidense conocido por su trabajo en películas de superhéroes, en particular por su contribución al Universo Extendido de DC Comics. Algunas de las películas más destacadas de Zack Snyder incluyen '300', 'Watchmen', 'Man of Steel'. También es conocido por su estilo visual distintivo y su influencia en el género de superhéroes en el cine." },
-{ word: "El Zorro", clue: "Alter ego del noble español Don Diego de la Vega, quien lucha contra la injusticia y la opresión en la California española del siglo XIX" },
+    { word: "El Zorro", clue: "Alter ego del noble español Don Diego de la Vega, quien lucha contra la injusticia y la opresión en la California española del siglo XIX" },
     { word: "Tocayo", clue: "Persona con el mismo nombre." },
     { word: "El padrino", clue: "Serie de películas de crimen y drama estrenada en 1972 y dirigida por Francis Ford Coppola, basada en la novela homónima de Mario Puzo. La trilogía consta de tres películas principales:" },
     { word: "El señor de los anillos", clue: "Saga de fantasía escrita por Tolkien." },
@@ -4015,7 +4411,7 @@ export const words = [
 
 
     { word: "Votacion", clue: "Proceso de elegir o expesar su preferencia por una opción, candidato o propuesta en una elección o referéndum. Es una parte fundamental de los sistemas democráticos y permite a los ciudadanos ejercer su derecho a tomar decisiones políticas. " },
-    
+
     { word: "Vulnerable", clue: "Susceptible de ser dañado." },
     { word: "Voluble", clue: "persona que es cambiante o inconstante en su carácter, opinión o comportamiento. Puede referirse a alguien que cambia de manera rápida y frecuente sus decisiones o actitudes. " },
     { word: "Volquete", clue: "vehículo utilizado para transportar carga, como tierra, arena, escombros u otros materiales. Tiene una caja o plataforma en la parte trasera que puede elevarse o bascular para descargar su contenido. Se utiliza en la construcción, la minería y otros sectores industriales. " },
@@ -4063,7 +4459,7 @@ export const words = [
     { word: "Trineo", clue: "Vehículo para deslizarse sobre la nieve, a menudo es tirado por animales, como perros o caballos.." },
     { word: "Trebol", clue: "Planta con hojas divididas en tres partes, considerada de buena suerte... cuando tiene una parte mas." },
     { word: "Transeunte", clue: "Persona que pasa caminando por un lugar." },
-    { word: "Tricolor", clue: "Que tiene tres colores." },,
+    { word: "Tricolor", clue: "Que tiene tres colores." }, ,
     { word: "Trayectoria", clue: "Camino o la ruta que sigue un objeto en movimiento a lo largo del tiempo. En la física, se utiliza para analizar el movimiento de los objetos en el espacio." },
     { word: "Torpedo", clue: "Proyectil del submarino autopropulsado que se utiliza en la guerra naval para atacar embarcaciones enemigas." },
     { word: "Tortuga", clue: "Reptil de caparazón duro, caracterizado por su lenta velocidad." },
