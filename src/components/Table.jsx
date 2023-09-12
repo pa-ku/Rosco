@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useContext, useMemo, useState } from "react";
-import { StatusContext } from "../context/StatusContext";
 import { SettingsContext } from "../context/SettingsContext";
 import { words } from "../words";
-import Row from "./TableRow";
-import TableInfo from "./TableInfo";
+import TableRow from "./TableRow";
+
 import FirstTableRow from "./FirstTableRow";
 
 const Wrapper = styled.div`
@@ -31,11 +30,11 @@ const Tabl = styled.table`
   }
 `;
 
-const RowComponent = React.memo(({ letter, question, answer}) => {
-  return <Row letter={letter} question={question} answer={answer} />;
+const RowComponent = React.memo(({ letter, question, answer,tableA}) => {
+  return <TableRow letter={letter} question={question} answer={answer} tableA={tableA}/>;
 });
-export default function Table() {
-  const { wrongAnswers, rightAnswers, pending } = useContext(StatusContext);
+export default function Table({tableA}) {
+
   const { containsCounter, rollChance } =
     useContext(SettingsContext);
 const [breakCounter, setBreakCounter] = useState(0)
@@ -111,6 +110,7 @@ const [breakCounter, setBreakCounter] = useState(0)
   const rowComponents = useMemo(() => {
     return letters.map((letter, index) => (
       <RowComponent
+        tableA={tableA}
         key={index}
         letter={letter}
         question={handleAsk(index, letter)}
@@ -123,14 +123,7 @@ const [breakCounter, setBreakCounter] = useState(0)
   return (
     <>
       <>
-      
         <Wrapper>
-          <TableInfo
-            rightAnswers={rightAnswers}
-            wrongAnswers={wrongAnswers}
-            pending={pending}
-          />
-
           <Tabl>
             <tbody>
               <FirstTableRow />

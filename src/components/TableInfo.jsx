@@ -33,12 +33,16 @@ const TxtInfo = styled.p`
 
 `;
 
+const TextTeam = styled.p`
 
-export default function TableInfo({rightAnswers,wrongAnswers,pending}) {
+`
+
+export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
   return (
     <>
     
     <CtnInfo>
+      <TextTeam>{Team}</TextTeam>
     <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
     <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
     <TxtInfo $infocolor="#c56fd6">PASS {pending}</TxtInfo>

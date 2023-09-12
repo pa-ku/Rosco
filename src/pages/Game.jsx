@@ -7,10 +7,11 @@ import ReloadLogo from "@mui/icons-material/Cached";
 import Title from "../components/Title";
 import { useContext } from "react";
 import { SettingsContext } from "../context/SettingsContext";
-
+import { StatusContext } from "../context/StatusContext";
+import TableInfo from "../components/TableInfo";
 const Wrapper = styled.div`
-padding-top:4em;
-`
+  padding-top: 4em;
+`;
 
 const ButtonCtn = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const ButtonCtn = styled.div`
 
   gap: 2em;
   margin-block: 4em;
-  @media(max-width:700px){
+  @media (max-width: 700px) {
     flex-direction: column;
     gap: 1em;
   }
@@ -40,42 +41,45 @@ const ReloadIcon = styled(ReloadLogo)`
   }
 `;
 
-
-
 export default function Game() {
+  const { wrongAnswers, rightAnswers, pending,wrongAnswersB, rightAnswersB, pendingB } = useContext(StatusContext);
 
-
-
-  const {
-    teamTable
-  } = useContext(SettingsContext);
+  const { teamTable } = useContext(SettingsContext);
 
   return (
     <>
-    <Wrapper>
-    <Title text={"ROSQUEWE"} />
-      <ButtonCtn>
-        <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
-        <LinkButton
-          to={"/game"}
-          logo={<ReloadIcon></ReloadIcon>}
-          text="Roll"
-          onClick={() => window.location.reload()}
+      <Wrapper>
+        <Title text={"ROSQUEWE"} />
+        <ButtonCtn>
+          <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
+          <LinkButton
+            to={"/game"}
+            logo={<ReloadIcon></ReloadIcon>}
+            text="Roll"
+            onClick={() => window.location.reload()}
+          />
+        </ButtonCtn>
+
+
+        <TableInfo
+          rightAnswers={rightAnswers}
+          wrongAnswers={wrongAnswers}
+          pending={pending}
+        {...teamTable ? {Team:"Team A"} : {Team:""}}
         />
-      </ButtonCtn>
+        <Table tableA={true}/>
 
-      {teamTable === true && (<Title text={"Team A"} /> )}
-
-      <Table />
-
-
-{teamTable === true && (<>
-  <Title text={"Team B"} />
-  <Table /> 
-</> 
-)}
-
-
+        {teamTable === true && (
+          <>
+            <TableInfo
+            Team={"Team B"}
+              rightAnswers={rightAnswersB}
+              wrongAnswers={wrongAnswersB}
+              pending={pendingB}
+            />
+            <Table tableA={false}/>
+          </>
+        )}
       </Wrapper>
     </>
   );

@@ -140,41 +140,69 @@ const ContieneTxt = styled.p`
   font-size: 0.5em;
 `;
 
-export default function TableRow({ letter, question, answer }) {
+export default function TableRow({ letter, question, answer, tableA }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
   const [displayPending, setDisplayPending] = useState("block");
 
-  const { setWrongAnswers, setRightAnswers, pending, setPending } =
-    useContext(StatusContext);
+  const {
+    setWrongAnswers,
+    setWrongAnswersB,
+    setRightAnswers,
+    setRightAnswersB,
+    pending,
+    setPending,
+    setPendingB,
+    pendingB,
+  } = useContext(StatusContext);
   const { volume } = useContext(SettingsContext);
   function rightBtn() {
-    setColor("#2c462e");
-    setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
     setDisplay("none");
     setDisplayPending("none");
     right();
-    if (pending > 0) {
-      setPending((prevPending) => prevPending - 1);
+    setColor("#2c462e");
+
+    if (tableA === true) {
+      setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
+
+      if (pending > 0) {
+        setPending((prevPending) => prevPending - 1);
+      }
+    } else {
+      setRightAnswersB((prevRightAnswersB) => prevRightAnswersB + 1);
+      if (pendingB > 0) {
+        setPendingB((prevPendingB) => prevPendingB - 1);
+      }
     }
   }
 
   function wrongBtn() {
     setColor("#4d2626");
-    setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
     setDisplayPending("none");
     setDisplay("none");
     error();
-    if (pending > 0) {
-      setPending((prevPending) => prevPending - 1);
+
+    if (tableA === true) {
+      setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
+      if (pending > 0) {
+        setPending((prevPending) => prevPending - 1);
+      }
+    } else {
+      setWrongAnswersB((prevWrongAnswersB) => prevWrongAnswersB + 1);
+      if (pendingB > 0) {
+        setPendingB((prevPendingB) => prevPendingB - 1);
+      }
     }
   }
 
   const passBtn = () => {
-    /*    setColor("#324257"); */
-    setColor("#4c3150");
-    setPending((prevPending) => prevPending + 1);
     setDisplayPending("none");
+    setColor("#4c3150");
+    if (tableA === true) {
+      setPending((prevPending) => prevPending + 1);
+    } else {
+      setPendingB((prevPendingB) => prevPendingB + 1);
+    }
   };
   const beginsWithLetter = answer.toLowerCase().startsWith(letter);
 
@@ -193,7 +221,7 @@ export default function TableRow({ letter, question, answer }) {
         <Question $backg={color}>
           <Answer> {answer} </Answer>
           <p>{question}</p>
-          <ReportButton wordValue={answer} clueValue={question}/>
+          <ReportButton wordValue={answer} clueValue={question} />
         </Question>
         <ButtonRow $backg={color}>
           <CtnButton>

@@ -6,6 +6,8 @@ import Settings from "./pages/Settings";
 import background from "./assets/background.svg"
 import styled from "styled-components";
 
+
+
 const Background = styled.img`
 position: absolute;
 width: 100%;
@@ -15,6 +17,19 @@ left: 0px;
 height: 100%;
 z-index: -1;
 object-fit: cover;
+opacity: 0;
+animation: 1s show forwards; 
+overflow: hidden;
+@keyframes show {
+  0%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+
+  }
+}
 `
 
 function App() {
