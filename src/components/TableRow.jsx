@@ -6,6 +6,7 @@ import useSound from "use-sound";
 import rightSound from "../assets/sounds/right.wav";
 import errorSound from "../assets/sounds/error.wav";
 import { SettingsContext } from "../context/SettingsContext";
+import { TimeContext } from "../context/TimeContext";
 import { ReportButton } from "./ui/ReportButton";
 
 const Letter = styled.td`
@@ -31,7 +32,6 @@ const Letter = styled.td`
     }
   }
 `;
-
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
 
@@ -54,10 +54,8 @@ const Question = styled.td`
     font-size: 1.1em;
   }
 `;
-
 const ButtonRow = styled.td`
   background-color: #212f42;
-
   border-bottom: 4px solid #1c2128;
   background-color: ${(props) => props.$backg};
   padding-right: 1em;
@@ -65,7 +63,6 @@ const ButtonRow = styled.td`
     padding-right: 0.3em;
   }
 `;
-
 const Answer = styled.p`
   width: 100%;
   text-align: center;
@@ -79,7 +76,6 @@ const Answer = styled.p`
     font-size: 1em;
   }
 `;
-
 const CtnButton = styled.div`
   display: flex;
   flex-direction: column;
@@ -108,7 +104,6 @@ const CtnButton = styled.div`
     }
   }
 `;
-
 const Button = styled.button`
   display: ${(props) => props.$display};
   background-color: ${(props) => props.$backgcolor};
@@ -125,17 +120,14 @@ const Button = styled.button`
   font-size: 1.5em;
   cursor: pointer;
   font-weight: 800;
-
   &:hover {
     filter: brightness(1.1);
     border-color: ${(props) => props.$bordercolor};
   }
 `;
-
 const Tr = styled.tr`
   width: 100%;
 `;
-
 const ContieneTxt = styled.p`
   font-size: 0.5em;
 `;
@@ -144,6 +136,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
   const [displayPending, setDisplayPending] = useState("block");
+ 
+  const {stop,timeRunning,setTimeRunning } = useContext(TimeContext);
 
   const {
     setWrongAnswers,
@@ -156,15 +150,16 @@ export default function TableRow({ letter, question, answer, tableA }) {
     pendingB,
   } = useContext(StatusContext);
   const { volume } = useContext(SettingsContext);
+
+
   function rightBtn() {
     setDisplay("none");
     setDisplayPending("none");
     right();
-    setColor("#2c462e");
 
+    setColor("#2c462e");
     if (tableA === true) {
       setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
-
       if (pending > 0) {
         setPending((prevPending) => prevPending - 1);
       }
@@ -180,8 +175,11 @@ export default function TableRow({ letter, question, answer, tableA }) {
     setColor("#4d2626");
     setDisplayPending("none");
     setDisplay("none");
-    error();
-
+    error()
+    if(timeRunning === true){
+      stop()
+      setTimeRunning(false)
+    }
     if (tableA === true) {
       setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
       if (pending > 0) {
@@ -198,6 +196,10 @@ export default function TableRow({ letter, question, answer, tableA }) {
   const passBtn = () => {
     setDisplayPending("none");
     setColor("#4c3150");
+    if(timeRunning === true){
+      stop()
+      setTimeRunning(false)
+    }
     if (tableA === true) {
       setPending((prevPending) => prevPending + 1);
     } else {

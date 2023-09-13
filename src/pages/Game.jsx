@@ -49,6 +49,7 @@ export default function Game() {
   return (
     <>
       <Wrapper>
+        
         <Title text={"ROSQUEWE"} />
         <ButtonCtn>
           <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
@@ -84,3 +85,5 @@ export default function Game() {
     </>
   );
 }
+
+

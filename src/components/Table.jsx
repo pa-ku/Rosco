@@ -6,7 +6,6 @@ import { words } from "../words";
 import TableRow from "./TableRow";
 
 import FirstTableRow from "./FirstTableRow";
-
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -30,16 +29,19 @@ const Tabl = styled.table`
   }
 `;
 
-const RowComponent = React.memo(({ letter, question, answer,tableA}) => {
-  return <TableRow letter={letter} question={question} answer={answer} tableA={tableA}/>;
+const RowComponent = React.memo(({ letter, question, answer, tableA }) => {
+  return (
+    <TableRow
+      letter={letter}
+      question={question}
+      answer={answer}
+      tableA={tableA}
+    />
+  );
 });
-export default function Table({tableA}) {
-
-  const { containsCounter, rollChance } =
-    useContext(SettingsContext);
-const [breakCounter, setBreakCounter] = useState(0)
-
-
+export default function Table({ tableA }) {
+  const { containsCounter, rollChance } = useContext(SettingsContext);
+  const [breakCounter, setBreakCounter] = useState(0);
 
   const letters = [
     "a",
@@ -67,7 +69,7 @@ const [breakCounter, setBreakCounter] = useState(0)
     /* "w", */
     /*   "x", */
     /* "y", */
-    /* "z", */
+    "z", 
   ];
 
   //CREAR ROLL 0-9
@@ -75,18 +77,17 @@ const [breakCounter, setBreakCounter] = useState(0)
     return Math.floor(Math.random() * 9);
   }
 
-
   //FILTRO PARA CONTIENE
   function handleFilter(letter) {
     if (roll9() < rollChance && containsCounter > breakCounter) {
-      setBreakCounter(breakCounter + 1)
+      setBreakCounter(breakCounter + 1);
 
       return words.filter((item) => item.word.toLowerCase().includes(letter));
     } else {
       return words.filter((item) => item.word.toLowerCase().startsWith(letter));
     }
   }
-  
+
   //TIRAR UN NUMERO PARA EL ARRAY
   const rollNumber = (length) => {
     return Math.floor(Math.random() * length);
@@ -115,7 +116,6 @@ const [breakCounter, setBreakCounter] = useState(0)
         letter={letter}
         question={handleAsk(index, letter)}
         answer={handleAnswer(index, letter)}
-  
       />
     ));
   }, []);

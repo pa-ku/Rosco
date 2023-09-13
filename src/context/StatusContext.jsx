@@ -5,7 +5,6 @@ export function StatusProvider({ children }) {
   const [wrongAnswers, setWrongAnswers] = useState(0);
   const [rightAnswers, setRightAnswers] = useState(0);
   const [pending, setPending] = useState(0);
-
   const [wrongAnswersB, setWrongAnswersB] = useState(0);
   const [rightAnswersB, setRightAnswersB] = useState(0);
   const [pendingB, setPendingB] = useState(0);

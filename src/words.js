@@ -388,7 +388,7 @@ export const words = [
     },
     {
         word: "Moe",
-        clue: "Cantinero del a serie animada los simpsons, Su bar, es la famosa taberna de…  ",
+        clue: "Cantinero de la serie animada los simpsons, Su bar, es la famosa taberna de…  ",
     },
     {
         word: "Laberinto",
@@ -645,7 +645,7 @@ export const words = [
     },
     {
         word: "Jaquemate",
-        clue: "xpresión utilizada en el  de ajedrez para indicar que el rey no puede moverse a ninguna casilla que lo ponga fuera de peligro ",
+        clue: "Expresión utilizada en el  de ajedrez para indicar que el rey no puede moverse a ninguna casilla que lo ponga fuera de peligro ",
     },
     {
         word: "jardinero",
@@ -1747,8 +1747,6 @@ export const words = [
         clue: "El segundo mes del año en el calendario gregoriano y juliano, con 28 días en años comunes y 29 días en años bisiestos.",
     },
     { word: "Florecer", clue: "proceso en el cual las plantas producen flores como parte de su ciclo de crecimiento y reproducción." },
-
-    { word: "finura", clue: "La calidad de ser fino o delicado" },
     {
         word: "frenar",
         clue: "Hacer que algo se detenga o vaya más despacio",
@@ -1822,7 +1820,7 @@ export const words = [
     },
     {
         word: "Golosina",
-        clue: "Un dulce o alimento que se consume como una delicia.",
+        clue: "tipo de alimento dulce, como caramelos, chocolates, chicles o cualquier otro dulce que se come por placer. ",
     },
     {
         word: "Gobernar",
@@ -2396,7 +2394,7 @@ export const words = [
     },
     {
         word: "Lentejuela",
-        clue: "Disco pequeño usado para decoración.",
+        clue: "pequeño adorno redondo y brillante que se cose a la ropa o se utiliza para decorar prendas y accesorios. Suelen ser de metal, plástico o tela y se utilizan para añadir brillo y estilo a la ropa y otros objetos.",
     },
     {
         word: "Laico",
@@ -3324,10 +3322,6 @@ export const words = [
         clue: "Que ocupa el lugar número cincuenta en una serie.",
     },
     {
-        word: "Quirúrgicamente",
-        clue: "De manera relacionada con una cirugía.",
-    },
-    {
         word: "Río",
         clue: "Corriente de agua natural que fluye encauzada por un cauce.",
     },
@@ -3922,10 +3916,6 @@ export const words = [
         clue: "Todo lo relacionado con la ciudad o a la vida en la ciudad.",
     },
     {
-        word: "Pasas de huva",
-        clue: "Uvas deshidratadas .",
-    },
-    {
         word: "Unificar",
         clue: "Hacer que varias cosas se vuelvan una sola.",
     },
@@ -4340,7 +4330,7 @@ export const words = [
     { word: "Plaza", clue: "Espacio abierto o una área pública en una ciudad o pueblo, por lo general rodeada de edificios u otras estructuras. Las plazas suelen ser lugares de reunión, actividades culturales y eventos públicos" },
     { word: "Manzana", clue: "Fruta que es generalmente redonda y puede tener diferentes colores, como rojo, verde o amarillo. Es una de las frutas más populares y versátiles, se consume fresca y se utiliza en una variedad de preparaciones culinarias, desde pasteles hasta compotas." },
     { word: "Corazon", clue: "Órgano que impulsa la sangre." },
-    { word: "Azafran", clue: "especia muy valorada que se obtiene de los estigmas de una flor. Tiene un color rojo intenso y se utiliza comúnmente para dar sabor y color a diversos platos, especialmente en la cocina mediterránea y en la preparación del arroz paella" },
+    { word: "Azafran", clue: "especia muy valorada que se obtiene de los estigmas de una flor. Tiene un color rojo intenso y se utiliza comúnmente para dar sabor y color a diversos platos." },
     { word: "Ironizar", clue: "Accion de expresar una idea o comentario de manera sarcástica o burlona, a menudo con la intención de hacer una crítica disfrazada o resaltar la incongruencia en lo que se dice" },
     { word: "Zac snider", clue: "director de cine y productor estadounidense conocido por su trabajo en películas de superhéroes, en particular por su contribución al Universo Extendido de DC Comics. Algunas de las películas más destacadas de Zack Snyder incluyen '300', 'Watchmen', 'Man of Steel'. También es conocido por su estilo visual distintivo y su influencia en el género de superhéroes en el cine." },
     { word: "El Zorro", clue: "Alter ego del noble español Don Diego de la Vega, quien lucha contra la injusticia y la opresión en la California española del siglo XIX" },

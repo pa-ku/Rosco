@@ -3,7 +3,7 @@ import LinkButton from "../components/ui/LinkButton";
 import styled from "styled-components";
 import Title from "../components/Title";
 import HomeIcon from "@mui/icons-material/Home";
-import {useContext } from "react";
+import { useContext } from "react";
 import selectAudio from "../assets/sounds/select-sound.wav";
 import dohAudio from "../assets/sounds/doh.mp3";
 import checkAudio from "../assets/sounds/cheksound.wav";
@@ -11,6 +11,8 @@ import useSound from "use-sound";
 import { SettingsContext } from "../context/SettingsContext";
 import useLocalStorage from "use-local-storage";
 import CheckBox from "../components/ui/CheckBox";
+import { TimeContext } from "../context/TimeContext";
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -98,9 +100,6 @@ const Input = styled.input`
   }
 `;
 
-
-
-
 const ModeCtn = styled.div`
   display: flex;
   align-items: center;
@@ -126,7 +125,7 @@ export default function Settings() {
     hard: false,
     simpsons: false,
   });
-
+  const { setStoredTime } = useContext(TimeContext);
   const {
     setContainsCounter,
     setRollChance,
@@ -149,6 +148,7 @@ export default function Settings() {
       case "easy":
         setContainsCounter(0);
         selectSound();
+        setStoredTime({ms: 0, s: 180, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: true,
@@ -161,6 +161,7 @@ export default function Settings() {
         setRollChance(3);
         setContainsCounter(10);
         selectSound();
+        setStoredTime({ms: 0, s: 140, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: false,
@@ -173,6 +174,7 @@ export default function Settings() {
         setRollChance(7);
         setContainsCounter(20);
         selectSound();
+        setStoredTime({ms: 0, s: 100, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: false,
@@ -206,11 +208,9 @@ export default function Settings() {
   }
 
   function handleTeam(event) {
-  
-    if(teamTable === true){
+    if (teamTable === true) {
       setTeamTable(false);
-    }
-    else{
+    } else {
       setTeamTable(true);
     }
   }
@@ -230,10 +230,10 @@ export default function Settings() {
               type="checkbox"
             />
 
-            <Label htmlFor="Option1" >Team Table </Label>
+            <Label htmlFor="Option1">Team Table </Label>
           </OptionCtn>
           <OptionCtn>
-            <CheckBox 
+            <CheckBox
               checked={sound}
               onChange={handleSound}
               onClick={checkSound}
@@ -281,20 +281,20 @@ export default function Settings() {
           {mode === "easy" && (
             <ModeTxt>
               Para debiles e indesisos.<br></br>{" "}
-              <b>TODAS las palabras comienzan con la letra</b>
+              <b>TODAS las palabras comienzan con la letra</b> (200 segundos)
             </ModeTxt>
           )}
           {mode === "normal" && (
             <ModeTxt>
               {" "}
               Para los que le gusta la vainilla <br></br> <b>30%</b> de que
-              contengan la letra
+              contengan la letra (140 segundos)
             </ModeTxt>
           )}
           {mode === "hard" && (
             <ModeTxt>
-              Palabras mas dificiles <br></br>
-              <b>70%</b> de que contengan la letra
+         
+              <b>70%</b> de que contengan la letra (120 segundos)
             </ModeTxt>
           )}
           {mode === "simpsons" && (

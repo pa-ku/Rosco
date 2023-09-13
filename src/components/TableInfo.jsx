@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from "styled-components";
+import { TimeContext } from "../context/TimeContext";
+import CheckBox from './ui/CheckBox';
+import LinkButton from './ui/LinkButton';
+
 
 const CtnInfo = styled.div`
   display: flex;
@@ -9,7 +13,6 @@ const CtnInfo = styled.div`
   position: sticky;
   top: 0px;
   background-color: #111;
-
   width: 100%;
   text-align: center;
   outline: 2px solid #111;
@@ -30,14 +33,42 @@ const TxtInfo = styled.p`
   font-size: 1.1em;
   padding: 10px;
   color: ${(props) => props.$infocolor};
-
 `;
 
 const TextTeam = styled.p`
+color: #fff;
+`
+const TimerButton = styled.button`
+  background-color: #064ebb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid;
+  border-right: 5px solid;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  text-shadow: 1px 1px #0b397e;
+  border-color: #0b397e;
 
+
+  cursor: pointer;
+  padding: 4px 15px;
+  font-weight: 400;
+  border-radius: 20px;
+  font-weight: 500;
+  gap: 5px;
 `
 
 export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
+  const { time,start,timeRunning,setTimeRunning } = useContext(TimeContext);
+  function handleTime(){
+    if(timeRunning === false){
+      start();
+      setTimeRunning(true)
+  
+    }
+  }
   return (
     <>
     
@@ -46,6 +77,9 @@ export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
     <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
     <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
     <TxtInfo $infocolor="#c56fd6">PASS {pending}</TxtInfo>
+      <TextTeam> Time: {time.s !== 0 && time.s}{time.s === 0 && <p>Time Out!</p>}s </TextTeam>
+<TimerButton onClick={handleTime}>START</TimerButton>
+
   </CtnInfo>
 
     </>
