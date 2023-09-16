@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Table from "../components/Table";
 import LinkButton from "../components/ui/LinkButton";
-import { useContext } from "react";
+import { useContext,useRef,useEffect } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { StatusContext } from "../context/StatusContext";
 import TableInfo from "../components/TableInfo";
@@ -26,8 +26,8 @@ const ButtonCtn = styled.div`
 
 export default function Game() {
   const { wrongAnswers, rightAnswers, pending,wrongAnswersB, rightAnswersB, pendingB } = useContext(StatusContext);
-
   const { teamTable } = useContext(SettingsContext);
+
 
   return (
     <>
@@ -46,6 +46,7 @@ export default function Game() {
           rightAnswers={rightAnswers}
           wrongAnswers={wrongAnswers}
           pending={pending}
+    
         {...teamTable ? {Team:"Team A"} : {Team:""}}
         />
         <Table tableA={true}/>
@@ -53,7 +54,7 @@ export default function Game() {
         {teamTable === true && (
           <>
             <TableInfo
-            Team={"Team B"}
+              Team={"Team B"}
               rightAnswers={rightAnswersB}
               wrongAnswers={wrongAnswersB}
               pending={pendingB}

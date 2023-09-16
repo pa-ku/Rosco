@@ -36,6 +36,7 @@ const TxtInfo = styled.p`
 const TextTeam = styled.p`
 color: #fff;
 font-weight: 800;
+font-size: 14px;
 `
 
 const Timer = styled.button`

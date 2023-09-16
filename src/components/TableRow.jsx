@@ -67,7 +67,7 @@ const Answer = styled.p`
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 800;
+
   letter-spacing: 2px;
   font-size: 1.1em;
   color: #94b7e7;
@@ -134,7 +134,7 @@ const ContieneTxt = styled.p`
   font-weight: 800;
 `;
 const Line = styled.div`
-width: 70px;
+width: 40px;
 height: 1px;
 
 border-top: 4px dotted #354a64 ;

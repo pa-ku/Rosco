@@ -5,7 +5,8 @@ import styled from 'styled-components'
 const Form = styled.form`
 position: absolute;
 top: 0px;
-left: -300px;
+left: -310px;
+
 `
 
 const SendButton = styled.input`
@@ -15,16 +16,13 @@ background-color: rgba(255, 0, 0, 0);
 cursor: pointer;
 position: relative;
 pointer-events: ${props => props.$Disable};
-&:hover{
-    color: #fea8a8;
-}
+text-transform: uppercase;
+font-size: 11px;
 `
 const Message = styled.input`
 opacity: 0;
 visibility: hidden;
 `
-
-
 
 export const ReportButton = ({clueValue,wordValue}) => {
   const form = useRef();

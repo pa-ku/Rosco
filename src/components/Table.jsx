@@ -139,8 +139,9 @@ const arr = []
     <>
       <>
         <Wrapper>
-          <Tabl>
-            <tbody>
+          
+          <Tabl >
+            <tbody >
               <FirstTableRow />
               {rowComponents}
             </tbody>
