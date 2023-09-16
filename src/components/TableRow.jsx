@@ -137,7 +137,7 @@ const Line = styled.div`
 width: 40px;
 height: 1px;
 
-border-top: 4px dotted #c4c4c4 ;
+border-top: 4px dotted #c4c4c455 ;
 
 margin: auto;
 margin-block: 5px;

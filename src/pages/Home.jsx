@@ -38,7 +38,7 @@ const Img = styled.img`
   height: 150px;
   position: absolute;
   right: ${(props) => props.$right};
-  animation: 500ms logoStart forwards ease-in 100ms;
+  animation: 500ms logoStart forwards ease-in 200ms;
   opacity: 0;
 scale: 0.8;
 `;
@@ -48,7 +48,7 @@ const LogoContainer = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  animation: 1.5s Bounce forwards 100ms;
+  animation: 2s Bounce forwards;
   @keyframes logoStart {
     100% {
       right: 9px;
