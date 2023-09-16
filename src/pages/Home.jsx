@@ -38,7 +38,7 @@ const Img = styled.img`
   height: 150px;
   position: absolute;
   right: ${(props) => props.$right};
-  animation: 500ms logoStart forwards ease-in 200ms;
+  animation: 500ms logoStart forwards ease-in 100ms;
   opacity: 0;
 scale: 0.8;
 `;

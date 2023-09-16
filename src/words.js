@@ -442,7 +442,7 @@ export const words = [
     },
     {
         word: "Quebrado",
-        clue: "djetivo que se utiliza para describir algo que está roto o fracturado, o también puede referirse a una situación financiera en dificultades.",
+        clue: "Adjetivo que se utiliza para describir algo que está roto o fracturado, o también puede referirse a una situación financiera en dificultades.",
     },
     {
         word: "Quejarse",
@@ -764,10 +764,6 @@ export const words = [
         clue: "aplicable o válido en todo el mundo, en todas partes o para todas las personas sin excepción.",
     },
     {
-        word: "Umbral",
-        clue: "sustantivo que se utiliza en un contexto figurado para referirse al punto en el cual se inicia o se cruza una acción, experiencia o condición. Es el límite o punto en el que algo comienza a ser percibido o considerado. tambien puede hacer referencia a la Pieza empotrada, escalón o espacio que constituye la parte inferior de una puerta, contrapuesta al dintel",
-    },
-    {
         word: "Últimamente",
         clue: "adverbio que describe eventos, acciones o situaciones que han ocurrido en un período de tiempo reciente o en los días, semanas o meses más cercanos al momento presente. ",
     },
@@ -808,8 +804,8 @@ export const words = [
         clue: "objeto utilizado en procesos electorales y votaciones. Se utiliza para recoger de manera segura y confidencial las papeletas o votos de los ciudadanos.",
     },
     {
-        word: "Universitario",
-        clue: "persona Que cursa o estudios en la universidad.",
+        word: "Universidad",
+        clue: "Institución de educación superior donde se imparten cursos académicos ",
     },
     {
         word: "Unipersonal",
@@ -1074,7 +1070,7 @@ export const words = [
     { word: "Anunciar", clue: "hacer público algo." },
     {
         word: "Armadura",
-        clue: "una pieza de ropa protectora que se usa para proteger el cuerpo de lesiones.",
+        clue: "vestimenta de caballeros y guerreros medievales, fabricado en metal, cuero u otros materiales resistentes, se usa en situaciones de combate o peligro para proteger el cuerpo de lesiones.",
     },
     { word: "Atleta", clue: "una persona que compite en deportes." },
     { word: "Adornar", clue: "decorar o embellecer algo." },
@@ -1089,7 +1085,7 @@ export const words = [
         word: "Bucear",
         clue: "sumergirse bajo el agua para nadar o explorar",
     },
-    { word: "Bola", clue: "una forma redonda" },
+    { word: "Bola", clue: "objeto redondeado que puede ser sólido o hueco. Se utilizan en una variedad de deportes, como el béisbol, el golf y el Pool." },
     {
         word: "Bicicleta",
         clue: "un vehículo de dos ruedas que se impulsa con los pies",
@@ -1151,7 +1147,7 @@ export const words = [
     },
     {
         word: "Bruja",
-        clue: "una mujer que se cree que practica la magia",
+        clue: "una mujer que se cree que practica la magia negra",
     },
     {
         word: "Bolso",
@@ -1165,10 +1161,7 @@ export const words = [
         word: "Borrar",
         clue: "eliminar algo escribiendo o pintando sobre ello",
     },
-    {
-        word: "Bocadillo",
-        clue: "una comida ligera que se come entre horas",
-    },
+
     {
         word: "Bloque",
         clue: "un objeto sólido de forma cúbica o rectangular",
@@ -1343,7 +1336,7 @@ export const words = [
         clue: "Una actividad que es agradable y entretenida",
     },
 
-    { word: "dulce", clue: "Un alimento que es agradablemente dulce" },
+    { word: "dulce", clue: "sustantivo que se utiliza para describir alimentos o postres que tienen un sabor predominantemente azucarado y agradable al paladar." },
     {
         word: "decisión",
         clue: "La elección de una cosa entre varias opciones",
@@ -1384,7 +1377,7 @@ export const words = [
     },
     {
         word: "doctor",
-        clue: "Una persona que ha completado un programa de educación médica y está autorizada para practicar medicina",
+        clue: "persona que ha obtenido un título profesional en medicina y está capacitada para diagnosticar, tratar y cuidar la salud de los pacientes. ",
     },
     {
         word: "decorar",
@@ -1461,7 +1454,7 @@ export const words = [
         word: "desastre",
         clue: "Evento o situación que resulta en daño, destrucción, caos o un impacto negativo significativo. Puede referirse a fenómenos naturales como terremotos, inundaciones o huracanes, así como a situaciones humanas como accidentes graves o crisis. ",
     },
-    { word: "durar", clue: "Continuar durante un tiempo determinado" }
+    { word: "durar", clue: "continuar existiendo o mantenerse en un estado o condición durante un período de tiempo. También puede referirse a la resistencia o la persistencia de algo en el tiempo." }
     ,
     { word: "decidir", clue: "Acción de tomar una elección o una determinación después de considerar diferentes opciones o alternativas" },
 
@@ -1570,7 +1563,7 @@ export const words = [
         clue: "Mirar algo cuidadosamente para entenderlo mejor",
     },
     { word: "enfermo", clue: "Que no está sano" },
-    { word: "esperanza", clue: "El deseo de que algo bueno suceda" },
+    { word: "esperanza", clue: "sentimiento de optimismo o confianza en que algo deseado sucederá en el futuro" },
     {
         word: "encender",
         clue: "activar un dispositivo o máquina para que empiece a funcionar",
@@ -1975,7 +1968,7 @@ export const words = [
         word: "heredar",
         clue: "Obtener algo como propiedad después de la muerte de otra persona",
     },
-    { word: "hábil", clue: "Que es capaz de hacer algo bien" },
+    { word: "hábil", clue: "persona que tiene habilidad, destreza o capacidad para realizar una tarea o actividad con facilidad y eficiencia." },
     { word: "hundir", clue: "Hacer que algo se hunda" },
     {
         word: "hormigueo",
@@ -2070,9 +2063,9 @@ export const words = [
         clue: "Un sentimiento de ansiedad o preocupación",
     },
     { word: "impactante", clue: "Que tiene un gran efecto o impacto" },
-    { word: "intención", clue: "El deseo o propósito de hacer algo" },
+    { word: "intención", clue: "l propósito o la razón detrás de una acción o decisión. Se refiere a lo que alguien tiene en mente al realizar algo." },
     { word: "insomnio", clue: "La incapacidad de dormir" },
-    { word: "intenso", clue: "Muy fuerte o intenso" },
+    { word: "intenso", clue: "fuerte, concentrado o extremadamente notable en términos de emoción, actividad o calidad. También puede referirse a una experiencia o sensación que es muy profunda o vívida." },
     {
         word: "impulso",
         clue: "Una fuerza que impulsa a alguien a hacer algo",
@@ -2128,12 +2121,7 @@ export const words = [
         word: "joroba",
         clue: "Una protuberancia en la espalda de ciertos animales",
     },
-    { word: "jardín", clue: "Un área con plantas y flores cultivadas" },
-    {
-        word: "jarra",
-        clue: "Un recipiente grande con asa y boca ancha",
-    },
-  
+    { word: "jardín", clue: "Un área con plantas y flores cultivadas" },  
     { word: "juguete", clue: "Un objeto para que los niños jueguen" },
     {
         word: "jirafa",
@@ -2315,10 +2303,6 @@ export const words = [
         clue: "Origen o descendencia de una familia.",
     },
     {
-        word: "Límpido",
-        clue: "Claro y transparente.",
-    },
-    {
         word: "Llanura",
         clue: "Terreno plano y extenso.",
     },
@@ -2343,8 +2327,8 @@ export const words = [
         clue: "Palpitar, moverse rítmicamente.",
     },
     {
-        word: "Lucidez",
-        clue: "Claridad mental y comprensión.",
+        word: "Lucido",
+        clue: "Cualidad de una persona que tiene una mente clara, es decir, la capacidad de pensar y comprender de manera clara y racional. ",
     },
     {
         word: "Lisonja",
@@ -2675,11 +2659,11 @@ export const words = [
     },
     {
         word: "Nota",
-        clue: "Registro escrito de información breve.",
+        clue: "Escrito breve en un papel u otro soporte con el que se avisa de algo o se recuerda algo.",
     },
     {
-        word: "Neblina",
-        clue: "Suspensión de pequeñas gotas de agua en el aire.",
+        word: "Niebla",
+        clue: "Suspensión de pequeñas gotas de agua en el aire que enturbia la atmósfera y dificulta la visibilidad.",
     },
     {
         word: "Negación",
@@ -2702,11 +2686,6 @@ export const words = [
         word: "Nutrición",
         clue: "Proceso de obtener nutrientes para el crecimiento y funcionamiento del cuerpo.",
     },
-    {
-        word: "Nefasto",
-        clue: "Que causa desgracia o desastre.",
-    },
-
     {
         word: "Nervio",
         clue: "Cordón de tejido que transmite señales entre partes del cuerpo.",
@@ -2917,10 +2896,7 @@ export const words = [
         word: "Otoño",
         clue: "Estación del año entre el verano y el invierno.",
     },
-    {
-        word: "Orquestina",
-        clue: "Grupo musical pequeño que toca en vivo.",
-    },
+
     {
         word: "Olfato",
         clue: "Sentido que permite percibir olores.",
@@ -3015,7 +2991,7 @@ export const words = [
     },
     {
         word: "Pista",
-        clue: "Superficie para carreras, aterrizaje o presentaciones.",
+        clue: "información que ayuda a resolver un enigma, aclarar una situación o encontrar algo.",
     },
     {
         word: "Pálido",
@@ -3252,7 +3228,7 @@ export const words = [
         clue: "En la iconografía religiosa, angelito con alas.",
     },
     {
-        word: "Quilómetro",
+        word: "Kuilómetro",
         clue: "Medida de longitud equivalente a mil metros.",
     },
     {
@@ -3279,10 +3255,7 @@ export const words = [
         word: "Risa",
         clue: "Expresión de alegría que se manifiesta con sonidos.",
     },
-    {
-        word: "Radio",
-        clue: "Dispositivo para recibir o transmitir señales de radio.",
-    },
+
     {
         word: "Rápido",
         clue: "Que se mueve con velocidad.",
@@ -3437,7 +3410,7 @@ export const words = [
     },
     {
         word: "Régimen",
-        clue: "Sistema de normas o gobierno.",
+        clue: "sistema o conjunto de reglas y normas que regulan la forma en que funciona una organización, un país o una institución. También puede referirse a una dieta o plan de alimentación específico que una persona sigue para mantenerse saludable o alcanzar ciertos objetivos.",
     },
     {
         word: "Rumor",
@@ -3449,7 +3422,7 @@ export const words = [
     },
     {
         word: "Reconocimiento",
-        clue: "Acto de identificar o valorar algo.",
+        clue: "acto de apreciar o elogiar a alguien por sus logros o méritos, puede ser con una muestra de agracedimiento material o no",
     },
     {
         word: "Rama de olivo",
@@ -3530,10 +3503,6 @@ export const words = [
     {
         word: "Salto",
         clue: "Acción de elevarse en el aire y caer de nuevo.",
-    },
-    {
-        word: "Sustancia",
-        clue: "Material con propiedades específicas.",
     },
     {
         word: "Sociedad",
@@ -4257,15 +4226,15 @@ export const words = [
     { word: "Mestizo", clue: "persona que tiene ancestros de diferentes razas o etnias, especialmente cuando se mezclan ancestros indígenas y europeos en América Latina." },
     { word: "fianza", clue: "Garantía de cumplimiento de un contrato." },
     { word: "Matanza", clue: "Acto de matar a un gran número de personas o animales de manera violenta y generalmente en un corto período de tiempo. " },
-    { word: "Hechizado", clue: "Persona que está bajo el influjo o encanto de un encantamiento mágico, a menudo en contextos de cuentos de hadas o mitología. También puede referirse a alguien que está completamente fascinado o cautivado por algo o alguien de manera irresistible. " },
+    { word: "Hechizado", clue: "Persona que está bajo la influenza de un encantamiento mágico que genera admiración, afecto o deseo., a menudo en contextos de cuentos de hadas o mitología." },
     { word: "Durazno", clue: "fruta que generalmente tiene una piel aterciopelada y una pulpa jugosa y dulce. Es comúnmente utilizada en la preparación de postres, mermeladas y también se consume fresca." },
 
 
     { word: "Cereza", clue: "Fruta pequeña y redonda que suele ser roja o negra cuando está madura. Es conocida por su sabor dulce y se utiliza en una variedad de postres, como pasteles, helados y tartas. También es popular como adorno en cócteles y bebidas." },
 
-    { word: "Suiza", clue: "país en Europa que es conocido por sus impresionantes paisajes montañosos, como los Alpes. También es famoso por la fabricación de relojes de alta calidad, el chocolate" },
+    { word: "Suiza", clue: "País Europeo conocido por sus impresionantes paisajes montañosos, como los Alpes. También es famoso por sus relojes de alta calidad, y el chocolate" },
     { word: "Maiz", clue: "cereal ampliamente cultivado en muchas partes del mundo y es un alimento básico en muchas dietas. Sus granos se utilizan para hacer una variedad de productos, como harina, tortillas, cereales y también se utiliza como alimento para animales. " },
-    { word: "Plaza", clue: "Espacio abierto o una área pública en una ciudad o pueblo, por lo general rodeada de edificios u otras estructuras. Las plazas suelen ser lugares de reunión, actividades culturales y eventos públicos" },
+    { word: "Plaza", clue: "Espacio abierto o una área pública en una ciudad o pueblo, por lo general rodeada de edificios u otras estructuras.S uelen ser lugares de reunión, actividades culturales y eventos públicos" },
     { word: "Manzana", clue: "Fruta que es generalmente redonda y puede tener diferentes colores, como rojo, verde o amarillo. Es una de las frutas más populares y versátiles, se consume fresca y se utiliza en una variedad de preparaciones culinarias, desde pasteles hasta compotas." },
     { word: "Corazon", clue: "Órgano que impulsa la sangre." },
     { word: "Azafran", clue: "especia muy valorada que se obtiene de los estigmas de una flor. Tiene un color rojo intenso y se utiliza comúnmente para dar sabor y color a diversos platos." },
