@@ -1,15 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import ListIcon from "@mui/icons-material/FormatListBulleted";
-import SettingsIcon from "@mui/icons-material/Settings";
-import StartIcon from "@mui/icons-material/SportsEsports";
 import logoFirst from "../assets/img/first.png";
 import logoSecond from "../assets/img/second.png";
 import LinkButton from "../components/ui/LinkButton";
-
-import useSound from "use-sound";
-import checkAudio from "../assets/sounds/right.wav";
-
 
 const Wrapper = styled.div`
  display: flex;
@@ -34,7 +27,6 @@ const ButtonCtn = styled.div`
 const Author = styled.a`
   color: #696969;
   animation: 2s start forwards 500ms;
-
   cursor: pointer;
   opacity: 0;
   animation: 1s start forwards;
@@ -46,9 +38,9 @@ const Img = styled.img`
   height: 150px;
   position: absolute;
   right: ${(props) => props.$right};
-  animation: 500ms logoStart forwards ease-in;
+  animation: 500ms logoStart forwards ease-in 200ms;
   opacity: 0;
-  scale: 0.7;
+scale: 0.8;
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -56,13 +48,11 @@ const LogoContainer = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  animation: 1.5s Bounce forwards;
-
+  animation: 1.5s Bounce forwards 100ms;
   @keyframes logoStart {
     100% {
-      right: 19px;
+      right: 9px;
       opacity: 1;
-      scale: 0.9;
     }
   }
   @keyframes Bounce {
@@ -76,41 +66,23 @@ const LogoContainer = styled.div`
 `;
 
 export default function Home() {
-/*   const [logoSound] = useSound(checkAudio, { volume: 0.1 });
-  
-  function logoAudi(){
-    setTimeout(() => {
-      logoSound()
-    }, 550);
-    
-  }
-
-  
-  logoAudi()
-   */
   return (
     <>
       <Wrapper>
         <LogoContainer>
-          <Img $right="70px" src={logoFirst} alt="Logo First Part" />
-          <Img $right="-30px" src={logoSecond} alt="Logo Second Part" />
+          <Img $right="40px" src={logoFirst} alt="Logo First Part" />
+          <Img $right="-20px" src={logoSecond} alt="Logo Second Part" />
         </LogoContainer>
 
         <ButtonCtn>
           <LinkButton
             to="/game"
             text="Start"
-            logo={<StartIcon></StartIcon>}
           />
-{/*        <LinkButton
-            to={"/wordlist"}
-            text="Words"
-            logo={<ListIcon></ListIcon>}
-          />  */}
           <LinkButton
             to={"/settings"}
             text="Settings"
-            logo={<SettingsIcon></SettingsIcon>}
+     
           />
         </ButtonCtn>
         

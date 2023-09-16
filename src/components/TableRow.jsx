@@ -70,7 +70,7 @@ const Answer = styled.p`
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 1.1em;
-  color: floralwhite;
+  color: #94b7e7;
   z-index: 5;
   @media (max-width: 700px) {
     font-size: 1em;
@@ -221,8 +221,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
         </Letter>
 
         <Question $backg={color}>
-          <Answer> {answer} </Answer>
           <p>{question}</p>
+          <Answer> {answer} </Answer>
           <ReportButton wordValue={answer} clueValue={question} />
         </Question>
         <ButtonRow $backg={color}>

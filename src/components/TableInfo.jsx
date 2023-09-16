@@ -1,8 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import styled from "styled-components";
 import { TimeContext } from "../context/TimeContext";
-import CheckBox from './ui/CheckBox';
-import LinkButton from './ui/LinkButton';
 
 
 const CtnInfo = styled.div`
@@ -37,36 +35,38 @@ const TxtInfo = styled.p`
 
 const TextTeam = styled.p`
 color: #fff;
+font-weight: 800;
 `
-const TimerButton = styled.button`
-  background-color: #064ebb;
+
+const Timer = styled.button`
+  background-color: ${props => props.$TimeActive ? '#3a485e' : '#064ebb'};
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 5px solid;
+  border-bottom: 4px solid;
   border-right: 5px solid;
   border-left: 1px solid;
   border-top: 1px solid;
   text-shadow: 1px 1px #0b397e;
-  border-color: #0b397e;
-
-
+  border-color: ${props => props.$TimeActive ? '#212c3d' : '#0b397e'};
   cursor: pointer;
-  padding: 4px 15px;
+  padding: 8px 10px;
   font-weight: 400;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: 800;
   gap: 5px;
+
 `
 
 export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
   const { time,start,timeRunning,setTimeRunning } = useContext(TimeContext);
+  const [timeActive, setTimeActive] = useState(false)
   function handleTime(){
     if(timeRunning === false){
       start();
       setTimeRunning(true)
-  
+      setTimeActive()
     }
   }
   return (
@@ -77,8 +77,11 @@ export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
     <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
     <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
     <TxtInfo $infocolor="#c56fd6">PASS {pending}</TxtInfo>
-      <TextTeam> Time: {time.s !== 0 && time.s}{time.s === 0 && <p>Time Out!</p>}s </TextTeam>
-<TimerButton onClick={handleTime}>START</TimerButton>
+
+      <Timer $TimeActive={timeRunning} onClick={handleTime}> 
+      {time.s !== 0 && time.s}
+      {time.s === 0 && <p>Time Out!</p>}s
+      </Timer>
 
   </CtnInfo>
 

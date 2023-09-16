@@ -72,6 +72,8 @@ export default function Table({ tableA }) {
     "z", 
   ];
 
+const arr = []
+
   //CREAR ROLL 0-9
   function roll9() {
     return Math.floor(Math.random() * 9);
@@ -81,10 +83,20 @@ export default function Table({ tableA }) {
   function handleFilter(letter) {
     if (roll9() < rollChance && containsCounter > breakCounter) {
       setBreakCounter(breakCounter + 1);
-
-      return words.filter((item) => item.word.toLowerCase().includes(letter));
-    } else {
-      return words.filter((item) => item.word.toLowerCase().startsWith(letter));
+      const choosedWord = words.filter((item) => item.word.toLowerCase().includes(letter));
+      return choosedWord
+    } 
+    else {
+      if (letter === 'z') {
+        return words.filter((item) => item.word.toLowerCase().includes(letter));
+      } 
+      if (letter === 'h') {
+        return words.filter((item) => item.word.toLowerCase().includes(letter));
+      } 
+      
+      else {
+        return words.filter((item) => item.word.toLowerCase().startsWith(letter));
+      }
     }
   }
 
@@ -98,13 +110,16 @@ export default function Table({ tableA }) {
   const randomNumbers = wordArrays.map((arr) => rollNumber(arr.length));
 
   //PREGUNTA
-  const handleAsk = (index, letter) => {
+  const handleAsk = (index) => {
     return wordArrays[index][randomNumbers[index]].clue;
   };
 
   //RESPUESTA
-  const handleAnswer = (index, letter) => {
-    return wordArrays[index][randomNumbers[index]].word;
+  const handleAnswer = (index) => {
+    const choosedAnswer = wordArrays[index][randomNumbers[index]].word;
+    arr.push(choosedAnswer)
+
+    return choosedAnswer
   };
 
   //USE MEMO PARA EVITAR EL RE-RENDERIZADO DE LOS COMPONENTES
@@ -114,8 +129,8 @@ export default function Table({ tableA }) {
         tableA={tableA}
         key={index}
         letter={letter}
-        question={handleAsk(index, letter)}
-        answer={handleAnswer(index, letter)}
+        question={handleAsk(index)}
+        answer={handleAnswer(index)}
       />
     ));
   }, []);

@@ -1,8 +1,7 @@
 import React from "react";
 import LinkButton from "../components/ui/LinkButton";
 import styled from "styled-components";
-import Title from "../components/Title";
-import HomeIcon from "@mui/icons-material/Home";
+
 import { useContext } from "react";
 import selectAudio from "../assets/sounds/select-sound.wav";
 import dohAudio from "../assets/sounds/doh.mp3";
@@ -52,6 +51,7 @@ const BtnContainer = styled.div`
   margin: auto;
   flex-wrap: wrap;
   max-width: 400px;
+
 `;
 const Input = styled.input`
   -webkit-appearance: none;
@@ -68,7 +68,7 @@ const Input = styled.input`
   font-weight: 600;
   border-color: #717171;
   color: #1c2128;
-  padding: 8px;
+  padding: 7px;
   min-width: 100px;
   padding-inline: 15px;
   color: #222;
@@ -109,11 +109,22 @@ const ModeCtn = styled.div`
   text-align: center;
   gap: 1em;
   padding-inline: 0.5em;
+  margin-bottom: 2em;
 `;
 const ModeTxt = styled.p`
   color: ${(props) => props.$color};
   max-width: 40ch;
   height: 30px;
+`;
+
+const H1 = styled.h1`
+  font-size: 3em;
+  font-weight: 500;
+  color:#94b7e7 ;;
+  text-align: center;
+  @media (max-width: 700px) {
+    font-size: 2.5em;
+  }
 `;
 
 export default function Settings() {
@@ -125,7 +136,7 @@ export default function Settings() {
     hard: false,
     simpsons: false,
   });
-  const { setStoredTime } = useContext(TimeContext);
+  const { setStoredTime,setTime } = useContext(TimeContext);
   const {
     setContainsCounter,
     setRollChance,
@@ -149,6 +160,7 @@ export default function Settings() {
         setContainsCounter(0);
         selectSound();
         setStoredTime({ms: 0, s: 180, m: 0, h: 0,});
+        setTime({ms: 0, s: 180, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: true,
@@ -162,6 +174,7 @@ export default function Settings() {
         setContainsCounter(10);
         selectSound();
         setStoredTime({ms: 0, s: 140, m: 0, h: 0,});
+        setTime({ms: 0, s: 140, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: false,
@@ -175,6 +188,7 @@ export default function Settings() {
         setContainsCounter(20);
         selectSound();
         setStoredTime({ms: 0, s: 100, m: 0, h: 0,});
+        setTime({ms: 0, s: 100, m: 0, h: 0,});
         setButtonState((prevState) => ({
           ...prevState,
           easy: false,
@@ -218,7 +232,7 @@ export default function Settings() {
   return (
     <>
       <Wrapper>
-        <Title text={"SETTINGS"} />
+<H1>SETTINGS</H1>
 
         <OptionWrapper>
           <OptionCtn>
@@ -304,7 +318,7 @@ export default function Settings() {
           )}
         </ModeCtn>
 
-        <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
+        <LinkButton to={"/"} text={"Home"}/>
       </Wrapper>
     </>
   );

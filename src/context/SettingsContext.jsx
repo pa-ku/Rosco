@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 export const SettingsContext = createContext();
 import useLocalStorage from "use-local-storage";
 

@@ -60,6 +60,7 @@ export function TimeProvider({ children }) {
       value={{
         timeRunning,
         setTimeRunning,
+        setTime,
         reset,
         start,
         stop,

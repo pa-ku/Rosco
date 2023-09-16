@@ -4,14 +4,8 @@ import styled from "styled-components";
 import WordCount from "../components/WordCount";
 import LinkButton from "../components/ui/LinkButton";
 import HomeIcon from "@mui/icons-material/Home";
-import Title from "../components/Title";
 import { useState } from "react";
 import CheckBox from "../components/ui/CheckBox";
-//crear una tabla con todas las palabras, e informacion de cada palabra,
-//cantidad de palabras
-//numero de palabras con cada letra
-//pushear palabras al local storage para luego subirlas
-//marcar palabras en el local storage para eliminar posteriormente
 
 const Wrapper = styled.div`
 margin-block: 3em;
@@ -181,8 +175,6 @@ words.forEach((wordObj) => {
   return (
     <>
     <Wrapper>
-
-      <Title text={"WORDS"} />
 
       <Header>
         <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />

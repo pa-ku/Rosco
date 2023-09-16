@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Table from "../components/Table";
 import LinkButton from "../components/ui/LinkButton";
-import HomeIcon from "@mui/icons-material/Home";
 import ReloadLogo from "@mui/icons-material/Cached";
-import Title from "../components/Title";
 import { useContext } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { StatusContext } from "../context/StatusContext";
@@ -49,13 +47,10 @@ export default function Game() {
   return (
     <>
       <Wrapper>
-        
-        <Title text={"ROSQUEWE"} />
         <ButtonCtn>
-          <LinkButton to={"/"} text={"Home"} logo={<HomeIcon> </HomeIcon>} />
+          <LinkButton to={"/"} text={"Home"}  />
           <LinkButton
             to={"/game"}
-            logo={<ReloadIcon></ReloadIcon>}
             text="Roll"
             onClick={() => window.location.reload()}
           />
