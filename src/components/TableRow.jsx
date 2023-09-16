@@ -34,11 +34,11 @@ const Letter = styled.td`
 `;
 const Question = styled.td`
   border-bottom: 4px solid #1c2128;
-
+  letter-spacing: 0.7px;
   background-color: #212f42;
-  color: floralwhite;
+  color: #f1f1f1;
   padding-inline: 2em;
-  font-size: 1.2em;
+  font-size: 15px;
   padding-block: 1em;
   background-color: ${(props) => props.$backg};
   width: 80ch;
@@ -51,7 +51,7 @@ const Question = styled.td`
     animation: visible 1s forwards 200ms;
   }
   @media (max-width: 700px) {
-    font-size: 1.1em;
+    font-size: 14px;
   }
 `;
 const ButtonRow = styled.td`
@@ -67,10 +67,9 @@ const Answer = styled.p`
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-
   letter-spacing: 2px;
   font-size: 1.1em;
-  color: #94b7e7;
+  color: #79affc;
   z-index: 5;
   @media (max-width: 700px) {
     font-size: 1em;
@@ -130,14 +129,15 @@ const Tr = styled.tr`
 `;
 const ContieneTxt = styled.p`
   font-size: 0.5em;
-  color: #75bb47;
-  font-weight: 800;
+  color: #b8b8b8;
+  font-weight: 700;
+  letter-spacing: 1px;
 `;
 const Line = styled.div`
 width: 40px;
 height: 1px;
 
-border-top: 4px dotted #354a64 ;
+border-top: 4px dotted #c4c4c4 ;
 
 margin: auto;
 margin-block: 5px;

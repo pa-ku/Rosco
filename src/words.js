@@ -1186,11 +1186,11 @@ export const words = [
     { word: "Brincar", clue: "saltar" },
     {
         word: "Brocha",
-        clue: "una herramienta que se utiliza para aplicar pintura",
+        clue: "una herramienta mas grande que un pincel que se utiliza para pintar",
     },
     {
         word: "Bombero",
-        clue: "una persona que trabaja en un cuerpo de bomberos",
+        clue: "una persona que trabaja apagando incendios",
     },
     {
         word: "Bocanada",
@@ -1200,7 +1200,7 @@ export const words = [
         word: "Bofetada",
         clue: "un golpe que se da con la mano abierta",
     },
-    { word: "Botín", clue: "el robo o el saqueo" },
+    { word: "Botines", clue: "Calzado que se utiliza para jugar al futbol" },
     { word: "Bizcocho", clue: "un pastel pequeño y esponjoso" },
     {
         word: "Bigote",
@@ -1224,9 +1224,9 @@ export const words = [
     },
     {
         word: "canto",
-        clue: "El sonido que produce un pájaro u otro animal",
+        clue: "acción de producir sonidos musicales mediante la voz, un instrumento musical o cualquier otro medio",
     },
-    { word: "circular", clue: "Tener forma de círculo" },
+    { word: "Circulo", clue: " figura bidimensional que no tiene esquinas ni vértices. " },
     {
         word: "cebra",
         clue: "Un mamífero africano con rayas blancas y negras",
