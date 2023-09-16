@@ -76,7 +76,7 @@ export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
       <TextTeam>{Team}</TextTeam>
     <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
     <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
-    <TxtInfo $infocolor="#c56fd6">PASS {pending}</TxtInfo>
+    <TxtInfo $infocolor="#d67fe7">PASS {pending}</TxtInfo>
 
       <Timer $TimeActive={timeRunning} onClick={handleTime}> 
       {time.s !== 0 && time.s}

@@ -130,8 +130,18 @@ const Tr = styled.tr`
 `;
 const ContieneTxt = styled.p`
   font-size: 0.5em;
+  color: #75bb47;
+  font-weight: 800;
 `;
+const Line = styled.div`
+width: 70px;
+height: 1px;
 
+border-top: 4px dotted #354a64 ;
+
+margin: auto;
+margin-block: 5px;
+`
 export default function TableRow({ letter, question, answer, tableA }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
@@ -222,6 +232,7 @@ export default function TableRow({ letter, question, answer, tableA }) {
 
         <Question $backg={color}>
           <p>{question}</p>
+      <Line></Line>
           <Answer> {answer} </Answer>
           <ReportButton wordValue={answer} clueValue={question} />
         </Question>
