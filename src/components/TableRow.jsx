@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { useState, useContext } from "react";
-import { StatusContext } from "../context/StatusContext";
 import useSound from "use-sound";
 import rightSound from "../assets/sounds/right.wav";
 import errorSound from "../assets/sounds/error.wav";
-import { SettingsContext } from "../context/SettingsContext";
+import passSound from "../assets/sounds/select-sound.wav";
+import { GameContext } from "../context/GameContext";
 import { TimeContext } from "../context/TimeContext";
 import { ReportButton } from "./ui/ReportButton";
 
@@ -134,95 +134,117 @@ const ContieneTxt = styled.p`
   letter-spacing: 1px;
 `;
 const Line = styled.div`
-width: 40px;
-height: 1px;
+  width: 40px;
+  height: 1px;
 
-border-top: 4px dotted #c4c4c455 ;
+  border-top: 4px dotted #c4c4c455;
 
-margin: auto;
-margin-block: 5px;
-`
+  margin: auto;
+  margin-block: 5px;
+`;
 export default function TableRow({ letter, question, answer, tableA }) {
   const [color, setColor] = useState();
   const [display, setDisplay] = useState("block");
   const [displayPending, setDisplayPending] = useState("block");
- 
-  const {stop,timeRunning,setTimeRunning } = useContext(TimeContext);
-
-  const {
-    setWrongAnswers,
-    setWrongAnswersB,
-    setRightAnswers,
-    setRightAnswersB,
-    pending,
-    setPending,
-    setPendingB,
-    pendingB,
-  } = useContext(StatusContext);
-
-
-  const { settings } = useContext(SettingsContext);
-
-
-  function rightBtn() {
-    setDisplay("none");
-    setDisplayPending("none");
-    right();
-
-    setColor("#2c462e");
-    if (tableA === true) {
-      setRightAnswers((prevRightAnswers) => prevRightAnswers + 1);
-      if (pending > 0) {
-        setPending((prevPending) => prevPending - 1);
-      }
-    } else {
-      setRightAnswersB((prevRightAnswersB) => prevRightAnswersB + 1);
-      if (pendingB > 0) {
-        setPendingB((prevPendingB) => prevPendingB - 1);
-      }
-    }
-  }
-
-  function wrongBtn() {
-    setColor("#4d2626");
-    setDisplayPending("none");
-    setDisplay("none");
-    error()
-    if(timeRunning === true){
-      stop()
-      setTimeRunning(false)
-    }
-    if (tableA === true) {
-      setWrongAnswers((prevWrongAnswers) => prevWrongAnswers + 1);
-      if (pending > 0) {
-        setPending((prevPending) => prevPending - 1);
-      }
-    } else {
-      setWrongAnswersB((prevWrongAnswersB) => prevWrongAnswersB + 1);
-      if (pendingB > 0) {
-        setPendingB((prevPendingB) => prevPendingB - 1);
-      }
-    }
-  }
-
-  const passBtn = () => {
-    setDisplayPending("none");
-    setColor("#4c3150");
-    if(timeRunning === true){
-      stop()
-      setTimeRunning(false)
-    }
-    if (tableA === true) {
-      setPending((prevPending) => prevPending + 1);
-    } else {
-      setPendingB((prevPendingB) => prevPendingB + 1);
-    }
-  };
-  const beginsWithLetter = answer.toLowerCase().startsWith(letter);
+  const { stop, timeRunning, setTimeRunning } = useContext(TimeContext);
+  const { settings,answerHandler, setAnswerHandler  } = useContext(GameContext);
 
   //Sounds
-  const [right] = useSound(rightSound, { volume: settings.volume });
-  const [error] = useSound(errorSound, { volume: settings.volume });
+  const [rightAudio] = useSound(rightSound, { volume: settings.volume });
+  const [wrongAudio] = useSound(errorSound, { volume: settings.volume });
+  const [passAudio] = useSound(passSound, { volume: settings.volume });
+
+  function handleButton(event) {
+    setDisplayPending("none");
+    switch (event.target.value) {
+      //RIGHT
+      case "right":
+        setDisplay("none");
+        rightAudio();
+        setColor("#2c462e");
+        if (tableA === true) {
+          setAnswerHandler({
+            ...answerHandler,
+            rightAnswersA: answerHandler.rightAnswersA + 1,
+          });
+
+          if (answerHandler.pendingA > 0) {
+            setAnswerHandler({
+              ...answerHandler,
+              pendingA: answerHandler.pendingA - 1,
+            });
+          }
+        } else {
+          setAnswerHandler({
+            ...answerHandler,
+            rightAnswersB: answerHandler.rightAnswersB + 1,
+          });
+          if (answerHandler.pendingB > 0) {
+            setAnswerHandler({
+              ...answerHandler,
+              pendingB: answerHandler.pendingB - 1,
+            });
+          }
+        }
+        break;
+      //WRONG
+      case "wrong":
+        setColor("#4d2626");
+        setDisplay("none");
+        wrongAudio();
+        if (timeRunning === true) {
+          stop();
+          setTimeRunning(false);
+        }
+        if (tableA === true) {
+          setAnswerHandler({
+            ...answerHandler,
+            wrongAnswersA: answerHandler.wrongAnswersA + 1,
+          });
+          if (answerHandler.pendingA > 0) {
+            setAnswerHandler({
+              ...answerHandler,
+              pendingA: answerHandler.pendingA - 1,
+            });
+          }
+        } else {
+          setAnswerHandler({
+            ...answerHandler,
+            wrongAnswersB: answerHandler.wrongAnswersB + 1,
+          });
+          if (answerHandler.pendingB > 0) {
+            setAnswerHandler({
+              ...answerHandler,
+              pendingB: answerHandler.pendingB - 1,
+            });
+          }
+        }
+
+        break;
+      //PASS
+      case "pass":
+        passAudio()
+        setColor("#4c3150");
+        if (timeRunning === true) {
+          stop();
+          setTimeRunning(false);
+        }
+        if (tableA === true) {
+          setAnswerHandler({
+            ...answerHandler,
+            pendingA: answerHandler.pendingA + 1,
+          });
+        } else {
+          setAnswerHandler({
+            ...answerHandler,
+            pendingB: answerHandler.pendingB + 1,
+          });
+        }
+        break;
+    }
+  }
+
+  const beginsWithLetter = answer.toLowerCase().startsWith(letter);
 
   return (
     <>
@@ -234,7 +256,7 @@ export default function TableRow({ letter, question, answer, tableA }) {
 
         <Question $backg={color}>
           <p>{question}</p>
-      <Line></Line>
+          <Line></Line>
           <Answer> {answer} </Answer>
           <ReportButton wordValue={answer} clueValue={question} />
         </Question>
@@ -244,7 +266,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
               $bordercolor={"#304e06"}
               $backgcolor={"#5c9902"}
               $display={display}
-              onClick={rightBtn}
+              value={"right"}
+              onClick={handleButton}
             >
               ✔
             </Button>
@@ -252,7 +275,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
               $bordercolor={"#650404"}
               $backgcolor={"#bd0000"}
               $display={display}
-              onClick={wrongBtn}
+              value={"wrong"}
+              onClick={handleButton}
             >
               ✖
             </Button>
@@ -260,7 +284,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
               $backgcolor={"#ad73c4"}
               $bordercolor={"#6f228d"}
               $display={displayPending}
-              onClick={passBtn}
+              value={"pass"}
+              onClick={handleButton}
             >
               ➔
             </Button>

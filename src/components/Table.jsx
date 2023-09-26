@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useContext, useMemo, useState } from "react";
-import { SettingsContext } from "../context/SettingsContext";
+import { GameContext } from "../context/GameContext";
 import { words } from "../words";
 import TableRow from "./TableRow";
 
@@ -40,7 +40,7 @@ const RowComponent = React.memo(({ letter, question, answer, tableA }) => {
   );
 });
 export default function Table({ tableA }) {
-  const { settings } = useContext(SettingsContext);
+  const { settings } = useContext(GameContext);
   const [breakCounter, setBreakCounter] = useState(0);
 
   const letters = [

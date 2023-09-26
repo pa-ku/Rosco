@@ -1,15 +1,13 @@
 import React from "react";
 import LinkButton from "../components/ui/LinkButton";
 import styled from "styled-components";
-
-import { useContext } from "react";
 import selectAudio from "../assets/sounds/select-sound.wav";
 import checkAudio from "../assets/sounds/cheksound.wav";
 import useSound from "use-sound";
-import { SettingsContext } from "../context/SettingsContext";
-import useLocalStorage from "use-local-storage";
-import CheckBox from "../components/ui/CheckBox";
+import { useContext } from "react";
+import { GameContext } from "../context/GameContext";
 import { TimeContext } from "../context/TimeContext";
+import CheckBox from "../components/ui/CheckBox";
 
 const Wrapper = styled.div`
   display: flex;
@@ -125,14 +123,12 @@ const H1 = styled.h1`
 `;
 
 export default function Settings() {
-  const { setPrevTime ,setTime} = useContext(TimeContext);
-  const { setSettings, settings } = useContext(SettingsContext);
+  const { setPrevTime, setTime } = useContext(TimeContext);
+  const { setSettings, settings } = useContext(GameContext);
 
   //SOUND MANAGER
   const [selectSound] = useSound(selectAudio, { volume: settings.volume });
   const [checkSound] = useSound(checkAudio, { volume: settings.volume });
-
-  console.log(settings);
 
   function modeHandler(event) {
     switch (event.target.value) {
@@ -195,13 +191,16 @@ export default function Settings() {
     }
   }
 
+
   return (
     <>
       <Wrapper>
         <H1>SETTINGS</H1>
 
         <OptionWrapper>
+      
           <OptionCtn>
+            <Label htmlFor="Option1">Team Table </Label>
             <CheckBox
               checked={settings.teamTable}
               onChange={handleTeam}
@@ -209,9 +208,9 @@ export default function Settings() {
               type="checkbox"
             />
 
-            <Label htmlFor="Option1">Team Table </Label>
           </OptionCtn>
           <OptionCtn>
+            <Label htmlFor="Option2">SOUND</Label>
             <CheckBox
               checked={settings.sound}
               onChange={handleSound}
@@ -219,7 +218,6 @@ export default function Settings() {
               type="checkbox"
             />
 
-            <Label htmlFor="Option2">SOUND</Label>
           </OptionCtn>
         </OptionWrapper>
         <ModeCtn>
@@ -249,7 +247,7 @@ export default function Settings() {
           {settings.mode === "easy" && (
             <ModeTxt>
               Para debiles e indesisos.<br></br>{" "}
-              <b>TODAS las palabras comienzan con la letra</b> (200 segundos)
+              <b>TODAS las palabras comienzan con la letra</b> (180 segundos)
             </ModeTxt>
           )}
           {settings.mode === "normal" && (

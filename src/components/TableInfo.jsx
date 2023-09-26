@@ -1,4 +1,4 @@
-import React, { useContext,useState } from 'react'
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { TimeContext } from "../context/TimeContext";
 
@@ -34,13 +34,13 @@ const TxtInfo = styled.p`
 `;
 
 const TextTeam = styled.p`
-color: #fff;
-font-weight: 800;
-font-size: 14px;
-`
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+`;
 
 const Timer = styled.button`
-  background-color: ${props => props.$TimeActive ? '#3a485e' : '#064ebb'};
+  background-color: ${(props) => (props.$TimeActive ? "#3a485e" : "#064ebb")};
   color: white;
   display: flex;
   align-items: center;
@@ -50,42 +50,44 @@ const Timer = styled.button`
   border-left: 1px solid;
   border-top: 1px solid;
   text-shadow: 1px 1px #0b397e;
-  border-color: ${props => props.$TimeActive ? '#212c3d' : '#0b397e'};
+  border-color: ${(props) => (props.$TimeActive ? "#212c3d" : "#0b397e")};
   cursor: pointer;
   padding: 8px 10px;
   font-weight: 400;
   border-radius: 20px;
   font-weight: 800;
   gap: 5px;
+`;
 
-`
+export default function TableInfo({
+  rightAnswers,
+  wrongAnswers,
+  pending,
+  Team,
+}) {
+  const { time, start, timeRunning, setTimeRunning } = useContext(TimeContext);
+  const [timeActive, setTimeActive] = useState(false);
 
-export default function TableInfo({rightAnswers,wrongAnswers,pending,Team}) {
-  const { time,start,timeRunning,setTimeRunning } = useContext(TimeContext);
-  const [timeActive, setTimeActive] = useState(false)
-  function handleTime(){
-    if(timeRunning === false){
+  function handleTime() {
+    if (timeRunning === false) {
+      setTimeRunning(true);
       start();
-      setTimeRunning(true)
-      setTimeActive()
+      setTimeActive();
     }
   }
   return (
     <>
-    
-    <CtnInfo>
-      <TextTeam>{Team}</TextTeam>
-    <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
-    <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
-    <TxtInfo $infocolor="#d67fe7">PASS {pending}</TxtInfo>
+      <CtnInfo>
+        <TextTeam>{Team}</TextTeam>
+        <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
+        <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
+        <TxtInfo $infocolor="#d67fe7">PASS {pending}</TxtInfo>
 
-      <Timer $TimeActive={timeRunning} onClick={handleTime}> 
-      {time.s !== 0 && time.s}
-      {time.s === 0 && <p>Time Out!</p>}s
-      </Timer>
-
-  </CtnInfo>
-
+        <Timer $TimeActive={timeRunning} onClick={handleTime}>
+          {time.s !== 0 && time.s}
+          {time.s === 0 && <p>Time Out!</p>}s
+        </Timer>
+      </CtnInfo>
     </>
-  )
+  );
 }
