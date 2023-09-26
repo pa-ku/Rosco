@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Table from "../components/Table";
 import LinkButton from "../components/ui/LinkButton";
-import { useContext,useRef,useEffect } from "react";
+import { useContext, useRef, useEffect } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { StatusContext } from "../context/StatusContext";
 import TableInfo from "../components/TableInfo";
@@ -23,11 +23,17 @@ const ButtonCtn = styled.div`
   }
 `;
 
-
 export default function Game() {
-  const { wrongAnswers, rightAnswers, pending,wrongAnswersB, rightAnswersB, pendingB } = useContext(StatusContext);
-  const { teamTable } = useContext(SettingsContext);
+  const {
+    wrongAnswers,
+    rightAnswers,
+    pending,
+    wrongAnswersB,
+    rightAnswersB,
+    pendingB,
+  } = useContext(StatusContext);
 
+  const { settings } = useContext(SettingsContext);
 
   return (
     <>
@@ -41,17 +47,15 @@ export default function Game() {
           />
         </ButtonCtn>
 
-
         <TableInfo
           rightAnswers={rightAnswers}
           wrongAnswers={wrongAnswers}
           pending={pending}
-    
-        {...teamTable ? {Team:"Team A"} : {Team:""}}
+          {...(settings.teamTable ? { Team: "Team A" } : { Team: "" })}
         />
-        <Table tableA={true}/>
+        <Table tableA={true} />
 
-        {teamTable === true && (
+        {settings.teamTable === true && (
           <>
             <TableInfo
               Team={"Team B"}
@@ -59,12 +63,10 @@ export default function Game() {
               wrongAnswers={wrongAnswersB}
               pending={pendingB}
             />
-            <Table tableA={false}/>
+            <Table tableA={false} />
           </>
         )}
       </Wrapper>
     </>
   );
 }
-
-

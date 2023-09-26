@@ -2,15 +2,14 @@ import { createContext, useState } from "react";
 export const TimeContext = createContext();
 import useLocalStorage from "use-local-storage";
 
-
 export function TimeProvider({ children }) {
-  const [storedTime, setStoredTime] = useLocalStorage("storedTime", {
+  const [prevtime, setPrevTime] = useLocalStorage("time", {
     ms: 0,
-    s: 140,
-    m: 1,
+    s: 180,
+    m: 0,
     h: 0,
   });
-  const [time, setTime] = useState(storedTime);
+  const [time, setTime] = useState(prevtime);
   const [interv, setInterv] = useState();
   const [timeRunning, setTimeRunning] = useState(false);
 
@@ -61,12 +60,11 @@ export function TimeProvider({ children }) {
         timeRunning,
         setTimeRunning,
         setTime,
+        setPrevTime,
         reset,
         start,
         stop,
         time,
-        storedTime,
-        setStoredTime,
       }}
     >
       {children}

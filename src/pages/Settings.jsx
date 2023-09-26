@@ -4,14 +4,12 @@ import styled from "styled-components";
 
 import { useContext } from "react";
 import selectAudio from "../assets/sounds/select-sound.wav";
-import dohAudio from "../assets/sounds/doh.mp3";
 import checkAudio from "../assets/sounds/cheksound.wav";
 import useSound from "use-sound";
 import { SettingsContext } from "../context/SettingsContext";
 import useLocalStorage from "use-local-storage";
 import CheckBox from "../components/ui/CheckBox";
 import { TimeContext } from "../context/TimeContext";
-
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,7 +49,6 @@ const BtnContainer = styled.div`
   margin: auto;
   flex-wrap: wrap;
   max-width: 400px;
-
 `;
 const Input = styled.input`
   -webkit-appearance: none;
@@ -120,7 +117,7 @@ const ModeTxt = styled.p`
 const H1 = styled.h1`
   font-size: 3em;
   font-weight: 500;
-  color:#94b7e7 ;;
+  color: #94b7e7;
   text-align: center;
   @media (max-width: 700px) {
     font-size: 2.5em;
@@ -128,118 +125,86 @@ const H1 = styled.h1`
 `;
 
 export default function Settings() {
-  const [mode, setMode] = useLocalStorage("mode", "");
-
-  const [buttonState, setButtonState] = useLocalStorage("ButtonState", {
-    easy: false,
-    normal: false,
-    hard: false,
-    simpsons: false,
-  });
-  const { setStoredTime,setTime } = useContext(TimeContext);
-  const {
-    setContainsCounter,
-    setRollChance,
-    setSound,
-    setVolume,
-    sound,
-    volume,
-    teamTable,
-    setTeamTable,
-  } = useContext(SettingsContext);
+  const { setPrevTime ,setTime} = useContext(TimeContext);
+  const { setSettings, settings } = useContext(SettingsContext);
 
   //SOUND MANAGER
-  const [selectSound] = useSound(selectAudio, { volume: volume });
-  const [dohSound] = useSound(dohAudio, { volume: volume });
-  const [checkSound] = useSound(checkAudio, { volume: volume });
+  const [selectSound] = useSound(selectAudio, { volume: settings.volume });
+  const [checkSound] = useSound(checkAudio, { volume: settings.volume });
+
+  console.log(settings);
 
   function modeHandler(event) {
-    setMode(event.target.value);
     switch (event.target.value) {
       case "easy":
-        setContainsCounter(0);
         selectSound();
-        setStoredTime({ms: 0, s: 180, m: 0, h: 0,});
-        setTime({ms: 0, s: 180, m: 0, h: 0,});
-        setButtonState((prevState) => ({
-          ...prevState,
-          easy: true,
-          normal: false,
-          hard: false,
-          simpsons: false,
-        }));
+        setSettings({
+          ...settings,
+          mode: event.target.value,
+          rollChance: 3,
+          containsWords: 0,
+          time: { ms: 0, s: 180, m: 0, h: 0 },
+        });
+        setPrevTime({ ms: 0, s: 180, m: 0, h: 0 });
+        setTime({ ms: 0, s: 180, m: 0, h: 0 });
         break;
+
       case "normal":
-        setRollChance(3);
-        setContainsCounter(10);
         selectSound();
-        setStoredTime({ms: 0, s: 140, m: 0, h: 0,});
-        setTime({ms: 0, s: 140, m: 0, h: 0,});
-        setButtonState((prevState) => ({
-          ...prevState,
-          easy: false,
-          normal: true,
-          hard: false,
-          simpsons: false,
-        }));
+        setSettings({
+          ...settings,
+          mode: event.target.value,
+          rollChance: 3,
+          containsWords: 10,
+          time: { ms: 0, s: 140, m: 0, h: 0 },
+        });
+        setPrevTime({ ms: 0, s: 140, m: 0, h: 0 });
+        setTime({ ms: 0, s: 140, m: 0, h: 0 });
         break;
+
       case "hard":
-        setRollChance(7);
-        setContainsCounter(20);
         selectSound();
-        setStoredTime({ms: 0, s: 100, m: 0, h: 0,});
-        setTime({ms: 0, s: 100, m: 0, h: 0,});
-        setButtonState((prevState) => ({
-          ...prevState,
-          easy: false,
-          normal: false,
-          hard: true,
-          simpsons: false,
-        }));
-        break;
-      case "simpsons":
-        setRollChance(3);
-        setContainsCounter(10);
-        dohSound();
-        setButtonState((prevState) => ({
-          ...prevState,
-          easy: false,
-          normal: false,
-          hard: false,
-          simpsons: true,
-        }));
+        setSettings({
+          ...settings,
+          mode: event.target.value,
+          rollChance: 7,
+          containsWords: 20,
+          time: { ms: 0, s: 100, m: 0, h: 0 },
+        });
+        setPrevTime({ ms: 0, s: 100, m: 0, h: 0 });
+        setTime({ ms: 0, s: 100, m: 0, h: 0 });
         break;
     }
   }
 
-  function handleSound(event) {
-    setSound(event.target.checked);
-    if (sound === false) {
-      setVolume(0.2);
+  function handleSound() {
+    checkSound();
+    if (settings.sound === false) {
+      setSettings({ ...settings, volume: 1, sound: true });
     } else {
-      setVolume(0);
+      setSettings({ ...settings, volume: 0, sound: false });
     }
   }
 
-  function handleTeam(event) {
-    if (teamTable === true) {
-      setTeamTable(false);
+  function handleTeam() {
+    checkSound();
+    if (settings.teamTable === false) {
+      setSettings({ ...settings, teamTable: true });
     } else {
-      setTeamTable(true);
+      setSettings({ ...settings, teamTable: false });
     }
   }
 
   return (
     <>
       <Wrapper>
-<H1>SETTINGS</H1>
+        <H1>SETTINGS</H1>
 
         <OptionWrapper>
           <OptionCtn>
             <CheckBox
-              checked={teamTable}
+              checked={settings.teamTable}
               onChange={handleTeam}
-              onClick={checkSound}
               id="Option1"
               type="checkbox"
             />
@@ -248,9 +213,8 @@ export default function Settings() {
           </OptionCtn>
           <OptionCtn>
             <CheckBox
-              checked={sound}
+              checked={settings.sound}
               onChange={handleSound}
-              onClick={checkSound}
               id="Option2"
               type="checkbox"
             />
@@ -262,7 +226,7 @@ export default function Settings() {
           <BtnContainer>
             <Input
               value={"easy"}
-              checked={buttonState.easy}
+              checked={settings.mode === "easy" && true}
               name="mode"
               type="radio"
               onChange={modeHandler}
@@ -271,54 +235,38 @@ export default function Settings() {
               value={"normal"}
               name="mode"
               type="radio"
-              checked={buttonState.normal}
+              checked={settings.mode === "normal" && true}
               onChange={modeHandler}
             />
             <Input
               value={"hard"}
-              checked={buttonState.hard}
+              checked={settings.mode === "hard" && true}
               name="mode"
               type="radio"
               onChange={modeHandler}
             />
-
-            {/*    <Input
-              name="mode"
-              checked={buttonState.simpsons}
-              type="radio"
-              value={"simpsons"}
-              onChange={modeHandler}
-              $backgroundcolor={"#ffd404"}
-              $bordercolor={"#c9a802"}
-            /> */}
           </BtnContainer>
-          {mode === "easy" && (
+          {settings.mode === "easy" && (
             <ModeTxt>
               Para debiles e indesisos.<br></br>{" "}
               <b>TODAS las palabras comienzan con la letra</b> (200 segundos)
             </ModeTxt>
           )}
-          {mode === "normal" && (
+          {settings.mode === "normal" && (
             <ModeTxt>
               {" "}
               Para los que le gusta la vainilla <br></br> <b>30%</b> de que
               contengan la letra (140 segundos)
             </ModeTxt>
           )}
-          {mode === "hard" && (
+          {settings.mode === "hard" && (
             <ModeTxt>
-         
               <b>70%</b> de que contengan la letra (120 segundos)
-            </ModeTxt>
-          )}
-          {mode === "simpsons" && (
-            <ModeTxt $color="#ffd404">
-              Una lista especial con <b>preguntas de los Simpsons</b> Duh!
             </ModeTxt>
           )}
         </ModeCtn>
 
-        <LinkButton to={"/"} text={"Home"}/>
+        <LinkButton to={"/"} text={"Home"} />
       </Wrapper>
     </>
   );

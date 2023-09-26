@@ -159,7 +159,9 @@ export default function TableRow({ letter, question, answer, tableA }) {
     setPendingB,
     pendingB,
   } = useContext(StatusContext);
-  const { volume } = useContext(SettingsContext);
+
+
+  const { settings } = useContext(SettingsContext);
 
 
   function rightBtn() {
@@ -219,8 +221,8 @@ export default function TableRow({ letter, question, answer, tableA }) {
   const beginsWithLetter = answer.toLowerCase().startsWith(letter);
 
   //Sounds
-  const [right] = useSound(rightSound, { volume: volume });
-  const [error] = useSound(errorSound, { volume: volume });
+  const [right] = useSound(rightSound, { volume: settings.volume });
+  const [error] = useSound(errorSound, { volume: settings.volume });
 
   return (
     <>
