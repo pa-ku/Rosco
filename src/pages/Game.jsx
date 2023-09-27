@@ -7,6 +7,7 @@ import { GameContext } from "../context/GameContext";
 import TableInfo from "../components/TableInfo";
 import VolumeOn from "@mui/icons-material/VolumeUp";
 import VolumeOff from "@mui/icons-material/VolumeOff";
+import PersonIcon from "@mui/icons-material/Person";
 
 const Wrapper = styled.div`
   padding-top: 4em;
@@ -26,18 +27,18 @@ const ButtonCtn = styled.div`
 `;
 
 const SoundButton = styled.button`
-background-color:rgba(255, 255, 255, 0);
-border: none;
-border: none;
-cursor: pointer;
-transition: 200ms;
-&:hover{
-scale: 1.1;
-}
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border: none;
+  cursor: pointer;
+  transition: 200ms;
+  &:hover {
+    scale: 1.1;
+  }
 `;
 
-export default function Game() {
-  const { setSettings, settings, answerHandler } = useContext(GameContext);
+export function SoundBtn() {
+  const { settings,setSettings } = useContext(GameContext);
 
   function handleSound() {
     if (settings.sound === false) {
@@ -49,6 +50,19 @@ export default function Game() {
 
   return (
     <>
+      <SoundButton onClick={handleSound}>
+        {" "}
+        {settings.sound ? <VolumeOn></VolumeOn> : <VolumeOff></VolumeOff>}{" "}
+      </SoundButton>
+    </>
+  );
+}
+
+export default function Game() {
+  const { settings, answerHandler } = useContext(GameContext);
+
+  return (
+    <>
       <Wrapper>
         <ButtonCtn>
           <LinkButton to={"/"} text={"Home"} onClick={() => window.reload()} />
@@ -57,28 +71,21 @@ export default function Game() {
             text="Roll"
             onClick={() => window.location.reload()}
           />
-        <SoundButton onClick={handleSound}>
-          {" "}
-          {settings.sound ? (
-            <VolumeOn></VolumeOn>
-          ) : (
-            <VolumeOff></VolumeOff>
-          )}{" "}
-        </SoundButton>
         </ButtonCtn>
 
         <TableInfo
           rightAnswers={answerHandler.rightAnswersA}
           wrongAnswers={answerHandler.wrongAnswersA}
+          Team={"A"}
           pending={answerHandler.pendingA}
-          {...(settings.teamTable ? { Team: "Team A" } : { Team: "" })}
+          soundButton={<SoundBtn />}
         />
         <Table tableA={true} />
 
         {settings.teamTable === true && (
           <>
             <TableInfo
-              Team={"Team B"}
+              Team={"B"}
               rightAnswers={answerHandler.rightAnswersB}
               wrongAnswers={answerHandler.wrongAnswersB}
               pending={answerHandler.pendingB}

@@ -130,6 +130,11 @@ export default function Settings() {
   const [selectSound] = useSound(selectAudio, { volume: settings.volume });
   const [checkSound] = useSound(checkAudio, { volume: settings.volume });
 
+function modeHandler2 (e){
+  
+}
+
+
   function modeHandler(event) {
     switch (event.target.value) {
       case "easy":

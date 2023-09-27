@@ -1,7 +1,10 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { TimeContext } from "../context/TimeContext";
-
+import useSound from "use-sound";
+import timeSound from "../assets/sounds/right3.wav";
+import PersonIcon from "@mui/icons-material/Person";
+import { GameContext } from "../context/GameContext";
 
 const CtnInfo = styled.div`
   display: flex;
@@ -37,6 +40,9 @@ const TextTeam = styled.p`
   color: #fff;
   font-weight: 800;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Timer = styled.button`
@@ -59,26 +65,38 @@ const Timer = styled.button`
   gap: 5px;
 `;
 
+const UserIcon = styled(PersonIcon)`
+  scale: 0.8;
+`;
+
 export default function TableInfo({
   rightAnswers,
   wrongAnswers,
   pending,
   Team,
+  soundButton,
 }) {
-  const { time, start, timeRunning, setTimeRunning } = useContext(TimeContext);
-  const [timeActive, setTimeActive] = useState(false);
+  const { time, start, timeRunning } = useContext(TimeContext);
+  const { settings } = useContext(GameContext);
+  const [rightAudio] = useSound(timeSound, { volume: settings.volume });
 
   function handleTime() {
     if (timeRunning === false) {
-      setTimeRunning(true);
       start();
-      setTimeActive();
+      rightAudio();
     }
   }
+
   return (
     <>
       <CtnInfo>
-        <TextTeam>{Team}</TextTeam>
+        {settings.teamTable === true && (
+          <TextTeam>
+            {<UserIcon></UserIcon>}
+            {Team}
+          </TextTeam>
+        )}
+
         <TxtInfo $infocolor="#acf144">✔ {rightAnswers}</TxtInfo>
         <TxtInfo $infocolor="#ff5a5a">✖ {wrongAnswers}</TxtInfo>
         <TxtInfo $infocolor="#d67fe7">PASS {pending}</TxtInfo>
@@ -87,6 +105,7 @@ export default function TableInfo({
           {time.s !== 0 && time.s}
           {time.s === 0 && <p>Time Out!</p>}s
         </Timer>
+        {soundButton}
       </CtnInfo>
     </>
   );

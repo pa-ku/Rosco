@@ -15,8 +15,8 @@ export function TimeProvider({ children }) {
 
   const start = () => {
     run();
-
     setInterv(setInterval(run, 10));
+    setTimeRunning(true)
   };
 
   var updatedMs = time.ms,
@@ -61,7 +61,6 @@ export function TimeProvider({ children }) {
         setTimeRunning,
         setTime,
         setPrevTime,
-        reset,
         start,
         stop,
         time,

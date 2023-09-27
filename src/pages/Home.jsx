@@ -5,14 +5,13 @@ import logoSecond from "../assets/img/second.png";
 import LinkButton from "../components/ui/LinkButton";
 
 const Wrapper = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
-width: 100%;
-height: 95vh;
-gap: 7em;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+  gap: 7em;
 `;
 const ButtonCtn = styled.div`
   display: flex;
@@ -22,7 +21,6 @@ const ButtonCtn = styled.div`
   gap: 1em;
   opacity: 0;
   animation: 1s start forwards;
-
 `;
 const Author = styled.a`
   color: #696969;
@@ -30,8 +28,8 @@ const Author = styled.a`
   cursor: pointer;
   opacity: 0;
   animation: 1s start forwards;
-  &:hover{
-  color: #d5adfd;
+  &:hover {
+    color: #d5adfd;
   }
 `;
 const Img = styled.img`
@@ -40,7 +38,7 @@ const Img = styled.img`
   right: ${(props) => props.$right};
   animation: 500ms logoStart forwards ease-in 200ms;
   opacity: 0;
-scale: 0.8;
+  scale: 0.8;
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -75,18 +73,17 @@ export default function Home() {
         </LogoContainer>
 
         <ButtonCtn>
-          <LinkButton
-            to="/game"
-            text="Start"
-          />
-          <LinkButton
-            to={"/settings"}
-            text="Settings"
-     
-          />
+          <LinkButton to="/game" text="Start" />
+          <LinkButton to={"/settings"} text="Settings" />
         </ButtonCtn>
-        
-        <Author title="Author" href="https://pablokuhn.onedev.com.ar/" target="blank" >With 💜 by paku</Author>
+
+        <Author
+          title="Author"
+          href="https://pablokuhn.onedev.com.ar/"
+          target="blank"
+        >
+          With 💜 by paku
+        </Author>
       </Wrapper>
     </>
   );
