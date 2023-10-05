@@ -130,11 +130,6 @@ export default function Settings() {
   const [selectSound] = useSound(selectAudio, { volume: settings.volume });
   const [checkSound] = useSound(checkAudio, { volume: settings.volume });
 
-function modeHandler2 (e){
-  
-}
-
-
   function modeHandler(event) {
     switch (event.target.value) {
       case "easy":
@@ -144,10 +139,10 @@ function modeHandler2 (e){
           mode: event.target.value,
           rollChance: 3,
           containsWords: 0,
-          time: { ms: 0, s: 180, m: 0, h: 0 },
+          time: { ms: 0, s: 240, m: 0, h: 0 },
         });
-        setPrevTime({ ms: 0, s: 180, m: 0, h: 0 });
-        setTime({ ms: 0, s: 180, m: 0, h: 0 });
+        setPrevTime({ ms: 0, s: 240, m: 0, h: 0 });
+        setTime({ ms: 0, s: 240, m: 0, h: 0 });
         break;
 
       case "normal":
@@ -157,10 +152,10 @@ function modeHandler2 (e){
           mode: event.target.value,
           rollChance: 3,
           containsWords: 10,
-          time: { ms: 0, s: 140, m: 0, h: 0 },
+          time: { ms: 0, s: 220, m: 0, h: 0 },
         });
-        setPrevTime({ ms: 0, s: 140, m: 0, h: 0 });
-        setTime({ ms: 0, s: 140, m: 0, h: 0 });
+        setPrevTime({ ms: 0, s: 220, m: 0, h: 0 });
+        setTime({ ms: 0, s: 220, m: 0, h: 0 });
         break;
 
       case "hard":
@@ -170,10 +165,10 @@ function modeHandler2 (e){
           mode: event.target.value,
           rollChance: 7,
           containsWords: 20,
-          time: { ms: 0, s: 100, m: 0, h: 0 },
+          time: { ms: 0, s: 20, m: 0, h: 0 },
         });
-        setPrevTime({ ms: 0, s: 100, m: 0, h: 0 });
-        setTime({ ms: 0, s: 100, m: 0, h: 0 });
+        setPrevTime({ ms: 0, s: 180, m: 0, h: 0 });
+        setTime({ ms: 0, s: 180, m: 0, h: 0 });
         break;
     }
   }
@@ -196,14 +191,12 @@ function modeHandler2 (e){
     }
   }
 
-
   return (
     <>
       <Wrapper>
         <H1>SETTINGS</H1>
 
         <OptionWrapper>
-      
           <OptionCtn>
             <Label htmlFor="Option1">Team Table </Label>
             <CheckBox
@@ -212,7 +205,6 @@ function modeHandler2 (e){
               id="Option1"
               type="checkbox"
             />
-
           </OptionCtn>
           <OptionCtn>
             <Label htmlFor="Option2">SOUND</Label>
@@ -222,7 +214,6 @@ function modeHandler2 (e){
               id="Option2"
               type="checkbox"
             />
-
           </OptionCtn>
         </OptionWrapper>
         <ModeCtn>
@@ -251,20 +242,20 @@ function modeHandler2 (e){
           </BtnContainer>
           {settings.mode === "easy" && (
             <ModeTxt>
-              Para debiles e indesisos.<br></br>{" "}
-              <b>TODAS las palabras comienzan con la letra</b> (180 segundos)
+              Para debiles e indesisos.
+              <b>TODAS las palabras comienzan con la letra</b> (
+              {settings.time.s}s)
             </ModeTxt>
           )}
           {settings.mode === "normal" && (
             <ModeTxt>
-              {" "}
-              Para los que le gusta la vainilla <br></br> <b>30%</b> de que
-              contengan la letra (140 segundos)
+              Para los que le gusta la vainilla <b>30%</b> de que contengan la
+              letra ({settings.time.s}s)
             </ModeTxt>
           )}
           {settings.mode === "hard" && (
             <ModeTxt>
-              <b>70%</b> de que contengan la letra (120 segundos)
+              <b>70%</b> de que contengan la letra ({settings.time.s}s)
             </ModeTxt>
           )}
         </ModeCtn>

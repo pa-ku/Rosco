@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 export const TimeContext = createContext();
 import useLocalStorage from "use-local-storage";
 
@@ -16,7 +16,7 @@ export function TimeProvider({ children }) {
   const start = () => {
     run();
     setInterv(setInterval(run, 10));
-    setTimeRunning(true)
+    setTimeRunning(true);
   };
 
   var updatedMs = time.ms,
@@ -50,9 +50,13 @@ export function TimeProvider({ children }) {
     setTime(storedTime);
   };
 
-  if (time === 0) {
-    stop();
-  }
+  useEffect(() => {
+    console.log(time);
+    if (time.s === 0) {
+      stop();
+      alert("SE TERMINO EL TIEMPO");
+    }
+  }, [time]);
 
   return (
     <TimeContext.Provider
