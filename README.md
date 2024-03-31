@@ -1,3 +1,3 @@
 # Rosco
-App simulando el Rosco creada con React
-https://rosquewe.onedev.com.ar/
+App del rosco, creada con React
+https://rosquewe.netlify.app/
