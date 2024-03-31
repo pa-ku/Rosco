@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import logoFirst from "../assets/img/first.png";
-import logoSecond from "../assets/img/second.png";
-import LinkButton from "../components/ui/LinkButton";
+import React from 'react'
+import styled from 'styled-components'
+import logoFirst from '../assets/img/first.png'
+import logoSecond from '../assets/img/second.png'
+import LinkButton from '../components/ui/LinkButton'
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 95vh;
   gap: 7em;
-`;
+`
 const ButtonCtn = styled.div`
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ const ButtonCtn = styled.div`
   gap: 1em;
   opacity: 0;
   animation: 1s start forwards;
-`;
+`
 const Author = styled.a`
   color: #696969;
   animation: 2s start forwards 500ms;
@@ -31,7 +31,7 @@ const Author = styled.a`
   &:hover {
     color: #d5adfd;
   }
-`;
+`
 const Img = styled.img`
   height: 150px;
   position: absolute;
@@ -39,7 +39,7 @@ const Img = styled.img`
   animation: 500ms logoStart forwards ease-in 200ms;
   opacity: 0;
   scale: 0.8;
-`;
+`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@ const LogoContainer = styled.div`
       rotate: 180deg;
     }
   }
-`;
+`
 
 export default function Home() {
   return (
@@ -74,17 +74,17 @@ export default function Home() {
 
         <ButtonCtn>
           <LinkButton to="/game" text="Start" />
-          <LinkButton to={"/settings"} text="Settings" />
+          <LinkButton to={'/settings'} text="Settings" />
         </ButtonCtn>
 
         <Author
           title="Author"
-          href="https://pablokuhn.onedev.com.ar/"
+          href="https://pablokuhn.netlify.app/"
           target="blank"
         >
           With 💜 by paku
         </Author>
       </Wrapper>
     </>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const Button = styled(Link)`
   background-color: #064ebb;
@@ -18,20 +18,20 @@ const Button = styled(Link)`
   width: 150px;
   font-size: 1.5em;
   font-weight: 400;
-  border-radius: 20px;
+  border-radius: 10px;
   gap: 5px;
- 
+  width: ${(props) => props.width};
   &:hover {
     filter: brightness(1.2);
     color: white;
   }
-`;
+`
 
-export default function LinkButton({ text, onClick, logo, to }) {
+export default function LinkButton({ width, text, onClick, logo, to }) {
   return (
-    <Button onClick={onClick} to={to}>
+    <Button width={width} onClick={onClick} to={to}>
       {logo}
       {text}
     </Button>
-  );
+  )
 }
